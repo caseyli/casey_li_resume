@@ -21,7 +21,7 @@ class ResumeEntry < ActiveRecord::Base
   
   belongs_to :resume_entry_type
   
-  has_many :resume_entry_notes
+  has_many :resume_entry_notes, :dependent => :destroy
   
   def self.entries(type)
     where("resume_entry_type_id = #{type.id}")

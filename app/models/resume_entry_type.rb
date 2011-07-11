@@ -14,5 +14,5 @@ class ResumeEntryType < ActiveRecord::Base
   
   validates :description, :presence => true
   
-  has_many :resume_entries
+  has_many :resume_entries, :dependent => :destroy
 end

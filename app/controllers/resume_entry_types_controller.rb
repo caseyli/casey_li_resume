@@ -20,14 +20,28 @@ class ResumeEntryTypesController < ApplicationController
     @resume_entry = @resume_entry_type.resume_entries.build
   end
   
+  def edit
+    @resume_entry_type = ResumeEntryType.find(params[:id])
+  end
+  
   def index
     @resume_entry_types = ResumeEntryType.all
   end
   
   def update
+    @resume_entry_type = ResumeEntryType.find(params[:id])
+    if @resume_entry_type.update_attributes(params[:resume_entry_type])
+      redirect_to resume_entry_types_path
+    else
+      @title = "Edit user"
+      render 'edit'
+    end
   end
   
   def destroy
+    @resume_entry_type = ResumeEntryType.find(params[:id])
+    @resume_entry_type.destroy
+    redirect_to resume_entry_types_path
   end
 
 end

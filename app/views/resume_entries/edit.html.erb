@@ -1,7 +1,8 @@
-<h2>Add a new Resume Entry</h2>
+<h1>Edit Resume Entry</h1>
 <%= form_for(@resume_entry) do |f| %>
 	<div class="field">
-		<%= f.hidden_field :resume_entry_type_id %>
+		<%= f.label :resume_entry_type_id %><br />
+		<%= f.text_field :resume_entry_type_id %>
 	</div>
 	<div class="field">
 		<%= f.label :title %><br />
@@ -24,6 +25,6 @@
 		<%= f.text_field :end_year %>
 	</div>
 	<div class="actions">
-		<%= f.submit "Create New Entry" %>
+		<%= f.submit "Update" %>
 	</div>
 <% end %>

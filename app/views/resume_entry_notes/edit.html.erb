@@ -1,0 +1,14 @@
+<h1>Edit Resume Note</h1>
+<%= form_for(@resume_entry_note) do |f| %>
+	<div class="field">
+		<%= f.label :resume_entry_id %><br />
+		<%= f.text_field :resume_entry_id %>
+	</div>
+	<div class="field">
+		<%= f.label :note %><br />
+		<%= f.text_field :note %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Update" %>
+	</div>
+<% end %>

@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   
   def skills
     @title = "Skills"
-    entry_type_id = ResumeEntryType.find_by_description("Skill")
+    entry_type_id = ResumeEntryType.find_by_description("Skills")
     @entries = ResumeEntry.entries(entry_type_id)
   end
 

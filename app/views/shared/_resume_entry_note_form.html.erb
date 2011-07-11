@@ -1,11 +1,11 @@
+<h2>Create a new note for this resume entry</h2>
 <%= form_for(@resume_entry_note) do |f| %>
 	<div class="field">
-		<%= f.label :resume_entry_id %><br />
-		<%= f.text_field :resume_entry_id %>
+		<%= f.hidden_field :resume_entry_id %>
 	</div>
 	<div class="field">
 		<%= f.label :note %><br />
-		<%= f.text_field :note %>
+		<%= f.text_area :note, :cols => 95, :rows => 20 %>
 	</div>
 	<div class="actions">
 		<%= f.submit "Create New Note" %>

@@ -1,4 +1,7 @@
-<h1><%= @resume_entry_type.description %></h1>
+<h1><%= @resume_entry_type.description %> | <%= link_to "edit", edit_resume_entry_type_path(@resume_entry_type) %> | <%= link_to "delete", @resume_entry_type,
+                                                      :method => :delete, 
+													  :confirm => "Are you sure you want to delete #{@resume_entry_type.description}?", 
+													  :title => "Delete item?" %></h1>
 <% if !@resume_entry_type.resume_entries.empty? %>
 	<ul>
 		<% @resume_entry_type.resume_entries.each do |entry| %>
