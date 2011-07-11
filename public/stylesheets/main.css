@@ -3,6 +3,10 @@
 	margin:0 auto;
 }
 
+.main {
+	height: 700px;
+}
+
 body {
 	background: #acb7bb;
 	font-size:75%;
@@ -147,4 +151,16 @@ table.resumeentries tr td {
 table.resumeentries tr td.resumeentrydate {
 	white-space:nowrap;
 	width: 17%;
+}
+
+/* Footer Table */
+.footer {
+	padding: 40px 0 0 0;
+}
+
+table.footertable {
+	width: 100%;
+}
+table.footertable tr td {
+	text-align: center;
 }
