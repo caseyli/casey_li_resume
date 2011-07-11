@@ -6,11 +6,13 @@
 		<td>Entry Type</td>
 		<td>Start</td>
 		<td>End</td>
+		<td>Display Order</td>
 	</tr>
 	<tr>
 		<td><%= link_to @resume_entry.resume_entry_type.description, @resume_entry.resume_entry_type %></td>
 		<td><%= @resume_entry.start_period %></td>
 		<td><%= @resume_entry.end_period %></td>
+		<td><%= @resume_entry.order_by %></td>
 	</tr>
 </table>
 

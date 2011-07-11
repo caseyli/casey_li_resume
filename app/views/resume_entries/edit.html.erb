@@ -1,29 +1,6 @@
 <h1>Edit Resume Entry</h1>
 <%= form_for(@resume_entry) do |f| %>
-	<div class="field">
-		<%= f.label :resume_entry_type_id %><br />
-		<%= f.text_field :resume_entry_type_id %>
-	</div>
-	<div class="field">
-		<%= f.label :title %><br />
-		<%= f.text_field :title %>
-	</div>
-	<div class="field">
-		<%= f.label :start_month %><br />
-		<%= f.text_field :start_month %>
-	</div>
-	<div class="field">
-		<%= f.label :start_year %><br />
-		<%= f.text_field :start_year %>
-	</div>
-	<div class="field">
-		<%= f.label :end_month %><br />
-		<%= f.text_field :end_month %>
-	</div>
-	<div class="field">
-		<%= f.label :end_year %><br />
-		<%= f.text_field :end_year %>
-	</div>
+	<%= render 'shared/resume_entry_form_fields', :f => f %>
 	<div class="actions">
 		<%= f.submit "Update" %>
 	</div>

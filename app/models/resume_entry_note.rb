@@ -11,8 +11,12 @@
 #
 
 class ResumeEntryNote < ActiveRecord::Base
-  attr_accessible :resume_entry_id, :note
+  attr_accessible :resume_entry_id, 
+                  :note,
+                  :order_by
   
   belongs_to :resume_entry
+  
+  default_scope :order => 'order_by ASC'
   
 end
