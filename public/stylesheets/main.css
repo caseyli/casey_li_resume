@@ -145,6 +145,9 @@ table.resumeentries tr {
 table.resumeentries tr td {
 	vertical-align:text-top;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	background: -moz-linear-gradient(top, #fff, #ccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#CCCCCCCC);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#CCCCCCCC)";
 	padding: 10px;
 }
 
