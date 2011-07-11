@@ -1,1 +1,14 @@
-<%= image_tag("Banner1.png", :alt => "Image Rotator", :class => "rotatorimage")%>
+<!-- <%= image_tag("Banner1.png", :alt => "Image Rotator", :class => "rotatorimage") %> -->
+<script type="text/javascript">
+	$(document).ready(function(){	
+		$("#slider").easySlider();
+	});	
+</script>
+
+<div id="slider">
+	<ul>				
+		<li><%= image_tag("Banner1.png", :alt => "Image 1", :class => "rotatorimage") %></li>
+		<li><%= image_tag("Banner2.png", :alt => "Image 1", :class => "rotatorimage") %></li>
+		<li><%= image_tag("Banner3.png", :alt => "Image 1", :class => "rotatorimage") %></li>
+	</ul>
+</div>
