@@ -1,0 +1,13 @@
+<tr>
+	<td><%= "#{resume_entry.start_period}"%></td>
+	<td><%= "#{resume_entry.end_period}"%></td>
+	<td><%= "#{resume_entry.title}" %><br/>
+		<% unless resume_entry.resume_entry_notes.empty? %>
+			<ul>
+				<% resume_entry.resume_entry_notes.each do |note| %>
+					<li><%= "#{note.note}" %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</td>
+</tr>

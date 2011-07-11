@@ -1,0 +1,10 @@
+<h1>Resume Entry Types</h1>
+<%= form_for(@resume_entry_type) do |f| %>
+	<div class="field">
+		<%= f.label :description %><br />
+		<%= f.text_field :description %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Create New Entry Type" %>
+	</div>
+<% end %>

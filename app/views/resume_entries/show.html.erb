@@ -1,0 +1,20 @@
+<h1><%= @resume_entry.title %></h1>
+<ul>
+	<li><%= @resume_entry.resume_entry_type.description %>
+	<li><%= @resume_entry.start_month %>-<%= @resume_entry.start_year %></li>
+	<li><%= @resume_entry.end_month %>-<%= @resume_entry.end_year %></li>
+</ul>
+
+<!-- Show Notes -->
+<% if !@resume_entry.resume_entry_notes.empty? %>
+	<ul>
+		<% @resume_entry.resume_entry_notes.each do |note| %>
+			<% if !note.note.nil? %>
+				<li><%= "#{note.note}" %></li>
+			<% end %>
+		<% end %>
+	</ul>
+<% end %>
+
+<!-- Form to add a new note -->
+<%= render 'shared/resume_entry_note_form' %>

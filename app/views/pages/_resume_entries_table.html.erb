@@ -1,0 +1,7 @@
+<% unless @entries.empty? %>
+	<table class="resumeentries" summary="Resume Entries">
+		<% @entries.each do |resume_entry| %>
+			<%= render resume_entry %>
+		<% end %>
+	</table>
+<% end %>

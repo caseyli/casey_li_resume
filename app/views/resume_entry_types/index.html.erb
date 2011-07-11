@@ -1,0 +1,19 @@
+<ul>
+<% @resume_entry_types.each do |entry_type| %>
+	<li><%= link_to entry_type.description, resume_entry_type_path(entry_type) %></li>
+	<% if !entry_type.resume_entries.empty? %>
+		<ul>
+			<% entry_type.resume_entries.each do |entry| %>
+				<li><%= entry.title %></li>
+				<% if !entry.resume_entry_notes.empty? %>
+					<ul>
+						<% entry.resume_entry_notes.each do |note| %>
+							<li><%= note.note %></li>
+						<% end %>
+					</ul>
+				<% end %>
+			<% end %>
+		</ul>
+	<% end %>
+<% end %>
+</ul>

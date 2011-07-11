@@ -10,5 +10,6 @@ module ApplicationHelper
   
   def logo
      image_tag("logo.png", :alt => "Casey Li", :class => "round", :width => "300px")
-   end  
+  end  
+   
 end

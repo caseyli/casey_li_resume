@@ -1,0 +1,15 @@
+<h1><%= @resume_entry_type.description %></h1>
+<% if !@resume_entry_type.resume_entries.empty? %>
+	<ul>
+		<% @resume_entry_type.resume_entries.each do |entry| %>
+			<!-- There will be one extra entry for the resume_entry form -->
+			<% if !entry.title.nil? %>
+				<li><%= "#{entry.start_month}-#{entry.start_year} | #{entry.end_month}-#{entry.end_year} | " %>
+					<%= link_to entry.title, resume_entry_path(entry) %>
+				</li>
+			<% end %>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= render 'shared/resume_entry_form' %>

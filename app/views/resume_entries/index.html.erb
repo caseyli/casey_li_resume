@@ -1,0 +1,12 @@
+<ul>
+<% @resume_entries.each do |entry| %>
+	<li><%= "#{entry.id} | #{entry.resume_entry_type_id} | #{entry.title}" %></li>
+	<% if !entry.resume_entry_notes.empty? %>
+		<ul>
+			<% entry.resume_entry_notes.each do |note| %>
+				<%= note.note %>
+			<% end %>
+		</ul>
+	<% end %>
+<% end %>
+</ul>

@@ -1,4 +1,9 @@
 CaseyLiResume::Application.routes.draw do
+
+  resources :resume_entry_types
+  resources :resume_entries
+  resources :resume_entry_notes
+
   get "pages/home"
   get "pages/skills"
   get "pages/work_experience"

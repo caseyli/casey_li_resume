@@ -1,0 +1,5 @@
+<ul>
+<% @resume_entry_notes.each do |note| %>
+	<li><%= "#{note.resume_entry.title} | #{note.note}" %></li>
+<% end %>
+</ul>
