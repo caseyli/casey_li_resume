@@ -1,8 +1,11 @@
 CaseyLiResume::Application.routes.draw do
 
+  get "sessions/new"
+
   resources :resume_entry_types
   resources :resume_entries
   resources :resume_entry_notes
+  resources :sessions,            :only => [:new, :create, :destroy]
 
   get "pages/home"
   get "pages/skills"
@@ -20,6 +23,8 @@ CaseyLiResume::Application.routes.draw do
   match '/hobbies', :to => "pages#hobbies"
   match '/contact', :to => "pages#contact"
   match '/about', :to => "pages#about"
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

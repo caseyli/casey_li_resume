@@ -1,4 +1,7 @@
 class ResumeEntryNotesController < ApplicationController
+  
+  before_filter :authenticate
+  
   def new
     redirect_to root_path
   end
