@@ -27,7 +27,7 @@ ul.resources {
 }
 
 ul.resources li a, p.contact a {
-	color: #2e2f6e;
+	color: #293c52;
 	text-decoration:none;
 }
 
@@ -36,7 +36,7 @@ ul.resources li a:hover, p.contact a:hover {
 }
 
 ul.resources li a:visited, p.contact a:visited {
-	color: #2e2f6e;
+	color: #293c52;
 	text-decoration:none;	
 }
 
@@ -71,7 +71,7 @@ h2 {
 }	
 
 #slider { 
-	margin-left:5px;
+	margin-left:0px;
 }
 
 #prevBtn, #nextBtn { 
