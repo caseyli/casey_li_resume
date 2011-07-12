@@ -55,6 +55,9 @@ a:hover, a.notelink:hover {
 	text-decoration:none;
 }
 
+ul.notelink li {
+	list-style-type: square;
+}
 
 header {
 	padding-top: 20px;
