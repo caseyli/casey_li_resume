@@ -1,5 +1,5 @@
 <% unless note.url.nil? %>
-	<% if note.link_text.nil? %>
+	<% if note.link_text.nil? || note.link_text.blank? %>
 		<li><%= link_to note.url, note.url, :class => "notelink", :target => "blank" %></li>
 	<% else %>
 		<li><%= link_to note.link_text, note.url, :class => "notelink", :target => "blank" %></li>

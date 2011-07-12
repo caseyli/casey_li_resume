@@ -30,7 +30,7 @@ class ResumeEntryNotesController < ApplicationController
   def update
     @resume_entry_note = ResumeEntryNote.find(params[:id])
     if @resume_entry_note.update_attributes(params[:resume_entry_note])
-      redirect_to resume_entry_types_path
+      redirect_to @resume_entry_note.resume_entry
     else
       render 'edit'
     end
