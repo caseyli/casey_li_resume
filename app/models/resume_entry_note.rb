@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110708210116
+# Schema version: 20110712160429
 #
 # Table name: resume_entry_notes
 #
@@ -8,6 +8,9 @@
 #  note            :string(255)
 #  created_at      :datetime
 #  updated_at      :datetime
+#  order_by        :integer
+#  url             :string(255)
+#  link_text       :string(255)
 #
 
 class ResumeEntryNote < ActiveRecord::Base

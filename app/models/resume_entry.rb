@@ -1,17 +1,18 @@
 # == Schema Information
-# Schema version: 20110708210116
+# Schema version: 20110712160429
 #
 # Table name: resume_entries
 #
-#  id            :integer         not null, primary key
+#  id                   :integer         not null, primary key
 #  resume_entry_type_id :integer
-#  title         :string(255)
-#  start_month   :integer
-#  start_year    :integer
-#  end_month     :integer
-#  end_year      :integer
-#  created_at    :datetime
-#  updated_at    :datetime
+#  title                :string(255)
+#  start_month          :integer
+#  start_year           :integer
+#  end_month            :integer
+#  end_year             :integer
+#  created_at           :datetime
+#  updated_at           :datetime
+#  order_by             :integer
 #
 
 class ResumeEntry < ActiveRecord::Base
