@@ -13,6 +13,8 @@
 class ResumeEntryNote < ActiveRecord::Base
   attr_accessible :resume_entry_id, 
                   :note,
+                  :url,
+                  :link_text,
                   :order_by
   
   belongs_to :resume_entry

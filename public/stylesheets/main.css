@@ -40,6 +40,21 @@ ul.resources li a:visited, p.contact a:visited {
 	text-decoration:none;	
 }
 
+a.notelink {
+	color: #293c52;
+	text-decoration:underline;
+}
+
+a.notelink:visited {
+	color: #293c52;
+	text-decoration:underline;
+}
+
+a.notelink:hover {
+	color: #293c52;
+	text-decoration:none;
+}
+
 header {
 	padding-top: 20px;
 }

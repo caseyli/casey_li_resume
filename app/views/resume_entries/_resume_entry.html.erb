@@ -8,6 +8,7 @@
 			<ul>
 				<% resume_entry.resume_entry_notes.each do |note| %>
 					<li><%= "#{note.note}" %></li>
+					<%= render 'shared/resume_entry_note_link', :note => note %>
 				<% end %>
 			</ul>
 		<% end %>

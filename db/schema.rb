@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110711204142) do
+ActiveRecord::Schema.define(:version => 20110712160429) do
 
   create_table "resume_entries", :force => true do |t|
     t.integer  "resume_entry_type_id"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20110711204142) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order_by"
+    t.string   "url"
+    t.string   "link_text"
   end
 
   create_table "resume_entry_types", :force => true do |t|
