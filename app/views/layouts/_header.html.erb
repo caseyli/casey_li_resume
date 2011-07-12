@@ -9,8 +9,9 @@
 			<li><%= link_to "Education", education_path %></li>
 			<li><%= link_to "Hobbies", hobbies_path %></li>
 			<% if signed_in? %>
-				<li><%= link_to "Edit Resume", resume_entry_types_path %></li>
+				<li><%= link_to "Edit", resume_entry_types_path %></li>
 			<% end %>
+			<li><%= link_to "PDF", "/Casey Li - Resume.pdf" %></li>
 			<li><%= link_to "Contact", 'mailto:casey.li@gmail.com' %></li>
 			<li><%= link_to "About", about_path %></li>
 			<li>
