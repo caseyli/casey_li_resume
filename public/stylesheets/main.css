@@ -122,6 +122,20 @@ img.rotatorimage {
 	padding: 1em 0em 0em 0em;
 }
 
+/* Forms */
+.actions input {
+	background-color: #ddd;
+	border-color: #444;
+	margin: 10px 0px 0px 0px;
+	height: 30px;
+}
+
+.field input {
+	font-size: 1.2em;
+	margin: 5px 0px 10px 0px;
+}
+
+
 /* Navigation */
 
 nav {
