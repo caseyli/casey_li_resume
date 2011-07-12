@@ -1,6 +1,13 @@
 <% unless @entries.nil? %>
 	<% unless @entries.empty? %>
 		<table class="resumeentries" summary="Resume Entries">
+			<tr class="resumeentriesheader">
+				<% if @show_date %>
+					<td>Start</td>
+					<td>End</td>
+				<% end %>
+					<td></td>
+			</tr>
 			<% @entries.each do |resume_entry| %>
 				<%= render resume_entry %>
 			<% end %>

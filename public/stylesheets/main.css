@@ -178,6 +178,12 @@ table.resumeentries tr td {
 	padding: 10px;
 }
 
+table.resumeentries tr.resumeentriesheader td {
+	background: #293c52;
+	color: white;
+	padding: 3px 0px 3px 10px;
+}
+
 table.resumeentries tr td.resumeentrydate {
 	white-space:nowrap;
 	width: 17%;
