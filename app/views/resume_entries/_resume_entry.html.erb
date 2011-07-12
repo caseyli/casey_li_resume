@@ -1,6 +1,8 @@
 <tr>
-	<td class="resumeentrydate"><%= "#{resume_entry.start_period}"%></td>
-	<td class="resumeentrydate"><%= "#{resume_entry.end_period}"%></td>
+	<% if @show_date %>
+		<td class="resumeentrydate"><%= "#{resume_entry.start_period}"%></td>
+		<td class="resumeentrydate"><%= "#{resume_entry.end_period}"%></td>
+	<% end %>
 	<td><%= "#{resume_entry.title}" %><br/>
 		<% unless resume_entry.resume_entry_notes.empty? %>
 			<ul>

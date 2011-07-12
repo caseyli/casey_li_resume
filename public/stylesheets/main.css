@@ -13,6 +13,33 @@ body {
 	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+p.about {
+	font-size:1.2em;
+	color: #555;
+}
+
+p.contact {
+	font-size:1.2em;
+}
+
+ul.resources {
+	font-size:1.2em;
+}
+
+ul.resources li a, p.contact a {
+	color: #2e2f6e;
+	text-decoration:none;
+}
+
+ul.resources li a:hover, p.contact a:hover {
+	text-decoration:underline;
+}
+
+ul.resources li a:visited, p.contact a:visited {
+	color: #2e2f6e;
+	text-decoration:none;	
+}
+
 header {
 	padding-top: 20px;
 }
