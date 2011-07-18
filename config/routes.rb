@@ -1,11 +1,14 @@
 CaseyLiResume::Application.routes.draw do
 
+  get "users/new"
+
   get "sessions/new"
 
   resources :resume_entry_types
   resources :resume_entries
   resources :resume_entry_notes
   resources :sessions,            :only => [:new, :create, :destroy]
+  resources :users
 
   get "pages/home"
   get "pages/skills"

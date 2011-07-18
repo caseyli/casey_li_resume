@@ -23,8 +23,8 @@ class SessionsController < ApplicationController
   private 
     
     def authenticate?(username, password)
-      # TODO: Replace this with a proper Users/Signin Model with encryption
-      if username == "user" && password == "password"
+      @user = User.authenticate(username, password)
+      if !@user.nil?
         true
       else
         false
