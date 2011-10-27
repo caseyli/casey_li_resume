@@ -18,12 +18,15 @@ CaseyLiResume::Application.routes.draw do
   get "pages/contact"
   get "pages/about"
   
+  post "pages/contact"
+  
   root :to => 'pages#home'
   
   match '/skills', :to => "pages#skills"
   match '/work_experience', :to => "pages#work_experience"
   match '/education', :to => "pages#education"
   match '/hobbies', :to => "pages#hobbies"
+  match '/contact', :to => "pages#contact"
   match '/about', :to => "pages#about"
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

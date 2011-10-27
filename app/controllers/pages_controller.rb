@@ -34,5 +34,15 @@ class PagesController < ApplicationController
   def about
     @title = "About"
   end
+  
+  def contact
+    @success = false
+    if !params[:email_address].blank? && !params[:message].blank?
+      ContactMailer.contact_email("CLI Resume Message from " + params[:email_address],
+                                  params[:email_address],
+                                  params[:message]).deliver
+      @success = true
+    end
+  end
 
 end
