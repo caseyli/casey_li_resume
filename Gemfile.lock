@@ -29,7 +29,6 @@ GEM
       activemodel (= 3.0.9)
       activesupport (= 3.0.9)
     activesupport (3.0.9)
-    annotate-models (1.0.4)
     arel (2.0.10)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
@@ -53,6 +52,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     nokogiri (1.4.6)
+    pg (0.11.0)
     polyglot (0.3.1)
     rack (1.2.3)
     rack-mount (0.6.14)
@@ -104,12 +104,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate-models (= 1.0.4)
   autotest (= 4.4.6)
   autotest-fsevent (= 0.2.4)
   autotest-growl (= 0.2.9)
   autotest-rails-pure (= 4.1.2)
   factory_girl_rails (= 1.0)
+  pg
   rails (= 3.0.9)
   rspec-rails (= 2.6.1)
   spork (= 0.9.0.rc8)
