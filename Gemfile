@@ -6,6 +6,7 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -28,7 +29,7 @@ gem 'sqlite3'
 # and rake tasks are available in development mode:
 group :development do
    gem 'rspec-rails', '2.6.1'
-   gem 'annotate-models', '1.0.4'
+   #gem 'annotate-models', '1.0.4'
 end
 
 group :test do
