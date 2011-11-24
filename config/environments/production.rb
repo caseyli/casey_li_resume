@@ -53,7 +53,7 @@ CaseyLiResume::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :user_name            => 'caseyliresume',
-    :password             => 'hirecaseycasey',
+    :password             => 'aaabbbccc123',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 end
