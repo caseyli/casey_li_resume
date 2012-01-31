@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include SessionsHelper
   
-  before_filter :set_iphone_format
+  #before_filter :set_iphone_format
     
   def set_iphone_format
     if is_iphone_request?
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
   
   def is_iphone_request?
-      request.user_agent =~ /(Mobile\/.+Safari)/
+      request.user_agent =~ /(iPhone)/
   end
   
 end

@@ -1,67 +1,206 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+ 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+</head> 
+<body> 
 
-	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-      <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-      <title>caseyli.com</title>
-      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-      <link rel="stylesheet" href="iui/iui.css" type="text/css" />
-   	  <link rel="stylesheet" href="iui/t/default/default-theme.css" type="text/css"/>
-      <script type="application/x-javascript" src="iui/iui.js"></script>
-      <%= stylesheet_link_tag 'iphone' %>
-    </head>
+	<!-- Home -->
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>caseyli.com</h1>
+		</div>
 
-    <body>
-		<div class="toolbar">
-			<h1 id="pageTitle">caseyli.com</h1>
-			<a id="backButton" class="button" href="#"></a>
+		<div data-role="content">	
+			<p>Welcome to caseyli.com</p>
+			<ul data-role="listview">
+				<li><a href="#mainmenu">Main Menu</a></li>
+				<li><a href="#login" data-transition="slideup">Login</a></li>
+			</ul>		
+		</div>
+	
+		<div data-role="footer">
+			<h4>.</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+
+	<!-- Main Menu -->
+	<div data-role="page" id="mainmenu">
+
+		<div data-role="header">
+			<a href="#home" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Main Menu</h1>
+		</div>
+
+		<div data-role="content">	
+			<ul data-role="listview">
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#work">Work</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#hobbies">Hobbies</a></li>
+				<li><a href="#pdf">PDF</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- Login -->
+	<div data-role="page" id="login">
+		<div data-role="header">
+			<a href="#home" data-transition="slideup" data-direction="reverse">Cancel</a>
+			<h1>Login</h1>
 		</div>
 		
-      	<!-- MAIN MENU -->
-		<ul id="home" title="caseyli.com" selected="true">
-   			<li><a href="#skills">Skills</a></li>
-      		<li><a href="#work">Work</a></li>
-      		<li><a href="#education">Education</a></li>
-      		<li><a href="#hobbies">Hobbies</a></li>
-      		<li><a href="#pdf">PDF</a></li>
-      		<li><a href="#contact">Contact</a></li>
-      		<li><a href="#about">About</a></li>
-		</ul>
-		
-		<!-- SKILLS -->
-		<div id="skills" title="Skills" class="panel">
-			<h2>Coming Soon!</h2>
+		<div data-role="content">
+			<form action="index.rb" method="post">
+				<input type="text" name="username" id="username" value="" placeholder="username" autocomplete="off" autocapitalize="off" autocorrect="off" />
+				<input type="password" name="password" id="password" value="" placeholder="password" />
+				<div data-role="fieldcontain">
+					<label for="rememberme">Remember Me?</label>
+					<select name="slider" id="rememberme" data-role="slider">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select> 
+				</div>
+				<input type="submit" value="Login" />
+			</form>
 		</div>
 		
-		<!-- WORK -->
-		<div id="work" title="Work" class="panel">
-			<h2>Coming Soon!</h2>
+		<div data-role="footer">
+			<h4>.</h4>
 		</div>
-		
-		<!-- EDUCATION -->
-		<div id="education" title="Education" class="panel">
-			<h2>Coming Soon!</h2>
+	</div>
+	
+	<!-- Skills -->
+	<div data-role="page" id="skills">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Skills</h1>
 		</div>
-		
-		<!-- HOBBIES -->
-		<div id="hobbies" title="Hobbies" class="panel">
-			<h2>Coming Soon!</h2>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
 		</div>
-		
-		<!-- PDF -->
-		<div id="pdf" title="PDF" class="panel">
-			<h2>Coming Soon!</h2>
+
+		<div data-role="footer">
+			<h4>.</h4>
 		</div>
-		
-		<!-- CONTACT -->
-		<div id="contact" title="Contact" class="panel">
-			<h2>Coming Soon!</h2>
+	</div>
+	
+	<!-- Work -->
+	<div data-role="page" id="work">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Work</h1>
 		</div>
-		
-		<!-- ABOUT -->
-		<div id="about" title="About" class="panel">
-			<h2>Coming Soon!</h2>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
 		</div>
-      
-    </body>
-    </html>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- Education -->
+	<div data-role="page" id="education">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Education</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- Hobbies -->
+	<div data-role="page" id="hobbies">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Hobbies</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- PDF -->
+	<div data-role="page" id="pdf">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>PDF</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- Contact -->
+	<div data-role="page" id="contact">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>Contact</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+	
+	<!-- About -->
+	<div data-role="page" id="about">
+
+		<div data-role="header">
+			<a href="#mainmenu" data-transition="slide" data-direction="reverse">Back</a>
+			<h1>About</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Coming Soon</p>
+		</div>
+
+		<div data-role="footer">
+			<h4>.</h4>
+		</div>
+	</div>
+</body>
+</html>
