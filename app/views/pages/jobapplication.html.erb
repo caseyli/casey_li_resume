@@ -1,0 +1,158 @@
+<p>
+<div class='center-image'>
+	<%= image_tag "JobApp/Mission.png", :class => "mission" %>
+</div>	
+</p>
+
+<p>
+<div class='center-image'>
+	<%= image_tag "JobApp/YourJob.png"%>
+</div>
+</p>
+
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/RailsHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='portfolio'>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/PersonalRails.png" %>
+				</td>
+				<td>
+					<a id='capo_dialog_link' class='portfolio-item' href="#"><%= image_tag "JobApp/Capo.png" %></a>
+				</td>
+				<td>
+					<%= image_tag "JobApp/MarilynAndDouglas.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/wwwp.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/caseylicom.png" %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/ProRails.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/Teldio.png"%>
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/ManagementHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='experience'>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/Scrum.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/PeopleManagement.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/ProductManagement.png" %>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/MarketingHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='portfolio'>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/MediaPortfolio.png"%>
+				</td>
+				<td>
+					<a id='capo_dialog_link' class='portfolio-item' href="#"><%= image_tag "JobApp/Graphics.png" %></a>
+				</td>
+				<td>
+					<%= image_tag "JobApp/TeldioVideo.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/NorthstarVideo.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/Photos.png" %>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/TalksHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='experience'>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/harrisleadership.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/NorthstarCC.png" %>
+				</td>
+				<td>
+					<%= image_tag "JobApp/SSMotivational.png" %>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<p>
+	<div class='center-image'>
+		<%= image_tag "JobApp/Interested.png" %>
+	</div>
+</p>
+
+<div id='capo_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Hello, World!
+		<div class>
+			<a id='close_dialog_link'>Close</a>	
+		</div>
+		
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		$("#capo_dialog_link").click(function(){
+			toggleDialog("#capo_dialog");
+			return false;
+		});
+		
+		$("#close_dialog_link").click(function(){
+			toggleDialog("#capo_dialog");
+		});
+	});
+	
+	function toggleDialog(dialog_id){
+		$("#capo_dialog").toggle(400);
+	}
+</script>

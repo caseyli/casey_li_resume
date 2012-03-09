@@ -30,6 +30,7 @@ CaseyLiResume::Application.routes.draw do
   match '/about', :to => "pages#about"
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/jobapplication', :to => "pages#jobapplication"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

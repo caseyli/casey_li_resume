@@ -44,5 +44,9 @@ class PagesController < ApplicationController
       @success = true
     end
   end
+  
+  def jobapplication
+    render :layout => "jobapplication"
+  end
 
 end

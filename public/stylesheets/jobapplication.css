@@ -1,0 +1,70 @@
+body {
+	background-color: #000000;
+	background-image: url("/images/JobApp/TopBanner.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.container {
+	margin: 225px auto;
+	width: 900px;
+	border-radius: 50px;
+	
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+.center-image {
+	display: block;
+	text-align: center;
+}
+
+p {
+	padding: 5px 0 5px 0;
+}
+
+.section-header {
+	padding: 20px 0 2px 0;
+	background-color: #587a9b;
+}
+
+.section-body {
+	padding: 20px 30px;
+}
+
+table tr td {
+	padding: 0px 5px 0px 5px;
+}
+
+table.experience {
+	margin: 0 auto;
+}
+
+table.experience tr td img {
+	width:200px;
+}
+
+.mission {
+	padding-top: 30px;
+}
+
+.modal-dialog {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:4000px;
+    text-align:center;
+    z-index: 1000;
+    background-image: url("/images/JobApp/background-trans.png");
+}
+
+.modal-dialog-body{
+	position:absolute;
+	 width:300px;
+     margin: 300px 300px;
+     background-color: #fff;
+     border:1px solid #000;
+     padding:15px;
+     text-align:center;
+}
