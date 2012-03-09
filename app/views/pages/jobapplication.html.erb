@@ -133,7 +133,7 @@
 	<div class='modal-dialog-body'>
 		Hello, World!
 		<div class>
-			<a id='close_dialog_link'>Close</a>	
+			<a id='close_dialog_link' href="#">Close</a>	
 		</div>
 		
 	</div>
@@ -149,6 +149,7 @@
 		
 		$("#close_dialog_link").click(function(){
 			toggleDialog("#capo_dialog");
+			return false;
 		});
 	});
 	
