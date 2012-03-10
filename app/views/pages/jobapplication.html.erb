@@ -21,16 +21,16 @@
 					<%= image_tag "JobApp/PersonalRails.png" %>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item' href="#"><%= image_tag "JobApp/Capo.png" %></a>
+					<a id='capo_dialog_link' class='portfolio-item capo-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/MarilynAndDouglas.png" %>
+					<a id='capo_dialog_link' class='portfolio-item md-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/wwwp.png" %>
+					<a id='capo_dialog_link' class='portfolio-item wwwp-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/caseylicom.png" %>
+					<a id='capo_dialog_link' class='portfolio-item caseyli-button' href="#"></a>
 				</td>
 			</tr>
 			<tr>
@@ -38,10 +38,10 @@
 					<%= image_tag "JobApp/ProRails.png" %>
 				</td>
 				<td>
-					<%= image_tag "JobApp/Teldio.png"%>
+					<a id='capo_dialog_link' class='portfolio-item teldio-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/RBX.png"%>
+					<a id='capo_dialog_link' class='portfolio-item rbx-button' href="#"></a>
 				</td>
 				<td>
 					
@@ -154,6 +154,6 @@
 	});
 	
 	function toggleDialog(dialog_id){
-		$("#capo_dialog").toggle(400);
+		$("#capo_dialog").fadeToggle(400);
 	}
 </script>

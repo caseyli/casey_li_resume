@@ -48,6 +48,41 @@ table.experience tr td img {
 	padding-top: 30px;
 }
 
+.portfolio-item {
+	display: block;
+	width: 163px;
+	height: 149px;
+}
+
+.portfolio-item:hover {
+	background-position: 0 0;
+}
+
+.capo-button {
+	background: url('/images/JobApp/Capo.png') bottom;	
+}
+
+.md-button {
+	background: url('/images/JobApp/MarilynAndDouglas.png') bottom;	
+}
+
+.wwwp-button {
+	background: url('/images/JobApp/wwwp.png') bottom;	
+}
+
+.caseyli-button {
+	background: url('/images/JobApp/caseylicom.png') bottom;	
+}
+
+.teldio-button {
+	background: url('/images/JobApp/Teldio.png') bottom;
+}
+
+.rbx-button {
+	background: url('/images/JobApp/RBX.png') bottom;
+}
+
+
 .modal-dialog {
     position: absolute;
     left: 0px;
