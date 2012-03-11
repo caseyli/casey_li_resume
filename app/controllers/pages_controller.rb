@@ -46,6 +46,35 @@ class PagesController < ApplicationController
   end
   
   def jobapplication
+    @skills = ["Rails", 
+               "Git",
+               "GitHub",
+               "Heroku",
+               "CSS",
+               "Javascript",
+               "JQuery",
+               "JQTouch",
+               "Java",
+               "JSP",
+               "ASP",
+               "ASP.NET",
+               "C#",
+               "Python",
+               "General SQL",
+               "PostgreSQL",
+               "MS-SQL",
+               "Informix",
+               "Oracle",
+               "SVN",
+               "CVS",
+               "Tomcat",
+               "JBoss",
+               "IIS",
+               "ActiveMQ",
+               "Jenkins",
+               "Photoshop",
+               "After Effects",
+               "Final Cut"]
     render :layout => "jobapplication"
   end
 

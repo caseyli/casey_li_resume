@@ -3,6 +3,8 @@ body {
 	background-image: url("/images/JobApp/TopBanner.png");
 	background-position: center top;
 	background-repeat: no-repeat;
+	
+	font-family: "Arial";
 }
 
 .container {
@@ -42,6 +44,15 @@ table.experience {
 
 table.experience tr td img {
 	width:200px;
+}
+
+table.dialog tr td {
+	vertical-align: top;
+	font-size: 0.8em;
+}
+
+table.dialog tr td h1 {
+	font-size: 1em;
 }
 
 .mission {
@@ -112,9 +123,45 @@ table.experience tr td img {
 .modal-dialog-body{
 	position:fixed;
 	width:500px;
-    margin: 300px 300px;
-    background-color: #fff;
-    border:3px solid #000;
+	left: 50%;
+    margin: 200px -250px;
+    background-color: #EEEEEE;
+    border:3px solid #330000;
     padding:15px;
     border-radius: 10px;
+    color: #111;
+}
+
+.skills-grid-body{
+	position:fixed;
+	width:750px;
+	left: 50%;
+	margin: 200px -375px;
+    background-color: #EEEEEE;
+    border:3px solid #330000;
+    padding:15px;
+    color: #111;
+}
+
+.basics-links {
+	width: 200px;
+	padding: 0 10px 0 10px;
+}
+
+.skill {
+	float: left;
+	width: 110px;
+	padding: 10px;
+	margin: 10px;
+	background-color: #333333;
+	color: #fff;
+}
+
+.skill-close {
+	background-color: #AA0000;
+	
+}
+
+.no-underline {
+	text-decoration: none;
 }
