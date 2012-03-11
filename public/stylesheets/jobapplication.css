@@ -33,7 +33,7 @@ p {
 }
 
 table tr td {
-	padding: 0px 5px 0px 5px;
+	padding: 5px 5px 5px 5px;
 }
 
 table.experience {
@@ -80,6 +80,22 @@ table.experience tr td img {
 
 .rbx-button {
 	background: url('/images/JobApp/RBX.png') bottom;
+}
+
+.graphics-button {
+	background: url('/images/JobApp/Graphics.png') bottom;
+}
+
+.teldio-video-button {
+	background: url('/images/JobApp/TeldioVideo.png') bottom;
+}
+
+.northstar-video-button {
+	background: url('/images/JobApp/NorthstarVideo.png') bottom;
+}
+
+.photos-button {
+	background: url('/images/JobApp/Photos.png') bottom;
 }
 
 

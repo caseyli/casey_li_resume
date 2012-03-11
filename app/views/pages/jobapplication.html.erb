@@ -21,16 +21,16 @@
 					<%= image_tag "JobApp/PersonalRails.png" %>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item capo-button' href="#"></a>
+					<a dialog_to_open='#capo_dialog' class='portfolio-item capo-button' href="#"></a>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item md-button' href="#"></a>
+					<a dialog_to_open='#md_dialog' class='portfolio-item md-button' href="#"></a>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item wwwp-button' href="#"></a>
+					<a dialog_to_open='#wwwp_dialog' class='portfolio-item wwwp-button' href="#"></a>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item caseyli-button' href="#"></a>
+					<a dialog_to_open='#caseylicom_dialog' class='portfolio-item caseyli-button' href="#"></a>
 				</td>
 			</tr>
 			<tr>
@@ -38,10 +38,10 @@
 					<%= image_tag "JobApp/ProRails.png" %>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item teldio-button' href="#"></a>
+					<a dialog_to_open='#teldio_dialog' class='portfolio-item teldio-button' href="#"></a>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item rbx-button' href="#"></a>
+					<a dialog_to_open='#rbx_dialog' class='portfolio-item rbx-button' href="#"></a>
 				</td>
 				<td>
 					
@@ -86,16 +86,16 @@
 					<%= image_tag "JobApp/MediaPortfolio.png"%>
 				</td>
 				<td>
-					<a id='capo_dialog_link' class='portfolio-item' href="#"><%= image_tag "JobApp/Graphics.png" %></a>
+					<a dialog_to_open='#graphics_dialog' class='portfolio-item graphics-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/TeldioVideo.png" %>
+					<a dialog_to_open='#teldio_video_dialog' class='portfolio-item teldio-video-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/NorthstarVideo.png" %>
+					<a dialog_to_open='#northstar_video_dialog' class='portfolio-item northstar-video-button' href="#"></a>
 				</td>
 				<td>
-					<%= image_tag "JobApp/Photos.png" %>
+					<a dialog_to_open='#photos_dialog' class='portfolio-item photos-button' href="#"></a>
 				</td>
 			</tr>
 		</table>
@@ -129,31 +129,126 @@
 	</div>
 </p>
 
+<!-- PORTFOLIO DETAIL DIALOGS -->
+
 <div id='capo_dialog' class='modal-dialog' style="display:none;">
 	<div class='modal-dialog-body'>
 		Hello, World!
 		<div class>
-			<a id='close_dialog_link' href="#">Close</a>	
+			<a class='close-dialog-link' dialog_to_close="#capo_dialog" href="#">Close</a>	
 		</div>
 		
 	</div>
-	
 </div>
+
+<div id='md_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Marilyn and Douglas
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#md_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='wwwp_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		WWWP
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#wwwp_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='caseylicom_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		caseyli.com
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#caseylicom_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='teldio_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Teldio Corporate Site
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#teldio_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='rbx_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Rbx Dialog
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#rbx_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='graphics_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Graphics
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#graphics_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='teldio_video_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Teldio Video
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#teldio_video_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='northstar_video_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Northstar Video
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#northstar_video_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+<div id='photos_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		Photos
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#photos_dialog" href="#">Close</a>	
+		</div>
+	</div>
+</div>
+
+
+<!-- EVENT HANDLERS -->
 
 <script type="text/javascript">
 	$(function(){
-		$("#capo_dialog_link").click(function(){
-			toggleDialog("#capo_dialog");
+		$(".portfolio-item").click(function(e){
+			toggleDialog($(e.target).attr("dialog_to_open"));
 			return false;
 		});
 		
-		$("#close_dialog_link").click(function(){
-			toggleDialog("#capo_dialog");
+		$("#md_dialog_link").click(function(){
+			toggleDialog("#md_dialog");
+			return false;
+		});
+		
+		$(".close-dialog-link").click(function(e){
+			toggleDialog($(e.target).attr("dialog_to_close"));
+			return false;
+		});
+		
+		$("#close_md_dialog_link").click(function(){
+			toggleDialog("#md_dialog");
 			return false;
 		});
 	});
 	
 	function toggleDialog(dialog_id){
-		$("#capo_dialog").fadeToggle(400);
+		$(dialog_id).fadeToggle(400);
 	}
 </script>
