@@ -1,0 +1,126 @@
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/MarketingHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='portfolio'>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/MediaPortfolio.png"%>
+				</td>
+				<td>
+					<a dialog_to_open='#graphics_dialog' class='portfolio-item graphics-button' href="#"></a>
+				</td>
+				<td>
+					<a dialog_to_open='#teldio_video_dialog' class='portfolio-item teldio-video-button' href="#"></a>
+				</td>
+				<td>
+					<a dialog_to_open='#northstar_video_dialog' class='portfolio-item northstar-video-button' href="#"></a>
+				</td>
+				<td>
+					<a dialog_to_open='#photos_dialog' class='portfolio-item photos-button' href="#"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<!-- Dialogs -->
+
+<div id='graphics_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		<table class='dialog'>
+			<tr>
+				<td>
+					<%= image_tag 'JobApp/GraphicsLogo.png' %>
+				</td>
+				<td>
+					<h1>Graphic Design</h1>
+					<p>
+						Starting as a hobby in High School, and building in University, Graphic Design was always a strong presence
+						in my life. As this became known at NorthStar Utilities Solutions, I started producing marketing collatoral for
+						Trade Shows, Brochures, Websites, and more. My work in Graphic Design carried on when I moved to Teldio as well.
+					</p>
+					<div class>
+						<a href="http://caseyli.carbonmade.com/projects/3173392#1" target="_blank"><%= image_tag "JobApp/view.png" %></a>
+						<a class='close-dialog-link' dialog_to_close="#graphics_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id='teldio_video_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		<table class='dialog'>
+			<tr>
+				<td>
+					<%= image_tag 'JobApp/TeldioLogo.png' %>
+				</td>
+				<td>
+					<h1>Film: Teldio Video</h1>
+					<p>
+						Like Graphic Design, Film was another big hobby turned career. It began in University where I filmed a couple
+						of amateur films and documentaries that led me to attending the Vancouver Film School. The skills I acquired
+						proved useful as I began to use them in my professional career. Everything from filming Promotional Videos, to
+						Wedding Videos, to Corporate Training - Film remained a big part of my life. This Teldio Corporate Video
+						is one example.
+					</p>
+					<div class>
+						<a href="#" target="_blank"><%= image_tag "JobApp/view.png" %></a>
+						<a class='close-dialog-link' dialog_to_close="#teldio_video_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id='northstar_video_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		<table class='dialog'>
+			<tr>
+				<td>
+					<%= image_tag 'JobApp/NorthstarLogo.png' %>
+				</td>
+				<td>
+					<h1>Film: NorthStar Utilities Solutions Video</h1>
+					<p>
+						Like Graphic Design, Film was another big hobby turned career. It began in University where I filmed a couple
+						of amateur films and documentaries that led me to attending the Vancouver Film School. The skills I acquired
+						proved useful as I began to use them in my professional career. Everything from filming Promotional Videos, to
+						Wedding Videos, to Corporate Training - Film remained a big part of my life. This NorthStar Utilities Solution
+						video is something I made to show at a Leadership Conference.
+					</p>
+					<div class>
+						<a href="http://vimeo.com/24576453" target="_blank"><%= image_tag "JobApp/view.png" %></a>
+						<a class='close-dialog-link' dialog_to_close="#northstar_video_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div id='photos_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		<table class='dialog'>
+			<tr>
+				<td>
+					<%= image_tag 'JobApp/PhotosLogo.png' %>
+				</td>
+				<td>
+					<h1>Photography</h1>
+					Springing up last among my arts (software, music, film), photography was something that I always wanted to get into
+					and in the last few years made it happen. Today I shoot for marketing materials as well as weddings. It's an art
+					that I've built up very quickly applying a lot of my design eye and skills I acquired through my other art.
+					<div class>
+						<a href="http://caseyli.carbonmade.com/projects/3173429#1" target="_blank"><%= image_tag "JobApp/view.png" %></a>
+						<a class='close-dialog-link' dialog_to_close="#photos_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<!-- EVENT HANDLERS -->
+
+<script type="text/javascript">
+	$(function(){
+		
+		/* Basics Links */
+		$("#skills_grid_link").click(function(){
+			toggleDialog("#skills_grid");
+			return false;
+		});
+		
+		$("#cover_letter_link").click(function(){
+			toggleDialog("#cover_letter");
+			return false;
+		});
+		
+		/* Portfolio Links */
+		$(".portfolio-item").click(function(e){
+			toggleDialog($(e.target).attr("dialog_to_open"));
+			return false;
+		});
+		
+		$(".experience-item").click(function(e){
+			toggleDialog($(e.target).parent().attr("dialog_to_open"));
+			return false;
+		});
+		
+		$(".close-dialog-link").click(function(e){
+			toggleDialog($(e.target).parent().attr("dialog_to_close"));
+			return false;
+		});
+		
+	});
+	
+	function toggleDialog(dialog_id){
+		$(dialog_id).fadeToggle(400);
+	}
+</script>

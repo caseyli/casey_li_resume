@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-	margin: 225px auto;
+	margin: 224px auto;
 	width: 900px;
 	border-radius: 50px;
 	
@@ -16,7 +16,7 @@ body {
 	background-color: #FFFFFF;
 }
 
-.center-image {
+.center {
 	display: block;
 	text-align: center;
 }
@@ -31,7 +31,11 @@ p {
 }
 
 .section-body {
-	padding: 20px 30px;
+	padding: 50px 0px;
+}
+
+table {
+	margin: 0 auto;
 }
 
 table tr td {
@@ -51,7 +55,7 @@ table.dialog tr td {
 	font-size: 0.8em;
 }
 
-table.dialog tr td h1 {
+.modal-dialog-body h1 {
 	font-size: 1em;
 }
 
@@ -124,7 +128,7 @@ table.dialog tr td h1 {
 	position:fixed;
 	width:500px;
 	left: 50%;
-    margin: 200px -250px;
+    margin: 200px -265px;
     background-color: #EEEEEE;
     border:3px solid #330000;
     padding:15px;
@@ -136,10 +140,26 @@ table.dialog tr td h1 {
 	position:fixed;
 	width:750px;
 	left: 50%;
-	margin: 200px -375px;
+	margin: 200px -390px;
     background-color: #EEEEEE;
     border:3px solid #330000;
     padding:15px;
+    color: #111;
+}
+
+.cover-letter-body{
+	
+	background-color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	
+	position:relative;
+	width:750px;
+	left: 50%;
+	margin: 100px -445px;
+    border: 20px inset;
+    border-color:#AAAAAA;
+    padding:50px;
     color: #111;
 }
 
@@ -158,8 +178,12 @@ table.dialog tr td h1 {
 }
 
 .skill-close {
-	background-color: #AA0000;
-	
+	background-color: #AA0000;	
+}
+
+.my-skills {
+	font-size: 2em;
+	font-weight: bold;
 }
 
 .no-underline {

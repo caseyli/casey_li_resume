@@ -1,0 +1,43 @@
+<p>
+	<div class='center'>
+		<a href='#' id='cover_letter_link'><%= image_tag "JobApp/coverletter.png", :class => "basics-links" %></a>
+		<a href='#' id='skills_grid_link'><%= image_tag "JobApp/skillsgrid.png", :class => "basics-links" %></a>
+		<a href='/Casey Li - Resume.pdf' id='resume'><%= image_tag "JobApp/traditionalresume.png", :class => "basics-links" %></a>
+	</div>
+	<br/>
+	<div class='center'>
+		<a href='http://www.github.com/caseyli' target='_blank'><%= image_tag "JobApp/githubaccount.png", :class => "basics-links" %></a>
+	</div>
+</p>
+
+<!-- Cover Letter -->
+<div id='cover_letter' class='modal-dialog' style="display:none;">
+	<div class='cover-letter-body'>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper, erat non laoreet dictum, dui nisi viverra diam, et blandit dui lectus id odio. Mauris massa augue, viverra et rhoncus vel, posuere eu elit. Aenean luctus magna ut sapien pretium vitae lacinia metus vehicula. Phasellus tincidunt, tellus eget posuere viverra, orci nisl tincidunt lacus, in rhoncus enim nunc a lacus. Proin ac tortor massa, quis tempus leo. Vivamus luctus massa sed nulla facilisis blandit commodo mi tempus. Donec ante est, tincidunt sed mollis eget, laoreet eu ipsum. Maecenas sit amet odio quis tellus pulvinar malesuada. Mauris interdum purus non libero dictum in pulvinar orci posuere. Integer eget diam lectus. Sed sed sapien eros, a faucibus urna. Donec placerat justo eget erat mollis fermentum ut vel lectus. Quisque ligula tortor, ultrices in porttitor at, iaculis ac arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus lacinia est vitae risus venenatis ut auctor quam fringilla.
+
+Nunc blandit posuere odio quis condimentum. Cras fringilla eleifend neque. Sed iaculis, lacus vitae placerat sollicitudin, purus lectus semper eros, a egestas nunc mauris non libero. In hac habitasse platea dictumst. Proin vitae tortor at erat luctus viverra eget ut orci. Etiam condimentum ligula a tellus consequat vitae mattis magna commodo. Praesent nec ante ligula. Suspendisse hendrerit neque et lorem dignissim a venenatis massa ornare. Mauris pretium dignissim ultricies. Nam sit amet tellus lectus, ut ornare orci. Maecenas quis neque felis. Morbi a lacinia nisi. Sed ultrices porta convallis. Phasellus pulvinar pellentesque quam, sed tincidunt augue imperdiet in. Vestibulum scelerisque iaculis orci.
+
+Cras laoreet, libero id facilisis pellentesque, metus felis rhoncus mi, id malesuada elit felis ut turpis. Phasellus sit amet nunc at quam bibendum pretium at ut justo. Aliquam nibh turpis, eleifend a feugiat non, fermentum sit amet odio. Sed sed mi at risus feugiat elementum sit amet nec massa. In hac habitasse platea dictumst. Donec semper fermentum tristique. Integer ultrices molestie facilisis. Quisque ultricies risus in est elementum vitae scelerisque urna pretium. Donec vel ante velit. Etiam a turpis nisl, nec laoreet magna. Donec pretium pretium est non fermentum. Proin lorem ante, laoreet condimentum mattis at, cursus ac arcu. Pellentesque pretium mi non orci venenatis interdum. Fusce a eros eros, nec auctor lorem. Donec varius placerat nunc, in scelerisque turpis viverra ut. Phasellus pharetra, nisl non elementum faucibus, enim tellus blandit mauris, id molestie purus augue at nulla.
+
+Curabitur tortor tellus, placerat vel viverra eu, varius sed neque. Nulla facilisi. Sed at leo augue. Vivamus eu dolor vitae diam ultricies vulputate. Integer in lectus arcu, at egestas neque. Quisque tincidunt consequat dolor, at bibendum elit condimentum et. Mauris in elit nec odio interdum rhoncus. Sed nec sem euismod eros sollicitudin placerat vel in eros.
+
+Ut augue massa, pulvinar a semper quis, tincidunt non libero. In sed lorem et nisi tincidunt auctor a sit amet tellus. Donec vel gravida est. Aenean at lacus ac urna dapibus ornare fringilla quis mauris. Curabitur interdum condimentum tellus, sit amet pharetra mi vehicula ac. Duis eget magna eu dolor gravida egestas. Duis luctus posuere mi, id pharetra nibh tempor ut. Sed sollicitudin lectus ut justo elementum feugiat. Morbi non nisi a lacus gravida scelerisque. Fusce fringilla dolor vel leo mollis semper. Suspendisse lacinia hendrerit ornare. Cras eleifend lectus et lorem feugiat a tristique erat facilisis. Donec vehicula imperdiet faucibus. Maecenas mauris mauris, rutrum quis ornare at, faucibus a dui.
+		<a class='close-dialog-link no-underline' dialog_to_close="#cover_letter" href="#"><div>CLOSE [X]</div></a>
+		</div>
+	</div>
+</div>
+
+<!-- Skills Grid -->
+<div id='skills_grid' class='modal-dialog' style="display:none;">
+	<div class='skills-grid-body'>
+		<div class='my-skills'>/my_skills</div>
+		<div class='skills'>
+			<% @skills.each do |skill| %>
+				<div class='skill'><%= skill %></div>	
+			<% end %>
+		</div>
+		<div>
+		<a class='close-dialog-link no-underline' dialog_to_close="#skills_grid" href="#"><div class='skill skill-close'>CLOSE [X]</div></a>
+		</div>
+	</div>
+</div>

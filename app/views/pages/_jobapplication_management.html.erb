@@ -1,0 +1,68 @@
+<p>
+	<div class='section-header'>
+		<%= image_tag "JobApp/ManagementHeader.png" %>
+	</div>
+	<div class='section-body'>
+		<table class='experience'>
+			<tr>
+				<td>
+					<a dialog_to_open='#scrum_dialog' class='experience-item' href="#"><%= image_tag "JobApp/Scrum.png" %></a>
+				</td>
+				<td>
+					<a dialog_to_open='#people_dialog' class='experience-item' href="#"><%= image_tag "JobApp/PeopleManagement.png" %></a>
+				</td>
+				<td>
+					<a dialog_to_open='#product_dialog' class='experience-item' href="#"><%= image_tag "JobApp/ProductManagement.png" %></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+</p>
+
+<!-- Dialogs -->
+
+<div id='scrum_dialog' class='modal-dialog' style='display:none;'>
+	<div class='modal-dialog-body'>
+		<h1>Scrum Methologies</h1>
+		<p>
+			I really became familiar with Scrum Methodologies when I was appointed Product Owner at Teldio. On top of pure
+			Product Owner responsibilities, I was also in charge of re-instituting Scrum into the company process and
+			enforcing it throughout. I was successful in bringing predictable, controlled delivery of our products with
+			consistent quality.
+		</p>
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#scrum_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+		</div>
+	</div>
+</div>
+
+<div id='people_dialog' class='modal-dialog' style='display:none;'>
+	<div class='modal-dialog-body'>
+		<h1>Team Lead at NorthStar Utilities Solutions</h1>
+		<p>
+			As Team Lead of Add-Ons at NorthStar Utilities Solutions, I gained a lot of experience managing people.
+			Between the resources I managed from Professional Services and Support to the numerous Co-op students
+			I mentored, the range of employees I dealt with taught me a lot about people management. I still
+			have a long way to go, but dealing with people is something I have a great start with.
+		</p>
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#people_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+		</div>
+	</div>
+</div>
+
+<div id='product_dialog' class='modal-dialog' style='display:none;'>
+	<div class='modal-dialog-body'>
+		<h1>Product Owner at Teldio</h1>
+		<p>
+			As Product Owner at Teldio, I gained a big appreciation to the complexities in delivering quality products
+			to customers while maintaining a vision for the direction of those products. I gained experienced in balancing
+			urgent customer requests and wishlists from internal staff. Being Product Owner was definitely an eye opener
+			for me being a Software Engineer all my life.
+		</p>
+		<div class>
+			<a class='close-dialog-link' dialog_to_close="#product_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+		</div>
+	</div>
+</div>
+
