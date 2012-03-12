@@ -3,6 +3,11 @@
 <script type="text/javascript">
 	$(function(){
 		
+		$(".modal-dialog").click(function() {
+			$(".modal-dialog").fadeOut(400);
+		});
+		
+		
 		/* Basics Links */
 		$("#skills_grid_link").click(function(){
 			toggleDialog("#skills_grid");
