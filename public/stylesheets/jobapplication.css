@@ -139,8 +139,9 @@ table.dialog tr td {
 .skills-grid-body{
 	position:fixed;
 	width:750px;
+	top: 50%;
 	left: 50%;
-	margin: 200px -390px;
+	margin: -300px -390px;
     background-color: #EEEEEE;
     border:3px solid #330000;
     padding:15px;
