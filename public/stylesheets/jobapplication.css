@@ -149,6 +149,7 @@ table.dialog tr td {
 
 .cover-letter-body{
 	
+	background-image: url("/images/JobApp/coverletterheader.png");
 	background-color: #FFFFFF;
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -156,11 +157,17 @@ table.dialog tr td {
 	position:relative;
 	width:750px;
 	left: 50%;
-	margin: 400px -445px;
-    border: 20px inset;
-    border-color:#AAAAAA;
+	margin: 300px -435px;
+    border: 10px inset;
+    border-color:#447744;
     padding:50px;
     color: #111;
+    font-size: 0.9em;
+}
+
+.cover-letter-body a {
+	font-weight: bold;
+	color: #000000;
 }
 
 .basics-links {
