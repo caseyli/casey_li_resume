@@ -1,3 +1,5 @@
+/* General Elements */
+
 body {
 	background-color: #000000;
 	background-image: url("/images/JobApp/TopBanner.png");
@@ -12,7 +14,7 @@ body {
 	width: 900px;
 	border-radius: 50px;
 	
-	padding: 0px;
+	padding: 0px 0px 50px 0px;
 	background-color: #FFFFFF;
 }
 
@@ -22,7 +24,7 @@ body {
 }
 
 p {
-	padding: 5px 0 5px 0;
+	padding: 5px 0 0px 0;
 }
 
 .section-header {
@@ -34,12 +36,31 @@ p {
 	padding: 50px 0px;
 }
 
+a {
+	border: none;
+	color: #888888;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+}
+
+/* Tables */
+
 table {
 	margin: 0 auto;
+	border-style: none;
+	border-spacing: 2px;
 }
 
 table tr td {
-	padding: 5px 5px 5px 5px;
+	padding: 0px 0px 0px 0px;
+	border-style: none;
+}
+
+table tr td img {
+	margin-top: 3px;
 }
 
 table.experience {
@@ -49,6 +70,8 @@ table.experience {
 table.experience tr td img {
 	width:200px;
 }
+
+/* Modal Dialogs */
 
 table.dialog tr td {
 	vertical-align: top;
@@ -60,7 +83,7 @@ table.dialog tr td {
 }
 
 .mission {
-	padding-top: 30px;
+	padding-top: 0px;
 }
 
 .portfolio-item {
@@ -97,6 +120,10 @@ table.dialog tr td {
 	background: url('/images/JobApp/RBX.png') bottom;
 }
 
+.sidexside-button {
+	background: url('/images/JobApp/SideXSide.png') bottom;
+}
+
 .graphics-button {
 	background: url('/images/JobApp/Graphics.png') bottom;
 }
@@ -112,7 +139,6 @@ table.dialog tr td {
 .photos-button {
 	background: url('/images/JobApp/Photos.png') bottom;
 }
-
 
 .modal-dialog {
     position: absolute;
@@ -197,3 +223,10 @@ table.dialog tr td {
 .no-underline {
 	text-decoration: none;
 }
+
+.top-contact {
+	margin-left: 150px;
+	color: #888888;
+	font-size: 1.2em;
+}
+

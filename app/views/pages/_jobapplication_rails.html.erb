@@ -38,6 +38,20 @@
 					
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<%= image_tag "JobApp/ShopifyRails.png" %>
+				</td>
+				<td>
+					<a dialog_to_open='#sidexside_dialog' class='portfolio-item sidexside-button' href="#"></a>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>				
+			</tr>
 		</table>
 	</div>
 </p>
@@ -200,3 +214,28 @@
 	</div>
 </div>
 
+<div id='sidexside_dialog' class='modal-dialog' style="display:none;">
+	<div class='modal-dialog-body'>
+		<table class='dialog'>
+			<tr>
+				<td>
+					<%= image_tag 'JobApp/SideXSideLogo.png' %>
+				</td>
+				<td>
+					<h1>SIDEXSIDE</h1>
+					<p>
+						SIDEXSIDE is my first Shopify App that I just started building recently. It is still a work in progress
+						but it has gotten me familiar with the App creation and deployment process as well as the Shopify API itself. 
+						I took a look at the wish list and started getting to work on this app that allows you to compare products side by side.
+						Backlog ideas include Diff like functionality (copy right, copy left) and ability to compare variants
+						of products.
+					</p>
+					<div class>
+						<a href="http://sidexside.heroku.com" target="_blank"><%= image_tag "JobApp/view.png" %></a>
+						<a class='close-dialog-link' dialog_to_close="#sidexside_dialog" href="#"><%= image_tag "JobApp/close.png" %></a>	
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
