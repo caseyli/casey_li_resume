@@ -162,6 +162,18 @@ table.dialog tr td {
     color: #111;
 }
 
+.vimeo-video-modal-dialog-body {
+	width: 600px;
+	left: 50%;
+	margin: 100px -315px;	
+}
+
+.youtube-video-modal-dialog-body {
+	width: 775px;
+	left: 50%;
+	margin: 100px -403px;	
+}
+
 .skills-grid-body{
 	position:fixed;
 	width:750px;

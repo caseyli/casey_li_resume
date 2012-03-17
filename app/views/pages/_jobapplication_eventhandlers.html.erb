@@ -33,6 +33,30 @@
 	});
 	
 	function toggleDialog(dialog_id){
+		if (dialog_id == "#northstar_video_dialog") {
+			if ($(dialog_id).is(':visible')) {
+				$("#vimeo_northstar").html("");
+			}
+			else {
+				ihtml = '<iframe src="http://player.vimeo.com/video/24576453?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/24576453">NorthStar Utilities Solutions Commercial</a> from <a href="http://vimeo.com/user4962983">Casey Li</a> on <a href="http://vimeo.com">Vimeo</a>.</p>';
+				$("#vimeo_northstar").html(ihtml);
+				
+			}
+		}
+		
+		if (dialog_id == "#teldio_video_dialog") {
+			if ($(dialog_id).is(':visible')) {
+				$("#youtube_teldio").html("");
+			}
+			else {
+				ihtml = '<iframe width="560" height="315" src="http://www.youtube.com/embed/qD0RIf6jHF8" frameborder="0" allowfullscreen></iframe>';
+				/*ihtml = '<object style="height: 385px; width: 640px"><param name="movie" value="http://www.youtube.com/v/obu86GMx1FU?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/obu86GMx1FU?version=3&feature=player_detailpage" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>';*/
+				$("#youtube_teldio").html(ihtml);
+				
+			}
+		}
+		
+		
 		$(dialog_id).fadeToggle(400);
 	}
 </script>
