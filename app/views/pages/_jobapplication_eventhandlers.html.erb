@@ -33,6 +33,8 @@
 	});
 	
 	function toggleDialog(dialog_id){
+		
+		/* When Closing the Video Dialogs, in case the user doesn't press stop, remove the video tag */
 		if (dialog_id == "#northstar_video_dialog") {
 			if ($(dialog_id).is(':visible')) {
 				$("#vimeo_northstar").html("");
@@ -44,6 +46,7 @@
 			}
 		}
 		
+		/* When Closing the Video Dialogs, in case the user doesn't press stop, remove the video tag */
 		if (dialog_id == "#teldio_video_dialog") {
 			if ($(dialog_id).is(':visible')) {
 				$("#youtube_teldio").html("");
