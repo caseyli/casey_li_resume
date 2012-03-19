@@ -83,7 +83,7 @@ table.dialog tr td {
 }
 
 .mission {
-	padding-top: 0px;
+	padding-top: 20px;
 }
 
 .portfolio-item {
@@ -235,10 +235,3 @@ table.dialog tr td {
 .no-underline {
 	text-decoration: none;
 }
-
-.top-contact {
-	margin-left: 150px;
-	color: #888888;
-	font-size: 1.2em;
-}
-
