@@ -42,6 +42,10 @@ a {
 	text-decoration: none;
 }
 
+a img {
+	border-style: none;
+}
+
 a:hover {
 	color: #000000;
 }
