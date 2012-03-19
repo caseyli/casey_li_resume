@@ -20,7 +20,7 @@ CaseyLiResume::Application.routes.draw do
   
   post "pages/contact"
   
-  root :to => 'pages#home'
+  root :to => 'pages#jobapplication'
   
   match '/skills', :to => "pages#skills"
   match '/work_experience', :to => "pages#work_experience"
@@ -31,6 +31,7 @@ CaseyLiResume::Application.routes.draw do
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/jobapplication', :to => "pages#jobapplication"
+  match '/home', :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

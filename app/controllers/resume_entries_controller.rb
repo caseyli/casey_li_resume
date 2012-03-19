@@ -3,7 +3,9 @@ class ResumeEntriesController < ApplicationController
   before_filter :authenticate
   
   def new
-    redirect_to root_path
+    # Temporary Redirect during Job Application Period
+    # redirect_to root_path
+    redirect_to "/home"
   end
   
   def create

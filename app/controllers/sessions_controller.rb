@@ -11,13 +11,19 @@ class SessionsController < ApplicationController
       render 'new'
     else
       session[:signedin] = true
-      redirect_back_or(root_path)
+      
+      # Temporary Redirect during Job Application Period
+      # redirect_back_or(root_path)
+      redirect_back_or("/home")
     end
   end
   
   def destroy
     session[:signedin] = nil
-    redirect_to root_path
+    
+    # Temporary Redirect during Job Application Period
+    # redirect_to root_path
+    redirect_to "/home"
   end
     
   private 
