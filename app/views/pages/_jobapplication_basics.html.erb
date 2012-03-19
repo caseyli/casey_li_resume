@@ -1,12 +1,13 @@
 <p>
 	<div class='center'>
-		<a href='#' id='cover_letter_link'><%= image_tag "JobApp/coverletter.png", :class => "basics-links" %></a>
-		<a href='#' id='skills_grid_link'><%= image_tag "JobApp/skillsgrid.png", :class => "basics-links" %></a>
-		<a href='/Casey Li - Resume.pdf' id='resume'><%= image_tag "JobApp/traditionalresume.png", :class => "basics-links" %></a>
+		<%= link_to image_tag("JobApp/coverletter.png", :class => "basics-links"), "#", :id => 'cover_letter_link' %>
+		<%= link_to image_tag("JobApp/skillsgrid.png", :class => "basics-links"), "#", :id => 'skills_grid_link' %>
+		<%= link_to image_tag("JobApp/traditionalresume.png", :class => "basics-links"), '/Casey Li - Resume.pdf', :id => 'resume', :target => "_blank" %>
 	</div>
 	<br/>
 	<div class='center'>
-		<a href='http://www.github.com/caseyli' target='_blank'><%= image_tag "JobApp/githubaccount.png", :class => "basics-links" %></a>
+		<%= link_to image_tag("JobApp/githubaccount.png", :class => "basics-links"), 'http://www.github.com/caseyli', :target =>'_blank' %>
+		<%= link_to image_tag("JobApp/LinkedIn.png", :class=>'basics-links'), "http://ca.linkedin.com/pub/casey-li/37/49a/7", :target => '_blank' %>
 	</div>
 </p>
 
