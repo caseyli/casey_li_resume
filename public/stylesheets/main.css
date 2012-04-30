@@ -233,3 +233,13 @@ table.footertable {
 table.footertable tr td {
 	text-align: center;
 }
+
+/* Gitting to Know You */
+ul.videos li {
+	padding-bottom: 10px;
+}
+
+ul.videos li a {
+	font-size: 2em;
+	text-decoration: none;
+}

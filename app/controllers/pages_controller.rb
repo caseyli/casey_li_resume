@@ -35,6 +35,11 @@ class PagesController < ApplicationController
     @title = "About"
   end
   
+  def gittingtoknowyou
+    @title = "Gitting to Know You | Git Tutorial Videos"
+    render :layout => "empty"
+  end
+  
   def contact
     @success = false
     if !params[:email_address].blank? && !params[:message].blank?
