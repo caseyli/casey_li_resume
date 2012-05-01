@@ -21,7 +21,7 @@ CaseyLiResume::Application.routes.draw do
   
   post "pages/contact"
   
-  root :to => 'pages#jobapplication'
+  root :to => 'pages#home'
   
   match '/skills', :to => "pages#skills"
   match '/work_experience', :to => "pages#work_experience"
