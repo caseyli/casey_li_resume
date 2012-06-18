@@ -11,3 +11,4 @@ doc/
 .DS_Store
 Gemfile.lock
 .sass-cache/
+*.dat
