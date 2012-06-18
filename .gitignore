@@ -10,4 +10,4 @@ doc/
 .project
 .DS_Store
 Gemfile.lock
-
+.sass-cache/
