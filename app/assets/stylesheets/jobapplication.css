@@ -2,7 +2,7 @@
 
 body {
 	background-color: #000000;
-	background-image: url("/assets/JobApp/TopBanner.png");
+	background-image: url("/images/JobApp/TopBanner.png");
 	background-position: center top;
 	background-repeat: no-repeat;
 	
@@ -101,47 +101,47 @@ table.dialog tr td {
 }
 
 .capo-button {
-	background: url('/assets/JobApp/Capo.png') bottom;	
+	background: url('/images/JobApp/Capo.png') bottom;	
 }
 
 .md-button {
-	background: url('/assets/JobApp/MarilynAndDouglas.png') bottom;	
+	background: url('/images/JobApp/MarilynAndDouglas.png') bottom;	
 }
 
 .wwwp-button {
-	background: url('/assets/JobApp/wwwp.png') bottom;	
+	background: url('/images/JobApp/wwwp.png') bottom;	
 }
 
 .caseyli-button {
-	background: url('/assets/JobApp/caseylicom.png') bottom;	
+	background: url('/images/JobApp/caseylicom.png') bottom;	
 }
 
 .teldio-button {
-	background: url('/assets/JobApp/Teldio.png') bottom;
+	background: url('/images/JobApp/Teldio.png') bottom;
 }
 
 .rbx-button {
-	background: url('/assets/JobApp/RBX.png') bottom;
+	background: url('/images/JobApp/RBX.png') bottom;
 }
 
 .sidexside-button {
-	background: url('/assets/JobApp/SideXSide.png') bottom;
+	background: url('/images/JobApp/SideXSide.png') bottom;
 }
 
 .graphics-button {
-	background: url('/assets/JobApp/Graphics.png') bottom;
+	background: url('/images/JobApp/Graphics.png') bottom;
 }
 
 .teldio-video-button {
-	background: url('/assets/JobApp/TeldioVideo.png') bottom;
+	background: url('/images/JobApp/TeldioVideo.png') bottom;
 }
 
 .northstar-video-button {
-	background: url('/assets/JobApp/NorthstarVideo.png') bottom;
+	background: url('/images/JobApp/NorthstarVideo.png') bottom;
 }
 
 .photos-button {
-	background: url('/assets/JobApp/Photos.png') bottom;
+	background: url('/images/JobApp/Photos.png') bottom;
 }
 
 .modal-dialog {
@@ -151,7 +151,7 @@ table.dialog tr td {
     width:100%;
     height:4000px;
     z-index: 1000;
-    background-image: url("/assets/JobApp/background-trans.png");
+    background-image: url("/images/JobApp/background-trans.png");
 }
 
 .modal-dialog-body{
@@ -192,7 +192,7 @@ table.dialog tr td {
 
 .cover-letter-body{
 	
-	background-image: url("/assets/JobApp/coverletterheader.png");
+	background-image: url("/images/JobApp/coverletterheader.png");
 	background-color: #FFFFFF;
 	background-position: center top;
 	background-repeat: no-repeat;
