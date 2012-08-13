@@ -1,4 +1,9 @@
 class PagesController < ApplicationController
+  def landing
+    @title = "Casey Li"
+    render :layout => "layouts/landing"
+  end
+  
   def home
     @title = "Home"
   end
@@ -35,9 +40,13 @@ class PagesController < ApplicationController
     @title = "About"
   end
   
-  def gittingtoknowyou
-    @title = "Gitting to Know You | Git Tutorial Videos"
+  def videos
+    @title = "Videos"
     render :layout => "empty"
+  end
+  
+  def gittingtoknowyou
+    redirect_to "/videos"
   end
   
   def contact

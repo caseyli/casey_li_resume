@@ -1,0 +1,42 @@
+body {
+	background: #fff;
+	font-family: Rokkitt;
+}
+
+h1 {
+	font-size: 50px;
+	font-weight:bold;
+	border-bottom: 1px solid;
+	border-color: #BBB;
+	color:#888;
+}
+
+.landing-list {
+	list-style:none;
+	padding-left:0px;
+	
+	a{
+		font-size: 20px;
+		text-decoration:none;
+		li {
+			padding: 20px;
+			border-radius: 20px;
+			transition: 200ms;
+			-moz-transition: 200ms; /* Firefox 4 */
+			-webkit-transition: 200ms; /* Safari and Chrome */
+			-o-transition: 200ms; /* Opera */
+			
+			td.header {
+				width: 300px;
+				font-size: 90px;
+			}
+			
+			&:hover{
+				color:#EEE;
+				background:black;
+			}
+
+		}
+	}
+	
+}
