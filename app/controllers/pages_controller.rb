@@ -59,6 +59,11 @@ class PagesController < ApplicationController
     end
   end
   
+  def birthday2013
+    @title = "Casey Li's 31st Birthday"
+    render :layout => "blackblank"
+  end
+  
   def jobapplication
     @skills = ["Rails", 
                "Git",
