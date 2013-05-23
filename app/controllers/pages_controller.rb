@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :basic_authenticate, :only => [:engagement]
+  
   def landing
     @title = "Casey Li"
     render :layout => "layouts/landing"
@@ -64,6 +66,11 @@ class PagesController < ApplicationController
     render :layout => "blackblank"
   end
   
+  def engagement
+    @title = "An Engagement Party for Breton & Casey"
+    render :layout => "blackblank"
+  end
+  
   def jobapplication
     @skills = ["Rails", 
                "Git",
@@ -96,5 +103,14 @@ class PagesController < ApplicationController
                "Final Cut"]
     render :layout => "jobapplication"
   end
+  
+  private
+    def basic_authenticate
+      authenticate_or_request_with_http_basic do |username, password|
+        if username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
+          true
+        end
+      end
+    end
 
 end

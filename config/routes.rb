@@ -38,6 +38,7 @@ CaseyLiResume::Application.routes.draw do
   match '/gittingtoknowyou', :to => "pages#gittingtoknowyou"
   match '/videos', :to => "pages#videos"
   match '/birthday2013', :to => "pages#birthday2013"
+  match '/engagement', :to => "pages#engagement"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
