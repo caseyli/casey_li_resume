@@ -236,10 +236,17 @@ table.footertable tr td {
 
 /* Gitting to Know You */
 ul.videos li {
-	padding-bottom: 10px;
+	margin-bottom:5px;
 }
 
 ul.videos li a {
-	font-size: 2em;
+	font-size: 15px;
 	text-decoration: none;
+	padding:5px;
+	border-radius:5px;
+}
+
+ul.videos li a:hover {
+	background:#222;
+	color:white;
 }
