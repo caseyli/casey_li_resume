@@ -1,5 +1,10 @@
 body {
-	background: #fff;
+	
+	background:url(/assets/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	font-family: Rokkitt;
 }
 
@@ -8,7 +13,16 @@ h1 {
 	font-weight:bold;
 	border-bottom: 1px solid;
 	border-color: #BBB;
-	color:#888;
+	color:#fff;
+}
+
+.hero-logo {
+	text-align:center;
+	margin:50px 0px;
+	
+	img {
+		width:100%;
+	}
 }
 
 .landing-list {
@@ -16,6 +30,7 @@ h1 {
 	padding-left:0px;
 	
 	a{
+		color:white;
 		font-size: 20px;
 		text-decoration:none;
 		li {
