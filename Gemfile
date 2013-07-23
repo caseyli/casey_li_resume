@@ -16,6 +16,9 @@ end
 gem 'jquery-rails'
 gem 'newrelic_rpm'
 
+gem 'unicorn'
+gem "rack-timeout"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
