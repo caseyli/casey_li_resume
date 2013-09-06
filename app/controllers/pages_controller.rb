@@ -70,7 +70,11 @@ class PagesController < ApplicationController
     @title = "An Engagement Party for Breton & Casey"
     render :layout => "blackblank"
   end
-  
+
+  def tutorails
+		render :layout => "tutorails"
+	end
+
   def jobapplication
     @skills = ["Rails", 
                "Git",
