@@ -1,8 +1,27 @@
 $(function(){
   
   $(".tutorails-sign-up-submit").click(tutorailsSignUp);
-  
+  $("#email").keyup(validateEmail);
 });
+
+
+function validateEmail() {
+
+  var x = $("#email").val();
+  var atpos = x.indexOf("@");
+  var dotpos = x.lastIndexOf(".");
+  
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    /* Not valid email */
+    $(".sign-up-results").html("Please enter a valid e-mail");
+    $(".tutorails-sign-up-submit").slideUp(100);
+  }
+  else {
+    /* valid email */
+    $(".sign-up-results").html("Press Submit to sign up!");
+    $(".tutorails-sign-up-submit").slideDown(100);
+  }
+}
 
 function tutorailsSignUp() {
   var email = $(this).siblings("#email").val();
