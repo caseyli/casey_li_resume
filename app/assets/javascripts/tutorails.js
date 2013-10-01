@@ -1,0 +1,32 @@
+$(function(){
+  
+  $(".tutorails-sign-up-submit").click(tutorailsSignUp);
+  
+});
+
+function tutorailsSignUp() {
+  var email = $(this).siblings("#email").val();
+  
+  $(".sign-up-results").html("<i class='icon-refresh icon-spin'></i> Submitting...");
+  
+  $.ajax({
+    url: "/newsletter_sign_ups",
+    dataType: "JSON",
+    type: "POST",
+    data: { newsletter_sign_up : { email : email, category : "tutorails", notes : "" } },
+    success: function(data, textStatus, jqXHR){
+      if(data.success) {
+        $(".sign-up-results").html("Success! Thanks for signing up. You should receive a confirmation e-mail in your inbox. If not please contact casey.li@gmail.com.");
+      }
+      else {
+        $(".sign-up-results").html("Sorry, there was an error in signing up. If this continues, e-mail casey.li@gmail.com.");
+      }
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      $(".sign-up-results").html("Sorry, there was an error in signing up. If this continues, e-mail casey.li@gmail.com");
+    }
+  });
+  
+  return false;
+}

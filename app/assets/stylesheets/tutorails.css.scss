@@ -69,6 +69,46 @@ body {
         background:#333;
         color:#EEE;
     }
+    
+    
+    .sign-up {
+        
+        font-family:"Istok Web", sans-serif;
+        border:1px solid #eee;
+        border-radius:10px;
+        width:500px;
+        padding:20px;
+        margin:0 auto;
+        background:#ddd;
+        .sign-up-form {
+            margin: 20px 0;
+
+            #email {
+                padding:10px;
+                font-size:10px;
+                width:300px;
+            }
+
+            .tutorails-sign-up-submit {
+                margin-top:10px;
+                display:inline-block;
+                background:#579099;
+                border:1px solid white;
+                padding:5px 20px;
+                text-decoration:none;
+                color:white;
+                
+                &:hover {
+                    background:#fff;
+                    color:black;
+                    border-color:#579099;
+                };
+            }
+        }        
+    }
+
+    
+
 }
 
 .info-section {
@@ -101,6 +141,11 @@ body {
 .contact-section {
     background:#ddd;
     color:#333;
+    text-align:center;
+    
+    img {
+        width:200px;
+    }
 }
 
 .course-list {

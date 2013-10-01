@@ -1,5 +1,8 @@
 CaseyLiResume::Application.routes.draw do
 
+  resources :newsletter_sign_ups
+
+
   get "users/new"
 
   get "sessions/new"

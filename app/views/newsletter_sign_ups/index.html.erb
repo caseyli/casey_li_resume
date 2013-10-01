@@ -1,0 +1,27 @@
+<h1>Listing newsletter_sign_ups</h1>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Category</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newsletter_sign_ups.each do |newsletter_sign_up| %>
+  <tr>
+    <td><%= newsletter_sign_up.email %></td>
+    <td><%= newsletter_sign_up.category %></td>
+    <td><%= newsletter_sign_up.notes %></td>
+    <td><%= link_to 'Show', newsletter_sign_up %></td>
+    <td><%= link_to 'Edit', edit_newsletter_sign_up_path(newsletter_sign_up) %></td>
+    <td><%= link_to 'Destroy', newsletter_sign_up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Newsletter sign up', new_newsletter_sign_up_path %>

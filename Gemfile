@@ -40,6 +40,7 @@ gem "rack-timeout"
 # and rake tasks are available in development mode:
 group :development do
    gem 'rspec-rails', '2.6.1'
+	 gem "letter_opener"
    #gem 'annotate-models', '1.0.4'
 end
 
