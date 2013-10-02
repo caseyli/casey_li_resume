@@ -1,3 +1,5 @@
+var scrollHeaders = [];
+
 $(function(){
   $(window).scroll(windowScroll);
   $(".tutorails-sign-up-submit").click(tutorailsSignUp);
@@ -5,6 +7,10 @@ $(function(){
   $(".nav-link").click(function(){ 
 		navigateTo($(this).attr("destination"));
 		return false;
+	});
+	
+	$.each($(".nav-link"), function(){
+	  scrollHeaders.push(this.id);
 	});
 	
 });
@@ -15,7 +21,7 @@ function navigateTo(destination) {
 }
 
 function windowScroll() {
-	var scrollTolerance = 1;
+	var scrollTolerance = 70;
 	var pixelsDown = $(window).scrollTop();
 	
 	/* Calculate Nav Bar Height */
@@ -35,18 +41,19 @@ function windowScroll() {
 	}
 	
   // /* Highlighted Nav */
-  // if($(window).scrollTop() + $(window).height() == $(document).height()) { highlightNavLink("#contact-link"); }
-  // else if (pixelsDown > $(".contact-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#contact-link"); }
-  // else if (pixelsDown > $(".about-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#about-link"); }
-  // else if (pixelsDown > $(".news-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#news-link"); }
-  // else if(pixelsDown > $(".services-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#services-link"); }
-  // else { highlightNavLink("#"); }
-  //  
-  // /* Animations based on scroll posiiton */
-  // if(pixelsDown > 750) { animateVideoProduction(); }
-  // if(pixelsDown > 950) { animatePhotography(); }
-  // if(pixelsDown > 1350) { animateMobileDevelopment(); }
-  // if(pixelsDown > 1750) { animateGraphicDesign(); }
+  if($(window).scrollTop() + $(window).height() == $(document).height()) { highlightNavLink("#contact-link"); }
+  else if (pixelsDown > $(".contact-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#contact-link"); }
+  else if (pixelsDown > $(".steam-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#steam-link"); }
+  else if (pixelsDown > $(".rails-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#rails-link"); }
+  else if(pixelsDown > $(".wagon-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#wagon-link"); }
+  else if(pixelsDown > $(".info-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#info-link"); }
+  else if(pixelsDown > $(".general-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#general-link"); }
+  else { highlightNavLink("#"); }
+}
+
+function highlightNavLink(id) {
+	$(".nav-bar a").removeClass("nav-selected");
+	$(id).addClass("nav-selected");
 }
 
 
