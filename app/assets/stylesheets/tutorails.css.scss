@@ -4,6 +4,19 @@ body {
     margin:0;
     padding:0;
     position:relative;
+    
+    &.fixed-nav {
+        padding-top:98px;
+    }
+}
+
+a {
+    color:#277D99;
+    font-weight:bold;
+    
+    &:hover {
+        color:black;
+    };
 }
 
 .container {
@@ -13,6 +26,7 @@ body {
 
 .section {
     padding:30px 0;
+    width:100%;
     
     .section-header {
         font-size:3em;
@@ -59,56 +73,83 @@ body {
         width:60%;
         margin:0 auto;
     }
+}
+
+.nav-bar {
+    text-align:center;
+    background:black;
+    a {
+        display:inline-block;
+        text-decoration:none;
+        font-family: "Arial";
+        border-radius: 20px;
+        color:white;
+        margin:0 10px;
+        padding:10px 30px;
+        
+        &:hover {
+            background:white;
+            color:black;
+        };
+    }
+}
+
+.nav-bar-fixed {
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+.general-section {
+    background:#eee;
     
     .where-are-we {
-        width:70%;
-        font-family:"Istok Web", sans-serif;
-        margin: 20px auto;
-        padding: 10px 10px;
-        border-radius:30px;
-        background:#333;
-        color:#EEE;
-    }
-    
-    
-    .sign-up {
-        
-        font-family:"Istok Web", sans-serif;
-        border:1px solid #eee;
-        border-radius:10px;
-        width:500px;
-        padding:20px;
-        margin:0 auto;
-        background:#ddd;
-        .sign-up-form {
-            margin: 20px 0;
+         width:70%;
+         font-family:"Istok Web", sans-serif;
+         margin: 20px auto;
+         padding: 10px 10px;
+         border-radius:30px;
+         background:#333;
+         color:#EEE;
+         text-align:center;
+     }
 
-            #email {
-                padding:10px;
-                font-size:10px;
-                width:300px;
-            }
 
-            .tutorails-sign-up-submit {
-                margin-top:10px;
-                display:inline-block;
-                background:#579099;
-                border:1px solid white;
-                padding:5px 20px;
-                text-decoration:none;
-                color:white;
-                
-                &:hover {
-                    background:#fff;
-                    color:black;
-                    border-color:#579099;
-                };
-            }
-        }        
-    }
+     .sign-up {
+         text-align:center;
+         font-family:"Istok Web", sans-serif;
+         border:1px solid #eee;
+         border-radius:10px;
+         width:500px;
+         padding:20px;
+         margin:0 auto;
+         background:#ddd;
+         .sign-up-form {
+             margin: 20px 0;
 
-    
+             #email {
+                 padding:10px;
+                 font-size:10px;
+                 width:300px;
+             }
 
+             .tutorails-sign-up-submit {
+                 margin-top:10px;
+                 display:inline-block;
+                 background:#579099;
+                 border:1px solid white;
+                 padding:5px 20px;
+                 text-decoration:none;
+                 color:white;
+
+                 &:hover {
+                     background:#fff;
+                     color:black;
+                     border-color:#579099;
+                 };
+             }
+         }        
+     }
 }
 
 .info-section {
@@ -145,6 +186,11 @@ body {
     
     img {
         width:200px;
+    }
+    
+    .who-is-this-guy {
+        margin:20px auto;
+        width:600px;
     }
 }
 

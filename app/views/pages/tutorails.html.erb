@@ -9,6 +9,27 @@
 		<div class="hero-blurb">
 			a <b>comprehensive</b>, <b>free</b> web development course using ruby on rails taught in <b>ottawa</b> canada
 		</div>
+
+	</div>
+</div>
+
+<div class="section nav-bar">
+	<div class="container">
+		<%= link_to "GENERAL", "#", class: "nav-link", destination: ".general-section" %>
+		<%= link_to "INFO", "#", class: "nav-link", destination: ".info-section" %>
+		<%= link_to "WAGON", "#", class: "nav-link", destination: ".wagon-section" %>
+		<%= link_to "RAILS", "#", class: "nav-link", destination: ".rails-section" %>
+		<%= link_to "STEAM", "#", class: "nav-link", destination: ".steam-section" %>
+		<%= link_to "CONTACT", "#", class: "nav-link", destination: ".contact-section" %>		
+	</div>
+
+</div>
+
+<div class="section general-section">
+	<div class="container">
+		<div class="section-header">
+			GENERAL
+		</div>
 		<div class="where-are-we">
 			WHERE ARE WE IN THE SYLLABUS / NEXT COURSE: <br>
 			NOVEMBER 4TH, 2013 (6:30pm to 8:30pm)<br>
@@ -22,12 +43,14 @@
 				<%= link_to "Submit", "#", class: "tutorails-sign-up-submit" %>				
 			</div>
 			<div class="sign-up-results">
-				
+
 			</div>
 
-		</div>
+		</div>		
 	</div>
+
 </div>
+
 <div class="section info-section">
 	<div class="container">
 		<div class="section-header">
@@ -234,13 +257,29 @@
 <div class="section contact-section">
 	<div class="container">
 		<div class="section-header">
-			CONTACT
+			CONTACT AND WHO IS THIS GUY?
 		</div>
 		<div class="featured-image">
 			<%= image_tag "me_circle.png", class: "contact-image" %>	
 		</div>
 		<div class="section-blurb">
 			Tutorails is taught by Casey Li. You can reach him at <%= link_to "casey.li@gmail.com", "mailto:casey.li@gmail.com" %>.
+		</div>
+		<div class="section-blurb who-is-this-guy">
+			Hi everybody, my name is Casey Li and I'm a web developer based out of Ottawa. I studied software engineering at UOttawa
+			from 2001-2006. I actually started out doing Java programming, but slowly moved into web development with JSP and .Net.
+			However, it wasn't until I jumped into Ruby on Rails that my web development passion really took off. Seriously - Ruby
+			on Rails was the first programming framework I've dealt with that didn't hinder my creativity. Since then, I started
+			up a web design company (shameless plug, <%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %>) and have
+			been loving it ever since. I'm passionate about Rails, but I'm also passionate about teaching. So that's why I'm running
+			this free course.
+			
+			If you want to look up anything else about me, you can hit up some of these links:<br>
+			<%= link_to "http://www.caseyli.com", "http://www.caseyli.com" %><br>
+			<%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %><br>
+			<%= link_to "http://www.youtube.com/cli23", "http://www.youtube.com/cli23" %><br>
+			<%= link_to "http://www.github.com/caseyli", "http://www.github.com/caseyli" %><br>
+			<%= link_to "http://cli23.blogspot.com", "http://cli23.blogspot.com" %>
 		</div>
 	</div>
 </div>
