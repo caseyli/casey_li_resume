@@ -72,6 +72,10 @@ class PagesController < ApplicationController
   end
 
   def tutorails
+    @tutorails_wagon_course_list = Setting.find_by_key("tutorails_wagon_course_list").try(:value)
+    @tutorails_rails_course_list = Setting.find_by_key("tutorails_rails_course_list").try(:value)
+    @tutorails_steam_course_list = Setting.find_by_key("tutorails_steam_course_list").try(:value)
+
 		render :layout => "tutorails"
 	end
 

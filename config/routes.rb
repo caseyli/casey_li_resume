@@ -1,5 +1,8 @@
 CaseyLiResume::Application.routes.draw do
 
+  resources :settings
+
+
   resources :newsletter_sign_ups
 
 
