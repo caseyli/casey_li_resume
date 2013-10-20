@@ -21,7 +21,11 @@
   </tr>
 <% end %>
 </table>
-
 <br />
+
+<div class="email-concat">
+  <%= @newsletter_sign_ups.collect{|x| x.email}.join(", ") %>  
+</div>
+
 
 <%= link_to 'New Newsletter sign up', new_newsletter_sign_up_path %>
