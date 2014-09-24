@@ -196,22 +196,36 @@ a {
     }
 }
 
-.wagon-section {
-    background:#ddd;
+.curriculum-section {
+    background:#333;
+    color:#ddd;
     
-    .wagon-image {
-        width:30%;
-    }
-}
+    table.schedule {
+        font-family:"Arial";
+        width:100%;
 
-.rails-section {
-    background:#222;
-    color:white;
-}
+        thead {
+            tr {
+                th {
+                    padding:10px;  
+                    text-align:left;
+                    background:white;
+                    color:#333; 
+                }
+            }
+        }
 
-.steam-section {
-    .steam-image {
-        width:30%;
+        tbody {
+            tr {
+                td {
+                    padding:10px;   
+                    vertical-align:top;
+                }
+            }    
+        }
+        
+
+
     }
 }
 

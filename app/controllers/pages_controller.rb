@@ -77,6 +77,28 @@ class PagesController < ApplicationController
     @tutorails_rails_course_list = Setting.find_by_key("tutorails_rails_course_list").try(:value)
     @tutorails_steam_course_list = Setting.find_by_key("tutorails_steam_course_list").try(:value)
 
+    @schedule = [
+
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" },
+      { inclass: "Coming Soon", selflearning: "Coming Soon" }
+
+    ]
+
 		render :layout => "tutorails"
 	end
 

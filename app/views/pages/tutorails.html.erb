@@ -17,9 +17,7 @@
 	<div class="container">
 		<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
 		<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
-		<%= link_to "WAGON", "#", id: "wagon-link", class: "nav-link", destination: ".wagon-section" %>
-		<%= link_to "RAILS", "#", id: "rails-link", class: "nav-link", destination: ".rails-section" %>
-		<%= link_to "STEAM", "#", id: "steam-link", class: "nav-link", destination: ".steam-section" %>
+		<%= link_to "CURRICULUM", "#", id: "curriculum-link", class: "nav-link", destination: ".curriculum-section" %>
 		<%= link_to "CONTACT", "#", id: "contact-link", class: "nav-link", destination: ".contact-section" %>		
 	</div>
 
@@ -81,17 +79,12 @@
 			<p>
 				Tutorails is a completely free comprehensive web development course that's open to anyone who wants to learn (<b>even if
 				you've never programmed a day in your life!</b>).
-				It takes place 
 			</p>
+
 			<p>
-				<b>Monday nights from 6:30 PM to 8:30 PM at the Shopify Office, 126 York Street, Suite 200,
-				Ottawa, ON, Canada</b>
+				Tutorails has run twice so far and each time has been different. <b>The current Tutorails Session is only open to University
+				of Ottawa Students</b>
 			</p>
-			<p>
-				It is a drop-in style course so come to the ones you can make, and skip the ones you can't. It is a rolling
-				course, so be sure to check this site frequently to see where we are in the syllabus.
-			</p>
-			
 			<p>
 				<b>It is HIGHLY RECOMMENDED that you bring a laptop to the course.</b> Although possible to attend to course
 				without a laptop, it will be much easier to follow along if you do the work as I do it.
@@ -101,88 +94,46 @@
 				If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
 			</p>
 			
-			<p>
-				Tutorails is broken up into three main legs covering varying degress of difficulty: Wagon, Rails, and Steam. Please
-				browse below for the details on each leg.
-			</p>
 		</div>
 	</div>
 </div>
-<div class="section wagon-section">
+<div class="section curriculum-section">
 	<div class="container">
 		<div class="section-header">
-			WAGON
-		</div>
-		<div class="google-links">
-			<%= link_to "WAGON GOOGLE DOC", 
-						"https://docs.google.com/presentation/d/10uaRWTM-yEe2dtUP-JS45kyns4E_QjsuE5fxoz0cSZo/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>
-		</div>
-		<div class="featured-image">
-			<%= image_tag "tutorails_wagon.png", class: "wagon-image" %>	
+			CURRICULUM
 		</div>
 
-		<div class="section-blurb">
-			The Wagon leg of the Tutorails course ensures that everyone who attends this course is on the same page. Wagon will go through
-			some of the absolute programming and setup basics you'll need before you even touch web development. The topics include:
-			
-			<ul class="course-list">
-				<%= raw @tutorails_wagon_course_list %>
-			</ul>
-			
-		</div>
-	</div>
-</div>
-<div class="section rails-section">
-	<div class="container">
-		<div class="section-header">
-			RAILS
-		</div>
-		<div class="google-links">
-			<%= link_to "RAILS GOOGLE DOC", 
-						"https://docs.google.com/presentation/d/1MlQxFhk4uE_bgE-RM1MIsOCgwIMYN30StcbFe7zdzto/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>
-		</div>
-		<div class="featured-image">
-			<%= image_tag "tutorails_rails.png", class: "rails-image" %>	
-		</div>
-		<div class="section-blurb">
-			The Rails leg of the Tutorails course dives into the meat of the course - learning how to build a full web application using
-			the Ruby on Rails framework. The topics include:
-			
-			<ul class="course-list">
-				<%= raw @tutorails_rails_course_list %>
-			</ul>
+		<div>
+			<table class="schedule">
+				<thead>
+					<tr>
+						<th>Week</th>
+						<th>In-class</th>
+						<th>Self-Learning</th>
+					</tr>	
+				</thead>
+				
+				<tbody>
+					<% @schedule.each_with_index do |details, index| %>
+						<tr>
+							<td><%= index + 1 %></td>
+							<td>
+								<%= details[:inclass] %>
+							</td>
+							<td>
+								<%= details[:selflearning] %>
+							</td>
+						</tr>
+					<% end %>
+				</tbody>
+				
+
+			</table>
 
 		</div>
 	</div>
 </div>
-<div class="section steam-section">
-	<div class="container">
-		<div class="section-header">
-			STEAM
-		</div>
-		<div class="google-links">
-			<%= link_to "STEAM GOOGLE DOC", 
-						"https://docs.google.com/presentation/d/1JBUUQ_BpcgYjM-2Jg4Q13uS85M-SeDhXq7Smsc8YEuM/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>
-		</div>
-		<div class="featured-image">
-			<%= image_tag "tutorails_steam.png", class: "steam-image" %>	
-		</div>
-		<div class="section-blurb">
-			The Steam leg of the Tutorails course takes everything you've learned in building a Ruby on Rails web application and dives
-			deeper into more advanced topics. The topics include:
-			
-			<ul class="course-list">
-				<%= raw @tutorails_steam_course_list %>
-			</ul>
-		</div>
-	</div>
-</div>
+
 <div class="section contact-section">
 	<div class="container">
 		<div class="section-header">

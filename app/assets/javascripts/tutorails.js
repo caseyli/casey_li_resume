@@ -43,9 +43,7 @@ function windowScroll() {
   // /* Highlighted Nav */
   if($(window).scrollTop() + $(window).height() == $(document).height()) { highlightNavLink("#contact-link"); }
   else if (pixelsDown > $(".contact-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#contact-link"); }
-  else if (pixelsDown > $(".steam-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#steam-link"); }
-  else if (pixelsDown > $(".rails-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#rails-link"); }
-  else if(pixelsDown > $(".wagon-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#wagon-link"); }
+  else if(pixelsDown > $(".curriculum-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#curriculum-link"); }
   else if(pixelsDown > $(".info-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#info-link"); }
   else if(pixelsDown > $(".general-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#general-link"); }
   else { highlightNavLink("#"); }
