@@ -68,11 +68,10 @@ a {
 }
 
 .hero-section {
-    background:$pale-blue;
     text-align:center;
     .hero {
-        margin-top:30px;
-        width:300px;
+        margin:30px 0;
+        width:600px;
         
     }
     
@@ -92,13 +91,14 @@ a {
         font-style:italic;
         font-size:1.5em;
         width:60%;
-        margin:0 auto;
+        margin:30px auto;
+        color:#333;
     }
 }
 
 .nav-bar {
     text-align:center;
-    background:black;
+    background:#222;
     a {
         display:inline-block;
         text-decoration:none;
