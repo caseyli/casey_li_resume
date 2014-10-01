@@ -52,6 +52,11 @@
 			Sign Up for the course by signing up for our Newsletter. <br>
 			Don't worry, there's no obligation and it's completely free!
 			<div class="sign-up-form">
+				Session:
+				<%= select_tag :category, options_for_select([
+																												["UOttawa Tutorails 2014", "UOttawa Tutorails 2014"], 
+																												["None (General Interest)", "tutorails"]
+																											]) %><br><br>
 				<%= text_field_tag :email, "", placeholder: "email address" %><br>
 				<%= link_to "Submit", "#", class: "tutorails-sign-up-submit" %>				
 			</div>

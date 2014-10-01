@@ -75,6 +75,7 @@ function validateEmail() {
 
 function tutorailsSignUp() {
   var email = $(this).siblings("#email").val();
+  var category = $(this).siblings("#category").val();
   
   $(".sign-up-results").html("<i class='icon-refresh icon-spin'></i> Submitting...");
   
@@ -82,7 +83,7 @@ function tutorailsSignUp() {
     url: "/newsletter_sign_ups",
     dataType: "JSON",
     type: "POST",
-    data: { newsletter_sign_up : { email : email, category : "tutorails", notes : "" } },
+    data: { newsletter_sign_up : { email : email, category : category, notes : "" } },
     success: function(data, textStatus, jqXHR){
       if(data.success) {
         $(".sign-up-results").html("Success! Thanks for signing up. You should receive a confirmation e-mail in your inbox. If not please contact casey.li@gmail.com.");
