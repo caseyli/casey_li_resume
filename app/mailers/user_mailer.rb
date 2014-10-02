@@ -5,6 +5,7 @@ class UserMailer < ActionMailer::Base
 		@newsletter_sign_up = newsletter_sign_up
 		
     mail(:to => newsletter_sign_up.email,
+         :reply_to => "casey.li@gmail.com",
          :subject => "Thanks for signing up for the #{newsletter_sign_up.category.titleize} Newsletter!")
 	end
 end
