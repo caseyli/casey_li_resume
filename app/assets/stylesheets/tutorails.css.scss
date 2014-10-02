@@ -203,7 +203,7 @@ a {
     table.schedule {
         font-family:"Arial";
         width:100%;
-
+        border-collapse:collapse;
         thead {
             tr {
                 th {
@@ -218,6 +218,7 @@ a {
         tbody {
             tr {
                 td {
+                    border:1px solid #888;
                     padding:10px;   
                     vertical-align:top;
                 }
