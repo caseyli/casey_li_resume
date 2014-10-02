@@ -17,7 +17,12 @@
     <td><%= newsletter_sign_up.notes %></td>
     <td><%= link_to 'Show', newsletter_sign_up %></td>
     <td><%= link_to 'Edit', edit_newsletter_sign_up_path(newsletter_sign_up) %></td>
-    <td><%= link_to 'Destroy', newsletter_sign_up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+      <%= link_to 'Destroy', 
+                    newsletter_sign_up, 
+                    method: :delete, 
+                    data: { confirm: "Are you sure you want to delete #{newsletter_sign_up.email}?" } %>
+    </td>
   </tr>
 <% end %>
 </table>
