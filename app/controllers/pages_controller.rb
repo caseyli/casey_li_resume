@@ -73,32 +73,7 @@ class PagesController < ApplicationController
 
   def tutorails
     @tutorails_where_we_are = Setting.find_by_key("tutorails_where_we_are").try(:value)
-    @tutorails_wagon_course_list = Setting.find_by_key("tutorails_wagon_course_list").try(:value)
-    @tutorails_rails_course_list = Setting.find_by_key("tutorails_rails_course_list").try(:value)
-    @tutorails_steam_course_list = Setting.find_by_key("tutorails_steam_course_list").try(:value)
-
-    @schedule = [
-
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" },
-      { inclass: "Coming Soon", selflearning: "Coming Soon" }
-
-    ]
-
+    @tutorails_schedule = Setting.find_by_key("tutorails_schedule").try(:value)
 		render :layout => "tutorails"
 	end
 

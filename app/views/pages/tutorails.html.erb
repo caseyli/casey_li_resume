@@ -106,31 +106,8 @@
 		</div>
 
 		<div>
-			<table class="schedule">
-				<thead>
-					<tr>
-						<th>Week</th>
-						<th>In-class</th>
-						<th>Self-Learning</th>
-					</tr>	
-				</thead>
-				
-				<tbody>
-					<% @schedule.each_with_index do |details, index| %>
-						<tr>
-							<td><%= index + 1 %></td>
-							<td>
-								<%= details[:inclass] %>
-							</td>
-							<td>
-								<%= details[:selflearning] %>
-							</td>
-						</tr>
-					<% end %>
-				</tbody>
-				
 
-			</table>
+			<%= raw @tutorails_schedule %>
 
 		</div>
 	</div>
