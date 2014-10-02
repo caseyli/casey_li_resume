@@ -1,4 +1,4 @@
-<h1>Listing newsletter_sign_ups</h1>
+<h1>Newsletter Sign Ups</h1>
 
 <table>
   <tr>
@@ -28,9 +28,14 @@
 </table>
 <br />
 
-<div class="email-concat">
-  <%= @newsletter_sign_ups.collect{|x| x.email}.join(", ") %>  
-</div>
+
+<% @newsletter_sign_ups.collect{|x| x.category}.uniq.each do |category| %>  
+  <div class='newsletter-sign-up-category'>
+    <h2><%= category %></h2>
+    <%= @newsletter_sign_ups.select{|x| x.category == category}.collect{|x| x.email}.join(", ") %>
+  </div>
+<% end %>
+
 
 
 <%= link_to 'New Newsletter sign up', new_newsletter_sign_up_path %>
