@@ -85,7 +85,7 @@
 
 			<p>
 				Tutorails has run twice so far and each time has been different. <b>The current Tutorails Session is only open to University
-				of Ottawa Students</b>
+				of Ottawa Students.</b>
 			</p>
 			<p>
 				<b>It is HIGHLY RECOMMENDED that you bring a laptop to the course.</b> Although possible to attend to course
@@ -134,11 +134,29 @@
 			this free course.
 			
 			If you want to look up anything else about me, you can hit up some of these links:<br>
-			<%= link_to "http://www.caseyli.com", "http://www.caseyli.com" %><br>
-			<%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %><br>
-			<%= link_to "http://www.youtube.com/cli23", "http://www.youtube.com/cli23" %><br>
-			<%= link_to "http://www.github.com/caseyli", "http://www.github.com/caseyli" %><br>
-			<%= link_to "http://cli23.blogspot.com", "http://cli23.blogspot.com" %>
+			<ul>
+				<%= link_to "http://www.caseyli.com" do %>
+					<li>http://www.caseyli.com</li>
+				<% end %>
+
+				<%= link_to "http://www.bitesite.ca" do %>
+					<li>http://www.bitesite.ca</li>
+				<% end %>
+
+				<%= link_to "http://www.youtube.com/cli23" do %>
+					<li>http://www.youtube.com/cli23</li>
+				<% end %>
+
+				<%= link_to "http://www.github.com/caseyli" do %>
+					<li>http://www.github.com/caseyli</li>
+				<% end %>
+
+				<%= link_to "http://cli23.blogspot.com" do %>
+					<li>http://cli23.blogspot.com</li>
+				<% end %>
+
+			</ul>
+			
 		</div>
 	</div>
 </div>
