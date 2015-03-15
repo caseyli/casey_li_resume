@@ -35,40 +35,60 @@
 
 		<div id="scrolling-content">
 			<div class="scroll-down">
-				SCROLL DOWN
+				SCROLL DOWN<br>
+				<%= image_tag "scrolldown.png", class: "animated infinite flash" %>
 			</div>
 			<div class="menu-items">
 				<a href="http://www.bitesite.ca" target="_blank" class="menu-item">
-					<div class="header">bitesite</div>
+					<div class="header">BITESITE</div>
 					<div class="description">ottawa-based web design and web development studio dedicated to producing simple yet elegant
 						web sites and web applications.
 					</div>
+					<div class="button">
+						click for more
+					</div>
 				</a>
 				<a href="/pages/home" class="menu-item">
-					<div class="header">main</div>
+					<div class="header">MAIN</div>
 					<div class="description">caseyli.com's main portal. view everything you need to know about casey li including
 						resume, work experience, skills, portfolio and more.
 					</div>
+					<div class="button">
+						click for more
+					</div>
 				</a>
 				<a href="/videos" class="menu-item">
-					<div class="header">videos</div>
+					<div class="header">VIDEOS</div>
 					<div class="description">various videos including tutorials on git, rails development and more
+					</div>
+					<div class="button">
+						click for more
 					</div>
 				</a>
 				<a href="http://cli23.blogspot.com" target="_blank" class="menu-item">
-					<div class="header">blog</div>
+					<div class="header">BLOG</div>
 					<div class="description">my blog where I have various posts about solving technical issues from programming,
 						to film equipment, to things like the nest thermostat
 					</div>
+					<div class="button">
+						click for more
+					</div>
 				</a>
 				<a href="/tutorails" target="_blank" class="menu-item">
-					<div class="header">tutorails</div>
+					<div class="header">TUTORAILS</div>
 					<div class="description">comprehensive course on web development using ruby on rails taught in ottawa, canada
+					</div>
+					<div class="button">
+						click for more
 					</div>
 				</a>
 				
 			</div>
 			<div class="clear"></div>
+		</div>
+
+		<div id="contact">
+			CASEYLI.COM FOR MORE INFO, <%= link_to "CONTACT CASEY.LI@GMAIL.COM", "mailto:casey.li@gmail.com" %>
 		</div>
 
 

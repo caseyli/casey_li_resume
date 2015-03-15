@@ -1,63 +1,6 @@
-body {
-	
-	background:url(/assets/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	font-family: Rokkitt;
-}
-
-h1 {
-	font-size: 50px;
-	font-weight:bold;
-	border-bottom: 1px solid;
-	border-color: #BBB;
-	color:#fff;
-}
-
-.hero-logo {
-	text-align:center;
-	margin:50px 0px;
-	
-	img {
-		width:100%;
-	}
-}
-
-.landing-list {
-	list-style:none;
-	padding-left:0px;
-	
-	a{
-		color:white;
-		font-size: 20px;
-		text-decoration:none;
-		li {
-			padding: 20px;
-			border-radius: 20px;
-			transition: 200ms;
-			-moz-transition: 200ms; /* Firefox 4 */
-			-webkit-transition: 200ms; /* Safari and Chrome */
-			-o-transition: 200ms; /* Opera */
-			
-			td.header {
-				width: 200px;
-				font-size: 60px;
-			}
-			
-			&:hover{
-				color:#EEE;
-				background:black;
-			}
-
-		}
-	}
-	
-}
-
-
 #landing {
+
+	font-family:Rokkitt;
 	.content {
 		position:fixed;
 		left:0;
@@ -71,9 +14,9 @@ h1 {
 	#logo-animation {
 		margin:30px auto;
 
-		width:50%;
+		width:30%;
 		max-width:500px;
-		height:80%;
+		height:25%;
 		max-height:300px;
 		overflow:hidden;
 
@@ -96,8 +39,8 @@ h1 {
 
 				img {
 					position:relative;
-					left:-30px;
-					top:-30px;
+					left:-200px;
+					top:-50px;
 					
 				}	
 			}
@@ -163,14 +106,20 @@ h1 {
 			position:relative;
 			width:100%;
 			height:100%;
-			font-family:Oswald;
-			font-size:5em;
+			font-family:Rokkitt;
+			font-size:3em;
+
+			img {
+				margin-top:20px;
+				width:50px;
+			}
 		}
 
 		.menu-items {
 			width:500%;
 			position:relative;
 			height:100%;
+			
 
 			a.menu-item {
 				height:calc(100% - 60px);
@@ -185,22 +134,45 @@ h1 {
 				&:last-child {
 					border-right:none;
 				}
-				
-				&:hover {
-					color:#333;
-				}
+
+
 
 				.header {
-					font-family:Oswald;
 					font-size:3em;
 				}
 
 				.description {
-					font-family:Oswald;
 					font-size:2em;
+				}
+
+				.button {
+					display:inline-block;
+					background:white;
+					color:#AD1637;
+					padding:10px;
+					margin:5px 0;
+					font-size:1.5em;
+				}
+
+				&:hover {
+					color:#999;
+
+					.button {
+						background:#999;
+					}
 				}
 			}
 		}
+	}
+
+	#contact {
+		text-align:center;
+		position:fixed;
+		width:100%;
+		bottom:0;
+		background:#eee;
+		color:black;
+		font-size:1.5em;
 	}
 
 
