@@ -1,162 +1,162 @@
-
-
-<div class="section hero-section">
-	<div class="container">
-		<%= image_tag "tutorails_logo_new.png", class: "hero" %>
-		<div class="hero-blurb">
-			a <b>comprehensive</b>, <b>free</b> web development course using ruby on rails taught in <b>ottawa</b> canada
-		</div>
-
-	</div>
-</div>
-
-<div class="section nav-bar">
-	<div class="container">
-		<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
-		<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
-		<%= link_to "CURRICULUM", "#", id: "curriculum-link", class: "nav-link", destination: ".curriculum-section" %>
-		<%= link_to "CONTACT", "#", id: "contact-link", class: "nav-link", destination: ".contact-section" %>		
-	</div>
-
-</div>
-
-<div class="section general-section">
-	<div class="container">
-		<div class="section-header">
-			GENERAL
-		</div>
-		<div class="where-are-we">
-			WHERE ARE WE IN THE SYLLABUS / NEXT COURSE: <br>
-			<%= raw @tutorails_where_we_are %>
-		</div>
-		<div class="google-links">
-			<%= link_to "GOOGLE CALENDAR SCHEDULE", 
-						"https://www.google.com/calendar/embed?src=d8fre4q0v4e3521eal181hivl8%40group.calendar.google.com&ctz=America/Toronto",
-						class: "google-button",
-						target: "_blank" %>
-			<%= link_to "GOOGLE GROUP",
-			 			"http://groups.google.com/d/forum/tutorails-ottawa",
-						class: "google-button",
-						target: "_blank" %>		<br><br>
-			<%= link_to "CLASS LOG",
-						"https://docs.google.com/document/d/1TdcQ5Jha4YEt1iMgHLj6gZwRuRwTXtnmo_XSPW5pvwQ/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>	
-			<%= link_to "ASSIGNMENTS",
-						"https://docs.google.com/document/d/18VSOIDoh9XypyR-Bbt3QLMvCnl9DdX95EYiAmNlTERM/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>	
-		</div>
-
-		<div class="sign-up">
-			Sign Up for the course by signing up for our Newsletter. <br>
-			Don't worry, there's no obligation and it's completely free!
-			<div class="sign-up-form">
-				Session:
-				<%= select_tag :category, options_for_select([
-																												["UOttawa Tutorails 2014", "UOttawa Tutorails 2014"], 
-																												["None (General Interest)", "tutorails"]
-																											]) %><br><br>
-				<%= text_field_tag :email, "", placeholder: "email address" %><br>
-				<%= link_to "Submit", "#", class: "tutorails-sign-up-submit" %>				
-			</div>
-			<div class="sign-up-results">
-
+<div id="tutorails">
+	<div class="section hero-section">
+		<div class="container">
+			<%= image_tag "tutorails_logo_new.png", class: "hero" %>
+			<div class="hero-blurb">
+				a <b>comprehensive</b>, <b>free</b> web development course using ruby on rails taught in <b>ottawa</b> canada
 			</div>
 
-		</div>		
-	</div>
-
-</div>
-
-<div class="section info-section">
-	<div class="container">
-		<div class="section-header">
-			INFO
-		</div>
-		<div class="featured-image">
-			<%= image_tag "tutorails_info.png", class: "info-image" %>	
-		</div>
-		<div class="section-blurb">
-			<p>
-				Tutorails is a completely free comprehensive web development course that's designed for anyone who wants to learn (<b>even if
-				you've never programmed a day in your life!</b>).
-			</p>
-
-			<p>
-				<b>The current Tutorails Session is only open to University
-				of Ottawa Students.</b><br> It is held at <b>STE J0106, Mondays from 5:30pm - 7:00pm</b>.
-			</p>
-			<p>
-				<b>It is HIGHLY RECOMMENDED that you bring a laptop to the course.</b> Although possible to attend to course
-				without a laptop, it will be much easier to follow along if you do the work as I do it.
-			</p>
-			
-			<p>
-				If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
-			</p>
-			
 		</div>
 	</div>
-</div>
-<div class="section curriculum-section">
-	<div class="container">
-		<div class="section-header">
-			CURRICULUM
+
+	<div class="section nav-bar">
+		<div class="container">
+			<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
+			<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
+			<%= link_to "CURRICULUM", "#", id: "curriculum-link", class: "nav-link", destination: ".curriculum-section" %>
+			<%= link_to "CONTACT", "#", id: "contact-link", class: "nav-link", destination: ".contact-section" %>		
 		</div>
 
-		<div>
+	</div>
 
-			<%= raw @tutorails_schedule %>
+	<div class="section general-section">
+		<div class="container">
+			<div class="section-header">
+				GENERAL
+			</div>
+			<div class="where-are-we">
+				WHERE ARE WE IN THE SYLLABUS / NEXT COURSE: <br>
+				<%= raw @tutorails_where_we_are %>
+			</div>
+			<div class="google-links">
+				<%= link_to "GOOGLE CALENDAR SCHEDULE", 
+							"https://www.google.com/calendar/embed?src=d8fre4q0v4e3521eal181hivl8%40group.calendar.google.com&ctz=America/Toronto",
+							class: "google-button",
+							target: "_blank" %>
+				<%= link_to "GOOGLE GROUP",
+				 			"http://groups.google.com/d/forum/tutorails-ottawa",
+							class: "google-button",
+							target: "_blank" %>		<br><br>
+				<%= link_to "CLASS LOG",
+							"https://docs.google.com/document/d/1TdcQ5Jha4YEt1iMgHLj6gZwRuRwTXtnmo_XSPW5pvwQ/edit?usp=sharing",
+							class: "google-button",
+							target: "_blank" %>	
+				<%= link_to "ASSIGNMENTS",
+							"https://docs.google.com/document/d/18VSOIDoh9XypyR-Bbt3QLMvCnl9DdX95EYiAmNlTERM/edit?usp=sharing",
+							class: "google-button",
+							target: "_blank" %>	
+			</div>
 
+			<div class="sign-up">
+				Sign Up for the course by signing up for our Newsletter. <br>
+				Don't worry, there's no obligation and it's completely free!
+				<div class="sign-up-form">
+					Session:
+					<%= select_tag :category, options_for_select([
+																													["UOttawa Tutorails 2014", "UOttawa Tutorails 2014"], 
+																													["None (General Interest)", "tutorails"]
+																												]) %><br><br>
+					<%= text_field_tag :email, "", placeholder: "email address" %><br>
+					<%= link_to "Submit", "#", class: "tutorails-sign-up-submit" %>				
+				</div>
+				<div class="sign-up-results">
+
+				</div>
+
+			</div>		
+		</div>
+
+	</div>
+
+	<div class="section info-section">
+		<div class="container">
+			<div class="section-header">
+				INFO
+			</div>
+			<div class="featured-image">
+				<%= image_tag "tutorails_info.png", class: "info-image" %>	
+			</div>
+			<div class="section-blurb">
+				<p>
+					Tutorails is a completely free comprehensive web development course that's designed for anyone who wants to learn (<b>even if
+					you've never programmed a day in your life!</b>).
+				</p>
+
+				<p>
+					<b>The current Tutorails Session is only open to University
+					of Ottawa Students.</b><br> It is held at <b>STE J0106, Mondays from 5:30pm - 7:00pm</b>.
+				</p>
+				<p>
+					<b>It is HIGHLY RECOMMENDED that you bring a laptop to the course.</b> Although possible to attend to course
+					without a laptop, it will be much easier to follow along if you do the work as I do it.
+				</p>
+				
+				<p>
+					If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
+				</p>
+				
+			</div>
 		</div>
 	</div>
-</div>
+	<div class="section curriculum-section">
+		<div class="container">
+			<div class="section-header">
+				CURRICULUM
+			</div>
 
-<div class="section contact-section">
-	<div class="container">
-		<div class="section-header">
-			CONTACT AND WHO IS THIS GUY?
+			<div>
+
+				<%= raw @tutorails_schedule %>
+
+			</div>
 		</div>
-		<div class="featured-image">
-			<%= image_tag "me_circle.png", class: "contact-image" %>	
-		</div>
-		<div class="section-blurb">
-			Tutorails is taught by Casey Li. You can reach him at <%= link_to "casey.li@gmail.com", "mailto:casey.li@gmail.com" %>.
-		</div>
-		<div class="section-blurb who-is-this-guy">
-			Hi everybody, my name is Casey Li and I'm a web developer based out of Ottawa. I studied software engineering at UOttawa
-			from 2001-2006. I actually started out doing Java programming, but slowly moved into web development with JSP and .Net.
-			However, it wasn't until I jumped into Ruby on Rails that my web development passion really took off. Seriously - Ruby
-			on Rails was the first programming framework I've dealt with that didn't hinder my creativity. Since then, I started
-			up a web design company (shameless plug, <%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %>) and have
-			been loving it ever since. I'm passionate about Rails, but I'm also passionate about teaching. So that's why I'm running
-			this free course.
-			
-			If you want to look up anything else about me, you can hit up some of these links:<br>
-			<ul>
-				<%= link_to "http://www.caseyli.com" do %>
-					<li>http://www.caseyli.com</li>
-				<% end %>
+	</div>
 
-				<%= link_to "http://www.bitesite.ca" do %>
-					<li>http://www.bitesite.ca</li>
-				<% end %>
+	<div class="section contact-section">
+		<div class="container">
+			<div class="section-header">
+				CONTACT AND WHO IS THIS GUY?
+			</div>
+			<div class="featured-image">
+				<%= image_tag "me_circle.png", class: "contact-image" %>	
+			</div>
+			<div class="section-blurb">
+				Tutorails is taught by Casey Li. You can reach him at <%= link_to "casey.li@gmail.com", "mailto:casey.li@gmail.com" %>.
+			</div>
+			<div class="section-blurb who-is-this-guy">
+				Hi everybody, my name is Casey Li and I'm a web developer based out of Ottawa. I studied software engineering at UOttawa
+				from 2001-2006. I actually started out doing Java programming, but slowly moved into web development with JSP and .Net.
+				However, it wasn't until I jumped into Ruby on Rails that my web development passion really took off. Seriously - Ruby
+				on Rails was the first programming framework I've dealt with that didn't hinder my creativity. Since then, I started
+				up a web design company (shameless plug, <%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %>) and have
+				been loving it ever since. I'm passionate about Rails, but I'm also passionate about teaching. So that's why I'm running
+				this free course.
+				
+				If you want to look up anything else about me, you can hit up some of these links:<br>
+				<ul>
+					<%= link_to "http://www.caseyli.com" do %>
+						<li>http://www.caseyli.com</li>
+					<% end %>
 
-				<%= link_to "http://www.youtube.com/cli23" do %>
-					<li>http://www.youtube.com/cli23</li>
-				<% end %>
+					<%= link_to "http://www.bitesite.ca" do %>
+						<li>http://www.bitesite.ca</li>
+					<% end %>
 
-				<%= link_to "http://www.github.com/caseyli" do %>
-					<li>http://www.github.com/caseyli</li>
-				<% end %>
+					<%= link_to "http://www.youtube.com/cli23" do %>
+						<li>http://www.youtube.com/cli23</li>
+					<% end %>
 
-				<%= link_to "http://cli23.blogspot.com" do %>
-					<li>http://cli23.blogspot.com</li>
-				<% end %>
+					<%= link_to "http://www.github.com/caseyli" do %>
+						<li>http://www.github.com/caseyli</li>
+					<% end %>
 
-			</ul>
-			
+					<%= link_to "http://cli23.blogspot.com" do %>
+						<li>http://cli23.blogspot.com</li>
+					<% end %>
+
+				</ul>
+				
+			</div>
 		</div>
 	</div>
 </div>

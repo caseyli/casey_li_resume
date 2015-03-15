@@ -1,18 +1,19 @@
 var scrollHeaders = [];
 
 $(function(){
-  $(window).scroll(windowScroll);
-  $(".tutorails-sign-up-submit").click(tutorailsSignUp);
-  $("#email").keyup(validateEmail);
-  $(".nav-link").click(function(){ 
-		navigateTo($(this).attr("destination"));
-		return false;
-	});
-	
-	$.each($(".nav-link"), function(){
-	  scrollHeaders.push(this.id);
-	});
-	
+  if($("#tutorails").length > 0) {
+      $(window).scroll(windowScrollTutorails);
+      $(".tutorails-sign-up-submit").click(tutorailsSignUp);
+      $("#email").keyup(validateEmail);
+      $(".nav-link").click(function(){ 
+        navigateTo($(this).attr("destination"));
+        return false;
+      });
+      
+      $.each($(".nav-link"), function(){
+        scrollHeaders.push(this.id);
+      });
+  }
 });
 
 function navigateTo(destination) {
@@ -20,7 +21,7 @@ function navigateTo(destination) {
   return false;
 }
 
-function windowScroll() {
+function windowScrollTutorails() {
 	var scrollTolerance = 70;
 	var pixelsDown = $(window).scrollTop();
 	

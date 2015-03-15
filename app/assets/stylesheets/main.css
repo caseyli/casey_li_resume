@@ -258,3 +258,7 @@ ul.videos li a:hover {
 	background:#222;
 	color:white;
 }
+
+.clear {
+	clear:both;
+}
