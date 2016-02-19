@@ -16,12 +16,12 @@ $(function(){
 });
 
 function navigateTo(destination) {
-  $('html,body').animate({scrollTop: $(destination).offset().top - 64},'slow');
+  $('html,body').animate({scrollTop: $(destination).offset().top },'slow');
   return false;
 }
 
 function windowScroll() {
-	var scrollTolerance = 70;
+	var scrollTolerance = 0;
 	var pixelsDown = $(window).scrollTop();
 	
 	/* Calculate Nav Bar Height */
@@ -29,17 +29,7 @@ function windowScroll() {
 	if($(".nav-bar")) {
 		navBarHeight = $(".nav-bar").height();
 	}
-	
-	/* Navigation Bar */
-	if(pixelsDown > ($(".hero-section").height() + 60) - 1) {
-		$(".nav-bar").addClass("nav-bar-fixed");
-		$("body").addClass("fixed-nav");
-	}
-	else {
-		$(".nav-bar").removeClass("nav-bar-fixed");
-		$("body").removeClass("fixed-nav");
-	}
-	
+		
   // /* Highlighted Nav */
   if($(window).scrollTop() + $(window).height() == $(document).height()) { highlightNavLink("#contact-link"); }
   else if (pixelsDown > $(".contact-section").offset().top - navBarHeight - scrollTolerance) { highlightNavLink("#contact-link"); }

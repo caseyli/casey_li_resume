@@ -1,3 +1,12 @@
+<div class="section nav-bar">
+	<div class="container">
+		<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
+		<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
+		<%= link_to "CURRICULUM", "#", id: "curriculum-link", class: "nav-link", destination: ".curriculum-section" %>
+		<%= link_to "CONTACT", "#", id: "contact-link", class: "nav-link", destination: ".contact-section" %>		
+	</div>
+</div>
+
 <div class="section hero-section">
 	<div class="container">
 		<%= image_tag "tutorails_logo_new.png", class: "hero" %>
@@ -8,21 +17,12 @@
 	</div>
 </div>
 
-<div class="section nav-bar">
-	<div class="container">
-		<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
-		<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
-		<%= link_to "CURRICULUM", "#", id: "curriculum-link", class: "nav-link", destination: ".curriculum-section" %>
-		<%= link_to "CONTACT", "#", id: "contact-link", class: "nav-link", destination: ".contact-section" %>		
-	</div>
-
-</div>
 
 <div class="section general-section">
 	<div class="container">
-		<div class="section-header">
+		<h1>
 			GENERAL
-		</div>
+		</h1>
 		<div class="where-are-we">
 			WHERE ARE WE IN THE SYLLABUS / NEXT COURSE: <br>
 			<%= raw @tutorails_where_we_are %>
@@ -52,12 +52,9 @@
 
 <div class="section info-section">
 	<div class="container">
-		<div class="section-header">
+		<h1>
 			INFO
-		</div>
-		<div class="featured-image">
-			<%= image_tag "tutorails_info.png", class: "info-image" %>	
-		</div>
+		</h1>
 		<div class="section-blurb">
 			<p>
 				Tutorails is a completely free web development course that's designed for anyone who wants to learn.
@@ -66,7 +63,7 @@
 			<p>
 				<b>The current Tutorails Session is only open to University
 				of Ottawa Students.</b><br> 
-				It is held at <b>Tuesdays from 7:00pm - 8:30pm</b> (Room to be announced).
+				(details of time and location in curriculum below)
 			</p>			
 			<p>
 				If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
@@ -77,9 +74,9 @@
 </div>
 <div class="section curriculum-section">
 	<div class="container">
-		<div class="section-header">
+		<h1>
 			CURRICULUM
-		</div>
+		</h1>
 
 		<div>
 
@@ -91,9 +88,9 @@
 
 <div class="section contact-section">
 	<div class="container">
-		<div class="section-header">
+		<h1>
 			CONTACT AND WHO IS THIS GUY?
-		</div>
+		</h1>
 		<div class="featured-image">
 			<%= image_tag "me_circle.png", class: "contact-image" %>	
 		</div>
@@ -111,27 +108,29 @@
 			
 			If you want to look up anything else about me, you can hit up some of these links:<br>
 			<ul>
-				<%= link_to "http://www.caseyli.com" do %>
-					<li>http://www.caseyli.com</li>
+				<%= link_to "http://www.bitesite.ca" do %>
+					<li>www.bitesite.ca</li>
 				<% end %>
 
-				<%= link_to "http://www.bitesite.ca" do %>
-					<li>http://www.bitesite.ca</li>
+				<%= link_to "http://www.caseyli.com" do %>
+					<li>www.caseyli.com</li>
 				<% end %>
+
 
 				<%= link_to "http://www.youtube.com/cli23" do %>
-					<li>http://www.youtube.com/cli23</li>
+					<li>www.youtube.com/cli23</li>
 				<% end %>
 
 				<%= link_to "http://www.github.com/caseyli" do %>
-					<li>http://www.github.com/caseyli</li>
+					<li>www.github.com/caseyli</li>
 				<% end %>
 
 				<%= link_to "http://cli23.blogspot.com" do %>
-					<li>http://cli23.blogspot.com</li>
+					<li>cli23.blogspot.com</li>
 				<% end %>
 
 			</ul>
+			<div class="clear"></div>
 			
 		</div>
 	</div>

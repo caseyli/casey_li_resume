@@ -6,7 +6,7 @@ body {
     position:relative;
     
     &.fixed-nav {
-        padding-top:98px;
+        padding-top:38px;
     }
 }
 
@@ -42,18 +42,22 @@ a {
 
 .container {
     margin:0 auto;
-    width:960px;
+    max-width:960px;
+    width:calc(100% - 40px);
+    padding:0 20px;
 }
 
 .section {
     padding:30px 0;
     width:100%;
     
-    .section-header {
-        font-size:3em;
-        text-align:center;
+    h1 {
+        font-size:2em;
+        text-align:left;
         font-family:"Istok Web", sans-serif;
-        font-weight:700;
+        font-weight:400;
+        border-bottom:1px solid #ddd;
+        margin:50px 0;
     }
     
     .section-blurb {
@@ -70,9 +74,9 @@ a {
 .hero-section {
     text-align:center;
     .hero {
-        margin:30px 0;
-        width:600px;
-        
+        margin:80px 0 30px 0;
+        max-width:600px;
+        width:100%;
     }
     
     .hero-title {
@@ -97,45 +101,46 @@ a {
 }
 
 .nav-bar {
-    text-align:center;
-    background:#222;
+    text-align:right;
+    background:#fff;
+    padding:0;
+    position:fixed;
+    top:0;
+    left:0;
+    box-shadow:0 0 5px black;
+
     a {
+        border-top:5px solid transparent;
         display:inline-block;
         text-decoration:none;
-        font-family: "Arial";
-        border-radius: 20px;
-        color:white;
-        margin:0 10px;
-        padding:10px 30px;
+        font-family:"Istok Web", sans-serif;
+        color:#aaa;
+        padding:20px 30px;
+        font-weight:200;
         
+        &.nav-selected {
+            border-top:5px solid #999;
+        }
+
         &:hover {
-            background:white;
-            color:black;
+            border-top:5px solid #666;
         };
     }
 }
 
-.nav-bar-fixed {
-    position:fixed;
-    top:0;
-    left:0;
-}
 
-.nav-selected {
-    background:#444;
-}
+.general-section { 
+    color: #333;
+    padding-bottom:20px;
 
-.general-section {
-    background:#eee;
-    
     .where-are-we {
-         width:70%;
+         width:100%;
          font-family:"Istok Web", sans-serif;
          margin: 20px auto;
-         padding: 10px 10px;
-         border-radius:30px;
-         background:#333;
-         color:#EEE;
+         padding: 10px 0px;
+         border-radius:10px;
+         background:#ddd;
+         color:#222;
          text-align:center;
      }
 
@@ -156,10 +161,9 @@ a {
          font-family:"Istok Web", sans-serif;
          border:1px solid #eee;
          border-radius:10px;
-         width:500px;
-         padding:20px;
+         width:100% ;
+         padding:20px 0;
          margin:0 auto;
-         background:#ddd;
          .sign-up-form {
              margin: 20px 0;
 
@@ -189,7 +193,6 @@ a {
 }
 
 .info-section {
-    background:#fff;
     line-height:30px;
     .info-image {
         width:50%;
@@ -197,8 +200,6 @@ a {
 }
 
 .curriculum-section {
-    background:#333;
-    color:#ddd;
     
     table.schedule {
         font-family:"Arial";
@@ -209,7 +210,7 @@ a {
                 th {
                     padding:10px;  
                     text-align:left;
-                    background:white;
+                    background:#eee;
                     color:#333; 
                 }
             }
@@ -218,7 +219,7 @@ a {
         tbody {
             tr {
                 td {
-                    border:1px solid #888;
+                    border:1px solid #eee;
                     padding:10px;   
                     vertical-align:top;
                 }
@@ -231,12 +232,13 @@ a {
 }
 
 .contact-section {
-    background:#ddd;
-    color:#333;
-    text-align:center;
+    text-align:justify;
     
     img {
-        width:200px;
+        max-width:200px;
+        width:40%;
+        float:left;
+        margin-right:50px;
     }
     
     .who-is-this-guy {
@@ -251,15 +253,16 @@ a {
             a {
                 text-decoration:none;
                 li {
-                    margin:20px auto;
-                    width:300px;
+                    margin:10px 10px 10px 0;
+                    width:150px;
                     text-align:center;
                     border:1px solid #aaa;
+                    float:left;
                     
-                    background:#bbb;
+                    background:#fff;
                     color:#333;
                     font-weight:normal;
-                    font-size:20px;
+                    font-size:0.75em;
                     padding:10px 15px;
                 }
 
