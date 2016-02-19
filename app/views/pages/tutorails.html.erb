@@ -1,4 +1,4 @@
-<div class="section nav-bar">
+<div class="nav-bar">
 	<div class="container">
 		<%= link_to "GENERAL", "#", id: "general-link", class: "nav-link", destination: ".general-section" %>
 		<%= link_to "INFO", "#", id: "info-link", class: "nav-link", destination: ".info-section" %>
@@ -39,7 +39,7 @@
 																												["None (General Interest)", "tutorails"]
 																											]) %><br><br>
 				<%= text_field_tag :email, "", placeholder: "email address" %><br>
-				<%= link_to "Submit", "#", class: "tutorails-sign-up-submit" %>				
+				<%= link_to "Submit", "#", class: "btn" %>				
 			</div>
 			<div class="sign-up-results">
 
@@ -55,21 +55,20 @@
 		<h1>
 			INFO
 		</h1>
-		<div class="section-blurb">
-			<p>
-				Tutorails is a completely free web development course that's designed for anyone who wants to learn.
-			</p>
+		
+		<p>
+			Tutorails is a completely free web development course that's designed for anyone who wants to learn.
+		</p>
 
-			<p>
-				<b>The current Tutorails Session is only open to University
-				of Ottawa Students.</b><br> 
-				(details of time and location in curriculum below)
-			</p>			
-			<p>
-				If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
-			</p>
+		<p>
+			<b>The current Tutorails Session is only open to University
+			of Ottawa Students.</b><br> 
+			(details of time and location in curriculum below)
+		</p>			
+		<p>
+			If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
+		</p>
 			
-		</div>
 	</div>
 </div>
 <div class="section curriculum-section">
@@ -79,6 +78,9 @@
 		</h1>
 
 		<div>
+			<%= link_to "TEST_BUTTON", "#", class: "btn" %>
+			<%= link_to "TEST_BUTTON", "#", class: "btn" %>
+			<%= link_to "TEST_BUTTON", "#", class: "btn" %>
 
 			<%= raw @tutorails_schedule %>
 
@@ -94,44 +96,33 @@
 		<div class="featured-image">
 			<%= image_tag "me_circle.png", class: "contact-image" %>	
 		</div>
-		<div class="section-blurb">
+		
+		<p>
 			Tutorails is taught by Casey Li. You can reach him at <%= link_to "casey.li@gmail.com", "mailto:casey.li@gmail.com" %>.
-		</div>
-		<div class="section-blurb who-is-this-guy">
+		</p>
+
+		<p>
 			Hi everybody, my name is Casey Li and I'm a web developer based out of Ottawa. I studied software engineering at UOttawa
 			from 2001-2006. I actually started out doing Java programming, but slowly moved into web development with JSP and .Net.
 			However, it wasn't until I jumped into Ruby on Rails that my web development passion really took off. Seriously - Ruby
 			on Rails was the first programming framework I've dealt with that didn't hinder my creativity. Since then, I started
-			up a web design company (shameless plug, <%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %>) and have
+			up a software development and video production company 
+			(shameless plug, <%= link_to "http://www.bitesite.ca", "http://www.bitesite.ca" %>) and have
 			been loving it ever since. I'm passionate about Rails, but I'm also passionate about teaching. So that's why I'm running
 			this free course.
 			
 			If you want to look up anything else about me, you can hit up some of these links:<br>
-			<ul>
-				<%= link_to "http://www.bitesite.ca" do %>
-					<li>www.bitesite.ca</li>
-				<% end %>
-
-				<%= link_to "http://www.caseyli.com" do %>
-					<li>www.caseyli.com</li>
-				<% end %>
-
-
-				<%= link_to "http://www.youtube.com/cli23" do %>
-					<li>www.youtube.com/cli23</li>
-				<% end %>
-
-				<%= link_to "http://www.github.com/caseyli" do %>
-					<li>www.github.com/caseyli</li>
-				<% end %>
-
-				<%= link_to "http://cli23.blogspot.com" do %>
-					<li>cli23.blogspot.com</li>
-				<% end %>
-
-			</ul>
-			<div class="clear"></div>
 			
-		</div>
+			<div class="about-me-links">
+				<%= link_to "www.bitesite.ca", "http://www.bitesite.ca" %>
+				<%= link_to "www.caseyli.com", "http://www.caseyli.com" %>
+				<%= link_to "www.youtube.com/cli23", "http://www.youtube.com/cli23" %>
+				<%= link_to "www.github.com/caseyli", "http://www.github.com/caseyli" %>
+				<%= link_to "cli23.blogspot.com", "http://cli23.blogspot.com" %>
+			</div>
+		</p>
+		
+
+			
 	</div>
 </div>
