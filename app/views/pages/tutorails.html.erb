@@ -1,10 +1,8 @@
-
-
 <div class="section hero-section">
 	<div class="container">
 		<%= image_tag "tutorails_logo_new.png", class: "hero" %>
 		<div class="hero-blurb">
-			a <b>comprehensive</b>, <b>free</b> web development course using ruby on rails taught in <b>ottawa</b> canada
+			a <b>free</b> web development course using ruby on rails taught in <b>ottawa</b> canada
 		</div>
 
 	</div>
@@ -29,24 +27,6 @@
 			WHERE ARE WE IN THE SYLLABUS / NEXT COURSE: <br>
 			<%= raw @tutorails_where_we_are %>
 		</div>
-		<div class="google-links">
-			<%= link_to "GOOGLE CALENDAR SCHEDULE", 
-						"https://www.google.com/calendar/embed?src=d8fre4q0v4e3521eal181hivl8%40group.calendar.google.com&ctz=America/Toronto",
-						class: "google-button",
-						target: "_blank" %>
-			<%= link_to "GOOGLE GROUP",
-			 			"http://groups.google.com/d/forum/tutorails-ottawa",
-						class: "google-button",
-						target: "_blank" %>		<br><br>
-			<%= link_to "CLASS LOG",
-						"https://docs.google.com/document/d/1TdcQ5Jha4YEt1iMgHLj6gZwRuRwTXtnmo_XSPW5pvwQ/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>	
-			<%= link_to "ASSIGNMENTS",
-						"https://docs.google.com/document/d/18VSOIDoh9XypyR-Bbt3QLMvCnl9DdX95EYiAmNlTERM/edit?usp=sharing",
-						class: "google-button",
-						target: "_blank" %>	
-		</div>
 
 		<div class="sign-up">
 			Sign Up for the course by signing up for our Newsletter. <br>
@@ -54,6 +34,7 @@
 			<div class="sign-up-form">
 				Session:
 				<%= select_tag :category, options_for_select([
+																												["UOttawa Tutorails 2016", "UOttawa Tutorails 2016"],
 																												["UOttawa Tutorails 2014", "UOttawa Tutorails 2014"], 
 																												["None (General Interest)", "tutorails"]
 																											]) %><br><br>
@@ -79,19 +60,14 @@
 		</div>
 		<div class="section-blurb">
 			<p>
-				Tutorails is a completely free comprehensive web development course that's designed for anyone who wants to learn (<b>even if
-				you've never programmed a day in your life!</b>).
+				Tutorails is a completely free web development course that's designed for anyone who wants to learn.
 			</p>
 
 			<p>
 				<b>The current Tutorails Session is only open to University
-				of Ottawa Students.</b><br> It is held at <b>STE J0106, Mondays from 5:30pm - 7:00pm</b>.
-			</p>
-			<p>
-				<b>It is HIGHLY RECOMMENDED that you bring a laptop to the course.</b> Although possible to attend to course
-				without a laptop, it will be much easier to follow along if you do the work as I do it.
-			</p>
-			
+				of Ottawa Students.</b><br> 
+				It is held at <b>Tuesdays from 7:00pm - 8:30pm</b> (Room to be announced).
+			</p>			
 			<p>
 				If you're curious about the style of teaching you can expect, check out some of the videos <%= link_to "here", "/videos" %>.
 			</p>

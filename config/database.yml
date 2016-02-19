@@ -3,8 +3,6 @@ development:
   encoding: unicode
   database: casey_li_resume_development
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432
 
@@ -13,8 +11,6 @@ test:
   encoding: unicode
   database: casey_li_resume_test
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432
 
@@ -24,7 +20,5 @@ production:
   encoding: unicode
   database: casey_li_resume_production
   pool: 5
-  username: postgres
-  password: postgres
   host: 127.0.0.1
   port: 5432

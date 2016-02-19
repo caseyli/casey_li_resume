@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.22'
 
 gem 'pg'
 
@@ -11,9 +11,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'newrelic_rpm'
 
-gem 'unicorn'
+gem 'puma'
 gem "rack-timeout"
 
 
@@ -22,5 +21,5 @@ group :development do
 	 gem "letter_opener"
 end
 
-ruby '1.9.3'
+ruby '2.2.4'
 #ruby-gemset=casey_li_resume
