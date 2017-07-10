@@ -52,13 +52,7 @@ class PagesController < ApplicationController
   end
   
   def contact
-    @success = false
-    if !params[:email_address].blank? && !params[:message].blank?
-      ContactMailer.contact_email("CLI Resume Message from " + params[:email_address],
-                                  params[:email_address],
-                                  params[:message]).deliver
-      @success = true
-    end
+    @title = "Contact"
   end
   
   def birthday2013
