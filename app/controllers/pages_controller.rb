@@ -54,6 +54,10 @@ class PagesController < ApplicationController
   def contact
     @title = "Contact"
   end
+
+  def uo
+    @title = "University of Ottawa SEG2900"
+  end
   
   def birthday2013
     @title = "Casey Li's 31st Birthday"

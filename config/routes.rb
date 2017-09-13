@@ -27,6 +27,7 @@ CaseyLiResume::Application.routes.draw do
   get "pages/about"
   get "pages/gittingtoknowyou"
   get "/tutorails" => "pages#tutorails"
+  get "/uo" => "pages#uo"
   
   post "pages/contact"
   
