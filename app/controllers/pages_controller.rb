@@ -46,6 +46,11 @@ class PagesController < ApplicationController
     @title = "Videos"
     render :layout => "empty"
   end
+
+  def slideroom
+    @title = "Slideroom"
+    render layout: "empty"
+  end
   
   def gittingtoknowyou
     redirect_to "/videos"
