@@ -1,29 +1,32 @@
-<p>
-<div class='center'>
-	<%= image_tag "JobApp/Mission.png", :class => "mission" %>
-</div>	
-</p>
+<div id="pages-job-application">
+  <div class="container">
+    <p>
+      <div class='center'>
+        <%= image_tag "JobApp/Mission.png", :class => "mission" %>
+      </div>  
+    </p>
 
-<p>
-<div class='center'>
-	<%= link_to image_tag("JobApp/YourJob.png"), "http://www.shopify.com/careers/details?jvi=otvcWfwQ,job", :target => "_blank" %>
+    <p>
+      <div class='center'>
+        <%= link_to image_tag("JobApp/YourJob.png"), "http://www.shopify.com/careers/details?jvi=otvcWfwQ,job" %>
+      </div>
+    </p>
+
+    <%= render 'jobapplication_basics' %>
+
+    <%= render 'jobapplication_rails' %>
+    <%= render 'jobapplication_management' %>
+    <%= render 'jobapplication_marketing' %>
+    <%= render 'jobapplication_talks' %>
+
+
+
+    <p>
+      <div class='center'>
+        <%= link_to image_tag("JobApp/Interested.png"), 'mailto:casey.li@gmail.com' %>
+      </div>
+    </p>
+
+    <%= render 'jobapplication_eventhandlers' %>
+  </div>
 </div>
-</p>
-
-<%= render 'jobapplication_basics' %>
-
-<%= render 'jobapplication_rails' %>
-<%= render 'jobapplication_management' %>
-<%= render 'jobapplication_marketing' %>
-<%= render 'jobapplication_talks' %>
-
-
-
-<p>
-	<div class='center'>
-		<%= link_to image_tag("JobApp/Interested.png"), 'mailto:casey.li@gmail.com' %>
-	</div>
-</p>
-
-
-<%= render 'jobapplication_eventhandlers' %>

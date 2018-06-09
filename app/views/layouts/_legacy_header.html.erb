@@ -1,0 +1,34 @@
+<header>
+	<!-- # Temporary Redirect during Job Application Period
+	<%= link_to logo, root_path %>
+	-->
+	<%= link_to logo, '/home' %>
+	
+	<br/>
+	<nav class="round">
+		<ul>
+			<!-- # Temporary Redirect during Job Application Period
+			<li><%= link_to "Home", root_path %></li>
+			-->
+			<li><%= link_to "Home", "/legacy" %></li>
+			
+			<li><%= link_to "Skills", skills_path %></li>
+			<li><%= link_to "Work", work_experience_path %></li>
+			<li><%= link_to "Education", education_path %></li>
+			<li><%= link_to "Hobbies", hobbies_path %></li>
+			<% if signed_in? %>
+				<li><%= link_to "Edit", resume_entry_types_path %></li>
+			<% end %>
+			<li><%= link_to "PDF", "/Casey Li - Resume.pdf" %></li>
+			<li><%= link_to "Contact", contact_path %></li>
+			<li><%= link_to "About", about_path %></li>
+			<li>
+				<% if signed_in? %>
+					<%= link_to "Sign out", signout_path %>
+				<% else %>
+					<%= link_to "Sign in", signin_path %>
+				<% end %>
+			</li>
+		</ul>
+	</nav>
+</header>

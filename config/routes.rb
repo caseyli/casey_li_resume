@@ -1,10 +1,9 @@
 CaseyLiResume::Application.routes.draw do
 
+  root :to => 'pages#home'
+
   resources :settings
-
-
   resources :newsletter_sign_ups
-
 
   get "users/new"
   get "sessions/new"
@@ -31,8 +30,9 @@ CaseyLiResume::Application.routes.draw do
   
   post "pages/contact"
   
-  root :to => 'pages#landing'
   
+  
+  get '/legacy' => 'pages#legacy'
   get '/skills' => "pages#skills"
   get '/work_experience' => "pages#work_experience"
   get '/education' => "pages#education"

@@ -1,65 +1,64 @@
 class PagesController < ApplicationController
   before_filter :basic_authenticate, :only => [:engagement]
   
-  def landing
-    @title = "Casey Li"
-    render :layout => "layouts/landing"
-  end
-  
   def home
-    @title = "Home"
-  end
-  
-  def skills
-    @title = "Skills"
-    entry_type_id = ResumeEntryType.find_by_description("Skills")
-    @entries = ResumeEntry.entries(entry_type_id)
-    @show_date = false
+    @title = "Casey Li"
+
+    @sections = [
+                  {
+                    url: "http://www.bitesite.ca",
+                    title: "bitesite",
+                    description: "a software development and video production firm based in ottawa canada."
+                  },
+                  {
+                    url: "/videos",
+                    title: "videos",
+                    description: "various videos including tutorials on git, rails development and more"
+                  },
+                  {
+                    url: "/slideroom",
+                    title: "slideroom",
+                    description: "tips and advice on designing slides and presentations"
+                  },
+                  {
+                    url: "http://cli23.blogspot.com",
+                    title: "blog",
+                    description: "my blog where I have various posts about solving technical issues from programming to film equipment, to things like the nest thermostat"
+                  },
+                  {
+                    url: "/legacy",
+                    title: "legacy",
+                    description: "caseyli.com's original main portal. this site started as a test project back in 2011 when I just started learning rails. thought I'd keep it around for sentimental reasons."
+                  },
+                  {
+                    url: "/tutorails",
+                    title: "tutorails",
+                    description: "comprehensive course on web development using ruby on rails taught in ottawa, canada"
+                  }
+                
+                ]
+
+    render layout: "landing"
   end
 
-  def work_experience
-    @title = "Work Experience"
-    entry_type_id = ResumeEntryType.find_by_description("Work Experience")
-    @entries = ResumeEntry.entries(entry_type_id)
-    @show_date = true
-  end
-
-  def education
-    @title = "Education"
-    entry_type_id = ResumeEntryType.find_by_description("Education")
-    @entries = ResumeEntry.entries(entry_type_id)
-    @show_date = true
-  end
-
-  def hobbies
-    @title = "Hobbies"
-    entry_type_id = ResumeEntryType.find_by_description("Hobbies")
-    @entries = ResumeEntry.entries(entry_type_id)
-    @show_date = false
-  end
-
-  def about
-    @title = "About"
-  end
-  
   def videos
     @title = "Videos"
-    render :layout => "empty"
   end
 
   def slideroom
     @title = "Slideroom"
-    render layout: "empty"
   end
   
   def gittingtoknowyou
     redirect_to "/videos"
   end
   
-  def contact
-    @title = "Contact"
-  end
-
+  def tutorails
+    @tutorails_where_we_are = Setting.find_by_key("tutorails_where_we_are").try(:value)
+    @tutorails_schedule = Setting.find_by_key("tutorails_schedule").try(:value)
+    @hide_header = true
+	end
+  
   def uo
     @title = "University of Ottawa SEG2900"
   end
@@ -74,11 +73,56 @@ class PagesController < ApplicationController
     render :layout => "blackblank"
   end
 
-  def tutorails
-    @tutorails_where_we_are = Setting.find_by_key("tutorails_where_we_are").try(:value)
-    @tutorails_schedule = Setting.find_by_key("tutorails_schedule").try(:value)
-		render :layout => "tutorails"
-	end
+
+  
+
+  # Legacy ==================================================
+  def legacy
+    @title = "Home"
+    render layout: "legacy"
+  end
+  
+  def skills
+    @title = "Skills"
+    entry_type_id = ResumeEntryType.find_by_description("Skills")
+    @entries = ResumeEntry.entries(entry_type_id)
+    @show_date = false
+    render layout: "legacy"
+  end
+
+  def work_experience
+    @title = "Work Experience"
+    entry_type_id = ResumeEntryType.find_by_description("Work Experience")
+    @entries = ResumeEntry.entries(entry_type_id)
+    @show_date = true
+    render layout: "legacy"
+  end
+
+  def education
+    @title = "Education"
+    entry_type_id = ResumeEntryType.find_by_description("Education")
+    @entries = ResumeEntry.entries(entry_type_id)
+    @show_date = true
+    render layout: "legacy"
+  end
+
+  def hobbies
+    @title = "Hobbies"
+    entry_type_id = ResumeEntryType.find_by_description("Hobbies")
+    @entries = ResumeEntry.entries(entry_type_id)
+    @show_date = false
+    render layout: "legacy"
+  end
+
+  def contact
+    @title = "Contact"
+    render layout: "legacy"
+  end
+
+  def about
+    @title = "About"
+    render layout: "legacy"
+  end
 
   def jobapplication
     @skills = ["Rails", 
@@ -110,7 +154,7 @@ class PagesController < ApplicationController
                "Photoshop",
                "After Effects",
                "Final Cut"]
-    render :layout => "jobapplication"
+    render layout: "jobapplication"
   end
   
   private

@@ -2,16 +2,12 @@
 <html>
 <head>
   <title><%= title %></title>
-  <%= stylesheet_link_tag "jobapplication" %>
+  <%= stylesheet_link_tag "legacy/legacy" %>
   <%= javascript_include_tag 'application.js'%>
   <%= csrf_meta_tag %>
   
 </head>
-<body>
-	<div class="container">
-		<div class="main">
-			<%= yield %>
-		</div>
-	</div>
+<body class="job-application-body">
+	<%= yield %>
 </body>
 </html>

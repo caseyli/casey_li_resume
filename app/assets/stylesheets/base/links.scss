@@ -1,0 +1,11 @@
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color-dark;
+  }
+
+  &:visited {
+    color: $primary-color;
+  }
+}

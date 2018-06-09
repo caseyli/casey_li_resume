@@ -5,17 +5,13 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
   <%= render 'layouts/stylesheets' %>
 </head>
 <body>
-	<div class="container">
-		<div class="main">
-		<%= render 'layouts/header'%>
-		<%= yield %>
-		</div>
-		<div class="footer">
-		<%= render 'layouts/footer' %>
-		</div>
-	</div>
+  <% unless @hide_header %>
+  	<%= render 'layouts/header'%>
+  <% end %>
+	<%= yield %>
 </body>
 </html>

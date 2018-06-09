@@ -1,0 +1,52 @@
+#pages-home {
+	h1 {
+		font-size: 50px;
+		font-weight:bold;
+		border-bottom: 1px solid;
+		border-color: #BBB;
+		color:#fff;
+	}
+
+	.hero-logo {
+		text-align:center;
+		margin:50px 0px;
+		
+		img {
+			max-width: 300px;
+			width:100%;
+		}
+	}
+
+	.sections {		
+		a.section {
+			display: block;
+			color:white;
+			font-size: 20px;
+			text-decoration:none;
+			
+			width: calc(100% - 50px);
+			padding: 20px;
+			transition: 200ms;
+			-moz-transition: 200ms; /* Firefox 4 */
+			-webkit-transition: 200ms; /* Safari and Chrome */
+			-o-transition: 200ms; /* Opera */
+			border-left: 10px solid transparent;
+			
+			.title {
+				float:left;
+				width: 200px;
+				font-size: 40px;
+			}
+
+			.description {
+				float:left;
+				width: calc(100% - 200px);
+			}
+
+			&:hover{
+				border-left: 10px solid white;
+			}
+		}
+		
+	}
+}

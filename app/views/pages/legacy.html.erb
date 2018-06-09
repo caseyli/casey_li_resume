@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	$(document).ready(function(){	
+		$("#slider").easySlider();
+	});	
+</script>
+
+<div id="slider">
+	<ul>				
+		<li><%= link_to image_tag("Banner0.png", :alt => "Gitting to Know You", :class => "rotatorimage"), "/gittingtoknowyou" %></li>
+		<li><%= link_to image_tag("Banner1.png", :alt => "Capo", :class => "rotatorimage"), "http://capoapp.herokuapp.com/" %></li>
+		<li><%= link_to image_tag("Banner2.png", :alt => "Skills", :class => "rotatorimage"), "/skills" %></li>
+		<li><%= link_to image_tag("Banner3.png", :alt => "Portfolio", :class => "rotatorimage"), "http://caseyli.carbonmade.com/" %></li>
+	</ul>
+</div>

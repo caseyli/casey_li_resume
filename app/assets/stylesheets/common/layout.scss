@@ -1,0 +1,23 @@
+body {
+  background: #222;
+  color: white;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+.container {
+  width: calc(100% - 40px);
+  max-width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
