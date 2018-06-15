@@ -9,7 +9,7 @@ CaseyLiResume::Application.routes.draw do
   resources :newsletter_sign_ups, except: [:show]
   resources :resume_entry_types
   resources :resume_entries
-  resources :resume_entry_notes
+  resources :resume_entry_notes, except: [:show]
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
 
@@ -30,7 +30,7 @@ CaseyLiResume::Application.routes.draw do
   post "pages/contact"
   
   
-  
+  get 'admin' => 'pages#admin'  
   get '/legacy' => 'pages#legacy'
   get '/skills' => "pages#skills"
   get '/work_experience' => "pages#work_experience"

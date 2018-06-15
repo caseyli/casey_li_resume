@@ -1,7 +1,6 @@
-<h1>Resume Entry Types</h1>
-<%= form_for(@resume_entry_type) do |f| %>
-	<%= render "fields", :f => f %>
-	<div class="actions">
-		<%= f.submit "Create New Entry Type" %>
-	</div>
-<% end %>
+<div class="resume-entry-types-new">
+  <div class="container">
+    <h1>New resume entry type</h1>
+    <%= render 'form' %>
+  </div>
+</div>

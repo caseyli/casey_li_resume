@@ -3,9 +3,8 @@ class ResumeEntryNotesController < ApplicationController
   before_filter :authenticate
   
   def new
-    # Temporary Redirect during Job Application Period
-    # redirect_to root_path
-    redirect_to "/home"
+    @resume_entry_note = ResumeEntryNote.new
+    @resume_entry_note.resume_entry_id = params[:resume_entry_id]
   end
   
   def create
@@ -24,15 +23,7 @@ class ResumeEntryNotesController < ApplicationController
       render 'new'
     end
   end
-  
-  def show
-    @resume_entry_notes = ResumeEntryNotes.all
-  end
-  
-  def show
-    @resume_entry_note = ResumeEntryNote.find(params[:id])
-  end
-  
+    
   def edit
     @resume_entry_note = ResumeEntryNote.find(params[:id])
   end

@@ -1,39 +1,58 @@
 <div class="resume-entries-show">
 	<div class="container">
-		<h1><%= @resume_entry.title %> | <%= link_to "edit", edit_resume_entry_path(@resume_entry) %> | <%= link_to "delete", @resume_entry, :method => :delete, 
-													:confirm => "Are you sure you want to delete #{@resume_entry.title}?", 
-												    :title => "Delete item?" %></h1>
-		<table class="resumeentries">
-			<tr class="resumentriesheader">
-				<td>Entry Type</td>
-				<td>Start</td>
-				<td>End</td>
-				<td>Display Order</td>
-			</tr>
-			<tr>
-				<td><%= link_to @resume_entry.resume_entry_type.description, @resume_entry.resume_entry_type %></td>
-				<td><%= @resume_entry.start_period %></td>
-				<td><%= @resume_entry.end_period %></td>
-				<td><%= @resume_entry.order_by %></td>
-			</tr>
-		</table>
+		<h1><%= @resume_entry.title %></h1>
 
-		<!-- Show Notes -->
+  	<div>
+  		<%= @resume_entry.resume_entry_type.description %>
+		</div>
+  	<div>
+  		<%= @resume_entry.start_period %>
+		</div>
+  	<div>
+  		<%= @resume_entry.end_period %>
+		</div>
+  	<div>
+  		<%= @resume_entry.order_by %>
+		</div>
+
+
 		<% if !@resume_entry.resume_entry_notes.empty? %>
 			<h2>Notes</h2>
-			<ul>
-				<% @resume_entry.resume_entry_notes.each do |note| %>
-					<% if !note.note.nil? %>
-						<li><%= link_to note.note, resume_entry_note_path(note) %> | <%= link_to "edit", edit_resume_entry_note_path(note) %> | <%= link_to "delete", note, :method => :delete, 
-																	:confirm => "Are you sure you want to delete #{note.note}?", 
-																    :title => "Delete item?" %></li>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Note</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @resume_entry.resume_entry_notes.each do |note| %>
+						<tr>
+							<td><%= note.note %></td>
+							<td>
+								<%= link_to "edit", edit_resume_entry_note_path(note) %>
+							</td>
+							<td>
+								<%= link_to "delete", note, :method => :delete, 
+																		:confirm => "Are you sure you want to delete #{note.note}?", 
+																	    :title => "Delete item?" %></td>									
+							</td>
+						</tr>
 					<% end %>
-				<% end %>
+				</tbody>
+				
+			</table>
+				
 			</ul>
 		<% end %>
 
+
+
 		<!-- Form to add a new note -->
-		<%= render 'shared/resume_entry_note_form' %>
+		<%= link_to "New resume entry note", new_resume_entry_note_path(resume_entry_id: @resume_entry.id) %>
 		
 	</div>
 </div>

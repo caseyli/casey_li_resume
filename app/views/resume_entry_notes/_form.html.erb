@@ -1,0 +1,26 @@
+<%= form_for @resume_entry_note do |f| %>
+  <div class="field">
+    <%= f.label :resume_entry_id %>
+    <%= f.select :resume_entry_id, 
+                options_from_collection_for_select(ResumeEntry.all, :id, :title, selected: @resume_entry_note.resume_entry.id) %>
+  </div>
+  <div class="field">
+    <%= f.label :order_by %>
+    <%= f.text_field :order_by %>
+  </div>
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note, :cols => 95, :rows => 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url%>
+  </div>
+  <div class="field">
+    <%= f.label :link_text %>
+    <%= f.text_field :link_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

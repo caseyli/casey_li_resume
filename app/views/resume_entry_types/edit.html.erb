@@ -1,7 +1,6 @@
-<h1>Edit Resume Entry Type</h1>
-<%= form_for(@resume_entry_type) do |f| %>
-	<%= render "fields", :f => f %>
-	<div class="actions">
-		<%= f.submit "Update" %>
-	</div>
-<% end %>
+<div class="resume-entry-types-edit">
+  <div class="container">
+    <h1>Edit resume Entry Type</h1>
+    <%= render 'form' %>
+  </div>
+</div>

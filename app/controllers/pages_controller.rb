@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :basic_authenticate, :only => [:engagement]
+  before_filter :basic_authenticate, only: [:engagement]
+  before_filter :authenticate, only: [:admin]
   
   def home
     @title = "Casey Li"
@@ -73,8 +74,10 @@ class PagesController < ApplicationController
     render :layout => "blackblank"
   end
 
+  def admin
 
-  
+  end
+
 
   # Legacy ==================================================
   def legacy

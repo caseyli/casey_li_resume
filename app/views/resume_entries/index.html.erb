@@ -3,10 +3,10 @@
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Type</th>
           <th>Title</th>
           <th>Notes</th>
+          <th></th>
           <th></th>
           <th></th>
         </tr>
@@ -15,16 +15,16 @@
       <tbody>
         <% @resume_entries.each do |resume_entry| %>
           <tr>
-            <td><%= resume_entry.id %></td>
-            <td><%= resume_entry.resume_entry_type_id %></td>
+            <td><%= resume_entry.resume_entry_type.description %></td>
             <td><%= resume_entry.title %></td>
-            <td><%= resume_entry.notes %></td>
+            <td><%= resume_entry.resume_entry_notes.size %></td>
+            <td><%= link_to 'Show', resume_entry %></td>
             <td><%= link_to 'Edit', edit_resume_entry_path(resume_entry) %></td>
             <td>
               <%= link_to 'Destroy', 
                             resume_entry, 
                             method: :delete, 
-                            data: { confirm: "Are you sure you want to delete #{resume_entry.email}?" } %>
+                            data: { confirm: "Are you sure you want to delete #{resume_entry.title}?" } %>
             </td>
           </tr>
         <% end %>

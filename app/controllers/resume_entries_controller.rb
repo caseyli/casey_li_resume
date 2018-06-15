@@ -4,6 +4,7 @@ class ResumeEntriesController < ApplicationController
   
   def new
     @resume_entry = ResumeEntry.new
+    @resume_entry.resume_entry_type_id = params[:resume_entry_type_id]
   end
   
   def create
@@ -17,7 +18,6 @@ class ResumeEntriesController < ApplicationController
   
   def show
     @resume_entry = ResumeEntry.find(params[:id])
-    @resume_entry_note = @resume_entry.resume_entry_notes.build
   end
   
   def index

@@ -1,22 +1,45 @@
 <div class="resume-entry-types-show">
 	<div class="container">
-		<h1><%= @resume_entry_type.description %> | <%= link_to "edit", edit_resume_entry_type_path(@resume_entry_type) %> | <%= link_to "delete", @resume_entry_type,
-		                                                      :method => :delete, 
-															  :confirm => "Are you sure you want to delete #{@resume_entry_type.description}?", 
-															  :title => "Delete item?" %></h1>
+		<h1><%= @resume_entry_type.description %></h1>
 		<% if !@resume_entry_type.resume_entries.empty? %>
-			<ul>
-				<% @resume_entry_type.resume_entries.each do |entry| %>
-					<!-- There will be one extra entry for the resume_entry form -->
-					<% if !entry.title.nil? %>
-						<li><%= "#{entry.start_month}-#{entry.start_year} | #{entry.end_month}-#{entry.end_year} | " %>
-							<%= link_to entry.title, resume_entry_path(entry) %>
-						</li>
+			<table>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Dates</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<% @resume_entry_type.resume_entries.each do |resume_entry| %>
+						<tr>
+							<td>
+								<%= resume_entry.title %>
+							</td>	
+							<td>
+								<%= "#{resume_entry.start_month}-#{resume_entry.start_year} | #{resume_entry.end_month}-#{resume_entry.end_year} | " %>
+							</td>	
+							<td>
+								<%= link_to "Show", resume_entry %>
+							</td>
+							<td>
+								<%= link_to "Edit", edit_resume_entry_path(resume_entry) %>
+							</td>
+							<td>
+								<%= link_to "Delete", resume_entry, :method => :delete, 
+																												  :confirm => "Are you sure you want to delete #{resume_entry.title}?", 
+																												  :title => "Delete item?" %>
+							</td>
+						</tr>
 					<% end %>
-				<% end %>
-			</ul>
+				</tbody>
+
+			</table>
 		<% end %>
 
-		<%= render 'shared/resume_entry_form' %>
+		<%= link_to 'Add new resume entry', new_resume_entry_path(resume_entry_type_id: @resume_entry_type.id) %>
 	</div>
 </div>

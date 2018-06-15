@@ -1,0 +1,38 @@
+<%= form_for(@resume_entry) do |f| %>
+  <div class="field">
+    <%= f.label :resume_entry_type %>
+    <%= f.select :resume_entry_type_id, 
+                  options_from_collection_for_select(ResumeEntryType.all, 
+                                                      :id, 
+                                                      :description, 
+                                                      selected: @resume_entry.resume_entry_type_id) %>
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :start_month %>
+    <%= f.text_field :start_month %>
+  </div>
+  <div class="field">
+    <%= f.label :start_year %>
+    <%= f.text_field :start_year %>
+  </div>
+  <div class="field">
+    <%= f.label :end_month %>
+    <%= f.text_field :end_month %>
+  </div>
+  <div class="field">
+    <%= f.label :end_year %>
+    <%= f.text_field :end_year %>
+  </div>
+  <div class="field">
+    <%= f.label :order_by %>
+    <%= f.text_field :order_by %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
