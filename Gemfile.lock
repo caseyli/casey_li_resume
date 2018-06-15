@@ -60,6 +60,7 @@ GEM
     multi_json (1.11.2)
     pg (0.15.1)
     polyglot (0.3.5)
+    power_assert (0.2.2)
     puma (2.16.0)
     rack (1.4.7)
     rack-cache (1.6.1)
@@ -110,6 +111,8 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    test-unit (3.0.8)
+      power_assert
     thor (0.19.1)
     tilt (1.4.1)
     treetop (1.4.15)
@@ -133,6 +136,7 @@ DEPENDENCIES
   rails (= 3.2.22)
   rspec-rails (= 2.6.1)
   sass-rails
+  test-unit (~> 3.0)
   uglifier
 
 RUBY VERSION

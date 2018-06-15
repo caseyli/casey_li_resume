@@ -1,18 +1,20 @@
 var scrollHeaders = [];
 
 $(function(){
-  $(window).scroll(windowScroll);
-  $(".tutorails-sign-up-submit").click(tutorailsSignUp);
-  $("#email").keyup(validateEmail);
-  $(".nav-link").click(function(){ 
-		navigateTo($(this).attr("destination"));
-		return false;
-	});
-	
-	$.each($(".nav-link"), function(){
-	  scrollHeaders.push(this.id);
-	});
-	
+
+  if($("#pages-tutorails").length > 0) {
+    $(window).scroll(windowScroll);
+    $(".tutorails-sign-up-submit").click(tutorailsSignUp);
+    $("#email").keyup(validateEmail);
+    $(".nav-link").click(function(){ 
+  		navigateTo($(this).attr("destination"));
+  		return false;
+  	});
+  	
+  	$.each($(".nav-link"), function(){
+  	  scrollHeaders.push(this.id);
+  	});
+  }
 });
 
 function navigateTo(destination) {

@@ -1,41 +1,37 @@
-<h1>Newsletter Sign Ups</h1>
+<div class="newsletter-sign-ups-index">
+  <div class="container">
+    <h1>Newsletter Sign Ups</h1>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th>Category</th>
-    <th>Notes</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Category</th>
+          <th>Notes</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-<% @newsletter_sign_ups.each do |newsletter_sign_up| %>
-  <tr>
-    <td><%= newsletter_sign_up.email %></td>
-    <td><%= newsletter_sign_up.category %></td>
-    <td><%= newsletter_sign_up.notes %></td>
-    <td><%= link_to 'Show', newsletter_sign_up %></td>
-    <td><%= link_to 'Edit', edit_newsletter_sign_up_path(newsletter_sign_up) %></td>
-    <td>
-      <%= link_to 'Destroy', 
-                    newsletter_sign_up, 
-                    method: :delete, 
-                    data: { confirm: "Are you sure you want to delete #{newsletter_sign_up.email}?" } %>
-    </td>
-  </tr>
-<% end %>
-</table>
-<br />
+      <tbody>
+        <% @newsletter_sign_ups.each do |newsletter_sign_up| %>
+          <tr>
+            <td><%= newsletter_sign_up.email %></td>
+            <td><%= newsletter_sign_up.category %></td>
+            <td><%= newsletter_sign_up.notes %></td>
+            <td><%= link_to 'Edit', edit_newsletter_sign_up_path(newsletter_sign_up) %></td>
+            <td>
+              <%= link_to 'Destroy', 
+                            newsletter_sign_up, 
+                            method: :delete, 
+                            data: { confirm: "Are you sure you want to delete #{newsletter_sign_up.email}?" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
 
-<% @newsletter_sign_ups.collect{|x| x.category}.uniq.each do |category| %>  
-  <div class='newsletter-sign-up-category'>
-    <h2><%= category %></h2>
-    <%= @newsletter_sign_ups.select{|x| x.category == category}.collect{|x| x.email}.join(", ") %>
+    <%= link_to 'New Newsletter sign up', new_newsletter_sign_up_path %>    
   </div>
-<% end %>
-
-
-
-<%= link_to 'New Newsletter sign up', new_newsletter_sign_up_path %>
+</div>

@@ -5,13 +5,14 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>
-  <%= render 'layouts/stylesheets' %>
-  <%= stylesheet_link_tag	 "landing" %>
 
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class='landing-body'>
+
+  <%= render 'layouts/signed_in_banner' %>
+
 	<%= yield %>
 </body>
 </html>

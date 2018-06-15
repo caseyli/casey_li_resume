@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       
       # Temporary Redirect during Job Application Period
       # redirect_back_or(root_path)
-      redirect_back_or("/home")
+      redirect_to root_path
     end
   end
   

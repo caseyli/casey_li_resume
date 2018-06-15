@@ -1,17 +1,16 @@
 CaseyLiResume::Application.routes.draw do
 
   root :to => 'pages#home'
+  get "users/new"
+
+
 
   resources :settings
-  resources :newsletter_sign_ups
-
-  get "users/new"
-  get "sessions/new"
-
+  resources :newsletter_sign_ups, except: [:show]
   resources :resume_entry_types
   resources :resume_entries
   resources :resume_entry_notes
-  resources :sessions,            :only => [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users
 
   get "pages/landing"

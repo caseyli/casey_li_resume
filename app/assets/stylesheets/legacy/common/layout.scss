@@ -3,11 +3,18 @@
   margin:0 auto;
 }
 
+.signed-in-banner {
+  padding: 10px 0;
+  background: red;
+  text-align: right;
+}
+
 .main {
   min-height: 710px;
 }
 
 body {
+  margin: 0;
   background: #15182B;
   font-size:75%;
   font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;

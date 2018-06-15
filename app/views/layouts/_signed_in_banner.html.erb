@@ -1,0 +1,10 @@
+<% if signed_in? %>
+  <div class='signed-in-banner'>
+    <div class="container">
+      Signed in!
+      <%= link_to "Resume Entry Types", resume_entry_types_path %>
+      <%= link_to "Newsletter Signups", newsletter_sign_ups_path %>
+      <%= link_to "Sign out", controller: :sessions, action: :destroy %>
+    </div>
+  </div>
+<% end %>

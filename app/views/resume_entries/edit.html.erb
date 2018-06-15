@@ -1,7 +1,11 @@
-<h1>Edit Resume Entry</h1>
-<%= form_for(@resume_entry) do |f| %>
-	<%= render 'shared/resume_entry_form_fields', :f => f %>
-	<div class="actions">
-		<%= f.submit "Update" %>
-	</div>
-<% end %>
+<div class="resume-entries-edit">
+  <div class="container">
+    <h1>Edit Resume Entry</h1>
+    <%= form_for(@resume_entry) do |f| %>
+    	<%= render 'shared/resume_entry_form_fields', :f => f %>
+    	<div class="actions">
+    		<%= f.submit "Update" %>
+    	</div>
+    <% end %>
+  </div>
+</div>

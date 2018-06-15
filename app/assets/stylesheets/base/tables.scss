@@ -1,0 +1,32 @@
+table {
+
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; 
+
+  thead {
+    tr {
+      background: black;
+
+      th {
+        padding: 15px 10px;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+
+      background: #efefef;
+
+      &:nth-child(odd) {
+        background: #fff;
+      }
+
+      td {
+        color: #333;
+        padding: 15px 10px;
+      }
+    }
+  }
+}

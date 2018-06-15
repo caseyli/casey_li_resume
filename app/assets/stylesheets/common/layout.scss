@@ -15,6 +15,12 @@ header {
   }
 }
 
+.signed-in-banner {
+  padding: 10px 0;
+  background: red;
+  text-align: right;
+}
+
 .container {
   width: calc(100% - 40px);
   max-width: 960px;

@@ -1,12 +1,34 @@
-<ul>
-<% @resume_entries.each do |entry| %>
-	<li><%= "#{entry.id} | #{entry.resume_entry_type_id} | #{entry.title}" %></li>
-	<% if !entry.resume_entry_notes.empty? %>
-		<ul>
-			<% entry.resume_entry_notes.each do |note| %>
-				<%= note.note %>
-			<% end %>
-		</ul>
-	<% end %>
-<% end %>
-</ul>
+<div class="resume-entries-index">
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Title</th>
+          <th>Notes</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @resume_entries.each do |resume_entry| %>
+          <tr>
+            <td><%= resume_entry.id %></td>
+            <td><%= resume_entry.resume_entry_type_id %></td>
+            <td><%= resume_entry.title %></td>
+            <td><%= resume_entry.notes %></td>
+            <td><%= link_to 'Edit', edit_resume_entry_path(resume_entry) %></td>
+            <td>
+              <%= link_to 'Destroy', 
+                            resume_entry, 
+                            method: :delete, 
+                            data: { confirm: "Are you sure you want to delete #{resume_entry.email}?" } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -19,6 +19,7 @@ gem "rack-timeout"
 group :development do
    gem 'rspec-rails', '2.6.1'
 	 gem "letter_opener"
+   gem 'test-unit', '~> 3.0'
 end
 
 ruby '2.2.4'
