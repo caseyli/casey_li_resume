@@ -23,7 +23,7 @@ class NewsletterSignUpsController < ApplicationController
 			UserMailer.newsletter_confirmation(@newsletter_sign_up).deliver
 			
       respond_to do |format|
-        format.html { redirect_to @newsletter_sign_up, notice: 'Newsletter sign up was successfully created.' }
+        format.html { redirect_to newsletter_sign_ups_path, notice: 'Newsletter sign up was successfully created.' }
         format.json { render json: { success: true }.to_json }
       end
     else
@@ -38,7 +38,7 @@ class NewsletterSignUpsController < ApplicationController
     @newsletter_sign_up = NewsletterSignUp.find(params[:id])
 
     if @newsletter_sign_up.update_attributes(params[:newsletter_sign_up])
-      redirect_to @newsletter_sign_up, notice: 'Newsletter sign up was successfully updated.'
+      redirect_to newsletter_sign_ups_path, notice: 'Newsletter sign up was successfully updated.'
     else
       render action: "edit"
     end
