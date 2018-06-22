@@ -10,7 +10,7 @@ class ResumeEntriesController < ApplicationController
   def create
     @resume_entry = ResumeEntry.new(params[:resume_entry])
     if @resume_entry.save
-      redirect_to @resume_entry.resume_entry_type
+      redirect_to @resume_entry
     else
       render 'new'
     end
@@ -40,6 +40,6 @@ class ResumeEntriesController < ApplicationController
   def destroy
     @resume_entry = ResumeEntry.find(params[:id])
     @resume_entry.destroy
-    redirect_to resume_entry_types_path
+    redirect_to resume_entries_path
   end
 end

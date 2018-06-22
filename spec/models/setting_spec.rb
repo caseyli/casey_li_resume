@@ -1,5 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Setting do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Setting, type: :model do
+  it 'is valid with valid data' do
+    expect(build(:setting)).to be_valid
+  end
 end

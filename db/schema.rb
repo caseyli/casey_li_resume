@@ -28,16 +28,16 @@ ActiveRecord::Schema.define(:version => 20131012232206) do
     t.integer  "start_year"
     t.integer  "end_month"
     t.integer  "end_year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.integer  "order_by"
   end
 
   create_table "resume_entry_notes", :force => true do |t|
     t.integer  "resume_entry_id"
     t.string   "note"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "order_by"
     t.string   "url"
     t.string   "link_text"
@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20131012232206) do
 
   create_table "resume_entry_types", :force => true do |t|
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "settings", :force => true do |t|
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(:version => 20131012232206) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "encrypted_password"
     t.string   "salt"
   end
