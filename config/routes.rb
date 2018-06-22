@@ -3,8 +3,6 @@ CaseyLiResume::Application.routes.draw do
   root :to => 'pages#home'
   get "users/new"
 
-
-
   resources :settings
   resources :newsletter_sign_ups, except: [:show]
   resources :resume_entry_types
@@ -28,8 +26,7 @@ CaseyLiResume::Application.routes.draw do
   get "/uo" => "pages#uo"
   
   post "pages/contact"
-  
-  
+
   get 'admin' => 'pages#admin'  
   get '/legacy' => 'pages#legacy'
   get '/skills' => "pages#skills"
