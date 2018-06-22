@@ -17,9 +17,14 @@ gem "rack-timeout"
 
 
 group :development do
-   gem 'rspec-rails', '2.6.1'
 	 gem "letter_opener"
-   gem 'test-unit', '~> 3.0'
+end
+
+group :development, :test do
+  gem 'faker'
+  gem 'factory_bot_rails', '~> 4.10'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'test-unit', '~> 3.0'
 end
 
 ruby '2.2.4'

@@ -1,5 +1,7 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe NewsletterSignUp do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe NewsletterSignUp, type: :model do
+  it 'is valid with valid data' do
+    expect(build(:newsletter_sign_up)).to be_valid
+  end
 end
