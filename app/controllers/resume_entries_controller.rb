@@ -8,7 +8,7 @@ class ResumeEntriesController < ApplicationController
   end
   
   def create
-    @resume_entry = ResumeEntry.new(params[:resume_entry])
+    @resume_entry = ResumeEntry.new(resume_entry_params)
     if @resume_entry.save
       redirect_to @resume_entry
     else
@@ -30,7 +30,7 @@ class ResumeEntriesController < ApplicationController
   
   def update
     @resume_entry = ResumeEntry.find(params[:id])
-    if @resume_entry.update_attributes(params[:resume_entry])
+    if @resume_entry.update_attributes(resume_entry_params)
       redirect_to resume_entry_path(@resume_entry)
     else
       render 'edit'
@@ -42,4 +42,15 @@ class ResumeEntriesController < ApplicationController
     @resume_entry.destroy
     redirect_to resume_entries_path
   end
+
+  private
+    def resume_entry_params
+      params.require(:resume_entry).permit(:resume_entry_type_id, 
+                                                        :title, 
+                                                        :start_month, 
+                                                        :start_year, 
+                                                        :end_month, 
+                                                        :end_year,
+                                                        :order_by)
+    end
 end

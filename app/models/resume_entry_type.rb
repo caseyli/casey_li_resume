@@ -9,9 +9,7 @@
 #  updated_at  :datetime
 #
 
-class ResumeEntryType < ActiveRecord::Base
-  attr_accessible :description
-  
+class ResumeEntryType < ActiveRecord::Base  
   validates :description, :presence => true
   
   has_many :resume_entries, :dependent => :destroy

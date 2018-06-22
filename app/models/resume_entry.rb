@@ -16,21 +16,13 @@
 #
 
 class ResumeEntry < ActiveRecord::Base
-  attr_accessible :resume_entry_type_id, 
-                  :title, 
-                  :start_month, 
-                  :start_year, 
-                  :end_month, 
-                  :end_year,
-                  :order_by
-  
   validates :title, :presence => true
   
   belongs_to :resume_entry_type
   
   has_many :resume_entry_notes, :dependent => :destroy
   
-  default_scope :order => 'order_by ASC'
+  default_scope { order(order_by: :asc) }
   
   def self.entries(type)
     where("resume_entry_type_id = #{type.id}")

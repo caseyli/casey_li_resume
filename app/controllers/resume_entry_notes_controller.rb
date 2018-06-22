@@ -8,7 +8,7 @@ class ResumeEntryNotesController < ApplicationController
   end
   
   def create
-    @resume_entry_note = ResumeEntryNote.new(params[:resume_entry_note])
+    @resume_entry_note = ResumeEntryNote.new(resume_entry_note_params)
     
     # If no URL is entered, set values to NIL
     if @resume_entry_note.url.blank?
@@ -38,7 +38,7 @@ class ResumeEntryNotesController < ApplicationController
     end
     
     # Update entry
-    if @resume_entry_note.update_attributes(params[:resume_entry_note])
+    if @resume_entry_note.update_attributes(resume_entry_note_params)
       redirect_to @resume_entry_note.resume_entry
     else
       render 'edit'
@@ -51,5 +51,14 @@ class ResumeEntryNotesController < ApplicationController
     @resume_entry_note.destroy
     redirect_to resume_entry_path(resume_entry_id)
   end
+
+  private
+    def resume_entry_note_params
+      params.require(:resume_entry_note).permit(:resume_entry_id, 
+                                                :note,
+                                                :url,
+                                                :link_text,
+                                                :order_by)
+    end
 
 end

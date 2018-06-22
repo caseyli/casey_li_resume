@@ -15,7 +15,7 @@ class NewsletterSignUpsController < ApplicationController
   end
 
   def create
-    @newsletter_sign_up = NewsletterSignUp.new(params[:newsletter_sign_up])
+    @newsletter_sign_up = NewsletterSignUp.new(newsletter_sign_up_params)
 
     if @newsletter_sign_up.save
 
@@ -37,7 +37,7 @@ class NewsletterSignUpsController < ApplicationController
   def update
     @newsletter_sign_up = NewsletterSignUp.find(params[:id])
 
-    if @newsletter_sign_up.update_attributes(params[:newsletter_sign_up])
+    if @newsletter_sign_up.update_attributes(newsletter_sign_up_params)
       redirect_to newsletter_sign_ups_path, notice: 'Newsletter sign up was successfully updated.'
     else
       render action: "edit"
@@ -49,4 +49,9 @@ class NewsletterSignUpsController < ApplicationController
     @newsletter_sign_up.destroy
     redirect_to newsletter_sign_ups_url
   end
+
+  private
+    def newsletter_sign_up_params
+      params.require(:newsletter_sign_up).permit(:category, :email, :notes)
+    end
 end

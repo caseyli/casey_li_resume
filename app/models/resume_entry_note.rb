@@ -13,15 +13,9 @@
 #  link_text       :string(255)
 #
 
-class ResumeEntryNote < ActiveRecord::Base
-  attr_accessible :resume_entry_id, 
-                  :note,
-                  :url,
-                  :link_text,
-                  :order_by
-  
+class ResumeEntryNote < ActiveRecord::Base  
   belongs_to :resume_entry
   
-  default_scope :order => 'order_by ASC'
+  default_scope { order(order_by: :asc) }
   
 end
