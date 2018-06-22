@@ -9,7 +9,7 @@ CaseyLiResume::Application.routes.draw do
   resources :newsletter_sign_ups, except: [:show]
   resources :resume_entry_types
   resources :resume_entries
-  resources :resume_entry_notes, except: [:show]
+  resources :resume_entry_notes, except: [:index, :show]
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
 
