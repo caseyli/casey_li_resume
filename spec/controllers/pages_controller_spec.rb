@@ -55,13 +55,6 @@ RSpec.describe PagesController, type: :controller do
         expect(response).to render_template(:birthday2013)
       end
     end
-
-    describe 'GET #engagement' do
-      it 'renders the template' do
-        get :engagement
-        expect(response).to render_template(:engagement)
-      end
-    end
        
     describe 'GET #legacy' do
       it 'renders the template' do
@@ -72,6 +65,7 @@ RSpec.describe PagesController, type: :controller do
 
     describe 'GET #skills' do
       it 'renders the template' do
+        ResumeEntryType.create(description: "Skills") 
         get :skills
         expect(response).to render_template(:skills)
       end
@@ -79,6 +73,7 @@ RSpec.describe PagesController, type: :controller do
         
     describe 'GET #work_experience' do
       it 'renders the template' do
+        ResumeEntryType.create(description: "Work Experience") 
         get :work_experience
         expect(response).to render_template(:work_experience)
       end
@@ -86,6 +81,7 @@ RSpec.describe PagesController, type: :controller do
 
     describe 'GET #education' do
       it 'renders the template' do
+        ResumeEntryType.create(description: "Education") 
         get :education
         expect(response).to render_template(:education)
       end
@@ -93,6 +89,7 @@ RSpec.describe PagesController, type: :controller do
         
     describe 'GET #hobbies' do
       it 'renders the template' do
+        ResumeEntryType.create(description: "Hobbies") 
         get :hobbies
         expect(response).to render_template(:hobbies)
       end
