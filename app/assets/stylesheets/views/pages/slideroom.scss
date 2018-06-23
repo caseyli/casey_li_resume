@@ -1,6 +1,30 @@
 #pages-slideroom {
+  h1 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .slogan {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 20px auto;
+    max-width: 600px;
+    width: 100%;
+    text-align: justify;
+    line-height: 25px;
+    
+    .end-call-to-action {
+      text-align: center;
+    }
+  }
+
   img {
     width: 100%;
-    margin-bottom: 20px;
+    margin: 30px 0;
   }
+
+
 }
