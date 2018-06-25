@@ -36,11 +36,21 @@
 				float:left;
 				width: 200px;
 				font-size: 40px;
+
+				@media #{$small-and-down} {
+					width: 100%;
+					float: none;
+				}
 			}
 
 			.description {
 				float:left;
 				width: calc(100% - 200px);
+
+				@media #{$small-and-down} {
+					width: 100%;
+					float: none;
+				}
 			}
 
 			&:hover{
