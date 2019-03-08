@@ -82,24 +82,10 @@ RSpec.describe ResumeEntriesController, type: :controller do
   end
 
   shared_examples 'a user who cannot manage resume entries' do
-    describe 'GET #index' do
-      it 'denies access' do
-        get :index
-        expect(response).to redirect_to(signin_path)
-      end
-    end
-
-    describe 'GET #show' do
-      it 'renders the template' do
-        get :show, params: { id: resume_entry.id }
-        expect(response).to redirect_to(signin_path)
-      end
-    end
-
     describe 'GET #new' do
       it 'renders the template' do
         get :new
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -112,14 +98,14 @@ RSpec.describe ResumeEntriesController, type: :controller do
 
       it 'denies access' do
         post :create, params: { resume_entry: attributes_for(:resume_entry) }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
         get :edit, params: { id: resume_entry.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -137,7 +123,7 @@ RSpec.describe ResumeEntriesController, type: :controller do
 
       it 'denies access' do
         put :update, params: { id: resume_entry.id, resume_entry: { title: @new_title } }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -151,7 +137,7 @@ RSpec.describe ResumeEntriesController, type: :controller do
 
       it 'denies access' do
         delete :destroy, params: { id: resume_entry.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
   end
@@ -160,9 +146,10 @@ RSpec.describe ResumeEntriesController, type: :controller do
     it_behaves_like 'a user who cannot manage resume entries'
   end
 
-  context 'when signed in' do
+  context 'when signed in as an admin' do
     before :each do
-      session[:signedin] = true
+      admin_user = create(:admin_user)
+      sign_in admin_user
     end
 
     it_behaves_like 'a user who can manage resume entries'

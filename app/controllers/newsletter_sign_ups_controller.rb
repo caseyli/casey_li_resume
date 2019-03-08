@@ -1,22 +1,17 @@
 class NewsletterSignUpsController < ApplicationController
 	
-	before_action :authenticate, except: [:create]
+	load_and_authorize_resource
 	
   def index
-    @newsletter_sign_ups = NewsletterSignUp.all
   end
 
   def new
-    @newsletter_sign_up = NewsletterSignUp.new
   end
 
   def edit
-    @newsletter_sign_up = NewsletterSignUp.find(params[:id])
   end
 
   def create
-    @newsletter_sign_up = NewsletterSignUp.new(newsletter_sign_up_params)
-
     if @newsletter_sign_up.save
 
 			AdminMailer.user_signed_up_for_newsletter(@newsletter_sign_up).deliver_now
@@ -35,8 +30,6 @@ class NewsletterSignUpsController < ApplicationController
   end
 
   def update
-    @newsletter_sign_up = NewsletterSignUp.find(params[:id])
-
     if @newsletter_sign_up.update_attributes(newsletter_sign_up_params)
       redirect_to newsletter_sign_ups_path, notice: 'Newsletter sign up was successfully updated.'
     else
@@ -45,7 +38,6 @@ class NewsletterSignUpsController < ApplicationController
   end
 
   def destroy
-    @newsletter_sign_up = NewsletterSignUp.find(params[:id])
     @newsletter_sign_up.destroy
     redirect_to newsletter_sign_ups_url
   end

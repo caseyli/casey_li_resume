@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   before_action :basic_authenticate, only: [:engagement]
-  before_action :authenticate, only: [:admin]
   
   def home
     @title = "Casey Li"
@@ -75,7 +74,7 @@ class PagesController < ApplicationController
   end
 
   def admin
-
+    authorize! :view, :admin
   end
 
 

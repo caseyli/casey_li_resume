@@ -11,8 +11,11 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 gem 'puma'
-gem "rack-timeout"
+gem 'rack-timeout'
 
+gem 'devise'
+gem 'rolify'
+gem 'cancancan'
 
 group :development do
 	 gem 'letter_opener'

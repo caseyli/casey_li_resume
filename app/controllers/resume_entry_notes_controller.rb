@@ -1,15 +1,12 @@
 class ResumeEntryNotesController < ApplicationController
   
-  before_action :authenticate
+  load_and_authorize_resource
   
   def new
-    @resume_entry_note = ResumeEntryNote.new
     @resume_entry_note.resume_entry_id = params[:resume_entry_id]
   end
   
-  def create
-    @resume_entry_note = ResumeEntryNote.new(resume_entry_note_params)
-    
+  def create    
     # If no URL is entered, set values to NIL
     if @resume_entry_note.url.blank?
       @resume_entry_note.url = nil
@@ -25,12 +22,9 @@ class ResumeEntryNotesController < ApplicationController
   end
     
   def edit
-    @resume_entry_note = ResumeEntryNote.find(params[:id])
   end
   
   def update
-    @resume_entry_note = ResumeEntryNote.find(params[:id])
-    
     # If no URL is entered, set values to NIL
     if params[:resume_entry_note][:url].blank?
       params[:resume_entry_note][:url] = nil
@@ -46,7 +40,6 @@ class ResumeEntryNotesController < ApplicationController
   end
   
   def destroy
-    @resume_entry_note = ResumeEntryNote.find(params[:id])
     resume_entry_id = @resume_entry_note.resume_entry_id
     @resume_entry_note.destroy
     redirect_to resume_entry_path(resume_entry_id)

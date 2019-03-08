@@ -73,7 +73,7 @@ RSpec.describe ResumeEntryNotesController, type: :controller do
     describe 'GET #new' do
       it 'renders the template' do
         get :new
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -86,14 +86,14 @@ RSpec.describe ResumeEntryNotesController, type: :controller do
 
       it 'denies access' do
         post :create, params: { resume_entry_note: attributes_for(:resume_entry_note) }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
         get :edit, params: { id: resume_entry_note.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -111,7 +111,7 @@ RSpec.describe ResumeEntryNotesController, type: :controller do
 
       it 'denies access' do
         put :update, params: { id: resume_entry_note.id, resume_entry_note: { note: @new_note } }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -125,7 +125,7 @@ RSpec.describe ResumeEntryNotesController, type: :controller do
 
       it 'denies access' do
         delete :destroy, params: { id: resume_entry_note.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
   end
@@ -134,9 +134,10 @@ RSpec.describe ResumeEntryNotesController, type: :controller do
     it_behaves_like 'a user who cannot manage resume entry notes'
   end
 
-  context 'when signed in' do
+  context 'when signed in as an admin' do
     before :each do
-      session[:signedin] = true
+      admin_user = create(:admin_user)
+      sign_in admin_user
     end
 
     it_behaves_like 'a user who can manage resume entry notes'

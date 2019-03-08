@@ -85,21 +85,21 @@ RSpec.describe SettingsController, type: :controller do
     describe 'GET #index' do
       it 'denies access' do
         get :index
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
     describe 'GET #show' do
       it 'renders the template' do
         get :show, params: { id: setting.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
     describe 'GET #new' do
       it 'renders the template' do
         get :new
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -112,14 +112,14 @@ RSpec.describe SettingsController, type: :controller do
 
       it 'denies access' do
         post :create, params: { setting: attributes_for(:setting) }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
         get :edit, params: { id: setting.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -137,7 +137,7 @@ RSpec.describe SettingsController, type: :controller do
 
       it 'denies access' do
         put :update, params: { id: setting.id, setting: { key: @new_key } }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -151,7 +151,7 @@ RSpec.describe SettingsController, type: :controller do
 
       it 'denies access' do
         delete :destroy, params: { id: setting.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
   end
@@ -160,9 +160,10 @@ RSpec.describe SettingsController, type: :controller do
     it_behaves_like 'a user who cannot manage settings'
   end
 
-  context 'when signed in' do
+  context 'when signed in as an admin' do
     before :each do
-      session[:signedin] = true
+      admin_user = create(:admin_user)
+      sign_in admin_user
     end
 
     it_behaves_like 'a user who can manage settings'

@@ -7,6 +7,13 @@ RSpec.describe NewsletterSignUpsController, type: :controller do
   end
 
   shared_examples 'a user who can create newsletter sign ups' do
+    describe 'GET #new' do
+      it 'renders the template' do
+        get :new
+        expect(response).to render_template :new
+      end
+    end
+
     describe 'POST #create' do
       it 'creates the newsletter_sign_up' do
         expect {
@@ -77,17 +84,10 @@ RSpec.describe NewsletterSignUpsController, type: :controller do
   end
 
   shared_examples 'a user who cannot manage newsletter sign ups' do
-    describe 'GET #new' do
-      it 'renders the template' do
-        get :new
-        expect(response).to redirect_to(signin_path)
-      end
-    end
-    
     describe 'GET #edit' do
       it 'denies access' do
         get :edit, params: { id: newsletter_sign_up.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -105,7 +105,7 @@ RSpec.describe NewsletterSignUpsController, type: :controller do
 
       it 'denies access' do
         put :update, params: { id: newsletter_sign_up.id, newsletter_sign_up: { email: @new_email } }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 
@@ -119,7 +119,7 @@ RSpec.describe NewsletterSignUpsController, type: :controller do
 
       it 'denies access' do
         delete :destroy, params: { id: newsletter_sign_up.id }
-        expect(response).to redirect_to(signin_path)
+        expect(response).to redirect_to(root_path)
       end
     end
   end
@@ -129,9 +129,10 @@ RSpec.describe NewsletterSignUpsController, type: :controller do
     it_behaves_like 'a user who cannot manage newsletter sign ups'
   end
 
-  context 'when signed in' do
+  context 'when signed in as an admin' do
     before :each do
-      session[:signedin] = true
+      admin_user = create(:admin_user)
+      sign_in admin_user
     end
 
     it_behaves_like 'a user who can create newsletter sign ups'

@@ -130,9 +130,10 @@ RSpec.describe PagesController, type: :controller do
     it_behaves_like 'a user who can view public pages'
   end
 
-  context 'when signed in' do
+  context 'when signed in as an admin' do
     before :each do
-      session[:signedin] = true
+      admin_user = create(:admin_user)
+      sign_in admin_user
     end
 
     it_behaves_like 'a user who can view public pages'

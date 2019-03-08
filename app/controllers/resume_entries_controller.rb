@@ -1,14 +1,12 @@
 class ResumeEntriesController < ApplicationController
   
-  before_action :authenticate
+  load_and_authorize_resource
   
   def new
-    @resume_entry = ResumeEntry.new
     @resume_entry.resume_entry_type_id = params[:resume_entry_type_id]
   end
   
   def create
-    @resume_entry = ResumeEntry.new(resume_entry_params)
     if @resume_entry.save
       redirect_to @resume_entry
     else
@@ -17,19 +15,15 @@ class ResumeEntriesController < ApplicationController
   end
   
   def show
-    @resume_entry = ResumeEntry.find(params[:id])
   end
   
   def index
-    @resume_entries = ResumeEntry.all
   end
   
   def edit
-    @resume_entry = ResumeEntry.find(params[:id])
   end
   
   def update
-    @resume_entry = ResumeEntry.find(params[:id])
     if @resume_entry.update_attributes(resume_entry_params)
       redirect_to resume_entry_path(@resume_entry)
     else

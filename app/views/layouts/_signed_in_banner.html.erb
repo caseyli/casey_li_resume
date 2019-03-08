@@ -2,7 +2,11 @@
   <div class='signed-in-banner'>
     <div class="container">
       Signed in!
-      <%= link_to "Admin", admin_path %>
+
+      <% if admin? %>
+        <%= link_to "Admin", admin_path %>
+      <% end %>
+      
       <%= link_to "Sign out", controller: :sessions, action: :destroy %>
     </div>
   </div>
