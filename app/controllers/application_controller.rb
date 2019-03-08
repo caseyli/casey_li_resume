@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   include SessionsHelper
   
-  #before_filter :set_iphone_format
+  #before_action :set_iphone_format
     
   def set_iphone_format
     if is_iphone_request?

@@ -16,7 +16,7 @@ RSpec.describe ResumeEntriesController, type: :controller do
 
     describe 'GET #show' do
       it 'renders the template' do
-        get :show, id: resume_entry.id
+        get :show, params: { id: resume_entry.id }
         expect(response).to render_template(:show)
       end
     end
@@ -31,19 +31,19 @@ RSpec.describe ResumeEntriesController, type: :controller do
     describe 'POST #create' do
       it 'creates the resume entry' do
         expect {
-          post :create, resume_entry: attributes_for(:resume_entry)
+          post :create, params: { resume_entry: attributes_for(:resume_entry) }
         }.to change(ResumeEntry, :count).by(1)
       end
 
       it 'redirects to the resume entry path' do
-        post :create, resume_entry: attributes_for(:resume_entry)
+        post :create, params: { resume_entry: attributes_for(:resume_entry) }
         expect(response).to redirect_to(resume_entry_path(assigns(:resume_entry)))
       end
     end
 
     describe 'GET #edit' do
       it 'renders the template' do
-        get :edit, id: resume_entry.id
+        get :edit, params: { id: resume_entry.id }
         expect(response).to render_template(:edit)
       end
     end
@@ -55,13 +55,13 @@ RSpec.describe ResumeEntriesController, type: :controller do
       end
       
       it 'updates the resume entry' do
-        put :update, id: resume_entry.id, resume_entry: { title: @new_title }
+        put :update, params: { id: resume_entry.id, resume_entry: { title: @new_title } }
         resume_entry.reload
         expect(resume_entry.title).to eq(@new_title)
       end
 
       it 'redirects to resume entry path' do
-        put :update, id: resume_entry.id, resume_entry: { title: @new_title }
+        put :update, params: { id: resume_entry.id, resume_entry: { title: @new_title } }
         expect(response).to redirect_to(resume_entry_path(assigns(:resume_entry)))
       end
     end
@@ -70,12 +70,12 @@ RSpec.describe ResumeEntriesController, type: :controller do
       it 'deletes the resume entry' do
         resume_entry
         expect {
-          delete :destroy, id: resume_entry.id
+          delete :destroy, params: { id: resume_entry.id }
         }.to change(ResumeEntry, :count).by(-1)
       end
 
       it 'redirects to resume entries index' do
-        delete :destroy, id: resume_entry.id
+        delete :destroy, params: { id: resume_entry.id }
         expect(response).to redirect_to(resume_entries_path)
       end
     end
@@ -91,7 +91,7 @@ RSpec.describe ResumeEntriesController, type: :controller do
 
     describe 'GET #show' do
       it 'renders the template' do
-        get :show, id: resume_entry.id
+        get :show, params: { id: resume_entry.id }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -106,19 +106,19 @@ RSpec.describe ResumeEntriesController, type: :controller do
     describe 'POST #create' do
       it 'does not create the resume entry' do
         expect {
-          post :create, resume_entry: attributes_for(:resume_entry)
+          post :create, params: { resume_entry: attributes_for(:resume_entry) }
         }.to change(ResumeEntry, :count).by(0)
       end
 
       it 'denies access' do
-        post :create, resume_entry: attributes_for(:resume_entry)
+        post :create, params: { resume_entry: attributes_for(:resume_entry) }
         expect(response).to redirect_to(signin_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
-        get :edit, id: resume_entry.id
+        get :edit, params: { id: resume_entry.id }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -130,13 +130,13 @@ RSpec.describe ResumeEntriesController, type: :controller do
       end
       
       it 'does not update the resume entry' do
-        put :update, id: resume_entry.id, resume_entry: { title: @new_title }
+        put :update, params: { id: resume_entry.id, resume_entry: { title: @new_title } }
         resume_entry.reload
         expect(resume_entry.title).to eq(@original_title)
       end
 
       it 'denies access' do
-        put :update, id: resume_entry.id, resume_entry: { title: @new_title }
+        put :update, params: { id: resume_entry.id, resume_entry: { title: @new_title } }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -145,12 +145,12 @@ RSpec.describe ResumeEntriesController, type: :controller do
       it 'does not delete the resume entry' do
         resume_entry
         expect {
-          delete :destroy, id: resume_entry.id
+          delete :destroy, params: { id: resume_entry.id }
         }.to change(ResumeEntry, :count).by(0)
       end
 
       it 'denies access' do
-        delete :destroy, id: resume_entry.id
+        delete :destroy, params: { id: resume_entry.id }
         expect(response).to redirect_to(signin_path)
       end
     end

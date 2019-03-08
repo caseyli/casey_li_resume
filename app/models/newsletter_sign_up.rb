@@ -1,2 +1,2 @@
-class NewsletterSignUp < ActiveRecord::Base
+class NewsletterSignUp < ApplicationRecord
 end

@@ -9,7 +9,7 @@
 resume_entry_type_descriptions = ["Skills", "Work Experience", "Education", "Hobbies"]
 
 resume_entry_type_descriptions.each do |description|
-  resume_entry_type = ResumeEntryType.find_by_description(description)  
+  resume_entry_type = ResumeEntryType.find_by(description: description)  
   if resume_entry_type.nil?
     ResumeEntryType.create(description: description)
   end

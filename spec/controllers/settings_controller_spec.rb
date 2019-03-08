@@ -16,7 +16,7 @@ RSpec.describe SettingsController, type: :controller do
 
     describe 'GET #show' do
       it 'renders the template' do
-        get :show, id: setting.id
+        get :show, params: { id: setting.id }
         expect(response).to render_template(:show)
       end
     end
@@ -31,19 +31,19 @@ RSpec.describe SettingsController, type: :controller do
     describe 'POST #create' do
       it 'creates the resume entry' do
         expect {
-          post :create, setting: attributes_for(:setting)
+          post :create, params: { setting: attributes_for(:setting) }
         }.to change(Setting, :count).by(1)
       end
 
       it 'redirects to the resume entry path' do
-        post :create, setting: attributes_for(:setting)
+        post :create, params: { setting: attributes_for(:setting) }
         expect(response).to redirect_to(setting_path(assigns(:setting)))
       end
     end
 
     describe 'GET #edit' do
       it 'renders the template' do
-        get :edit, id: setting.id
+        get :edit, params: { id: setting.id }
         expect(response).to render_template(:edit)
       end
     end
@@ -55,13 +55,13 @@ RSpec.describe SettingsController, type: :controller do
       end
       
       it 'updates the resume entry' do
-        put :update, id: setting.id, setting: { key: @new_key }
+        put :update, params: { id: setting.id, setting: { key: @new_key } }
         setting.reload
         expect(setting.key).to eq(@new_key)
       end
 
       it 'redirects to resume entry path' do
-        put :update, id: setting.id, setting: { key: @new_key }
+        put :update, params: { id: setting.id, setting: { key: @new_key } }
         expect(response).to redirect_to(setting_path(assigns(:setting)))
       end
     end
@@ -70,12 +70,12 @@ RSpec.describe SettingsController, type: :controller do
       it 'deletes the resume entry' do
         setting
         expect {
-          delete :destroy, id: setting.id
+          delete :destroy, params: { id: setting.id }
         }.to change(Setting, :count).by(-1)
       end
 
       it 'redirects to settings index' do
-        delete :destroy, id: setting.id
+        delete :destroy, params: { id: setting.id }
         expect(response).to redirect_to(settings_path)
       end
     end
@@ -91,7 +91,7 @@ RSpec.describe SettingsController, type: :controller do
 
     describe 'GET #show' do
       it 'renders the template' do
-        get :show, id: setting.id
+        get :show, params: { id: setting.id }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -106,19 +106,19 @@ RSpec.describe SettingsController, type: :controller do
     describe 'POST #create' do
       it 'does not create the resume entry' do
         expect {
-          post :create, setting: attributes_for(:setting)
+          post :create, params: { setting: attributes_for(:setting) }
         }.to change(Setting, :count).by(0)
       end
 
       it 'denies access' do
-        post :create, setting: attributes_for(:setting)
+        post :create, params: { setting: attributes_for(:setting) }
         expect(response).to redirect_to(signin_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
-        get :edit, id: setting.id
+        get :edit, params: { id: setting.id }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -130,13 +130,13 @@ RSpec.describe SettingsController, type: :controller do
       end
       
       it 'does not update the resume entry' do
-        put :update, id: setting.id, setting: { key: @new_key }
+        put :update, params: { id: setting.id, setting: { key: @new_key } }
         setting.reload
         expect(setting.key).to eq(@original_key)
       end
 
       it 'denies access' do
-        put :update, id: setting.id, setting: { key: @new_key }
+        put :update, params: { id: setting.id, setting: { key: @new_key } }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -145,12 +145,12 @@ RSpec.describe SettingsController, type: :controller do
       it 'does not delete the resume entry' do
         setting
         expect {
-          delete :destroy, id: setting.id
+          delete :destroy, params: { id: setting.id }
         }.to change(Setting, :count).by(0)
       end
 
       it 'denies access' do
-        delete :destroy, id: setting.id
+        delete :destroy, params: { id: setting.id }
         expect(response).to redirect_to(signin_path)
       end
     end

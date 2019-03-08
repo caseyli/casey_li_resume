@@ -18,20 +18,20 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
       it 'creates the resume entry type' do
         resume_entry_type
         expect {
-          post :create, resume_entry_type: attributes_for(:resume_entry_type)
+          post :create, params: { resume_entry_type: attributes_for(:resume_entry_type) }
         }.to change(ResumeEntryType, :count).by(1)
       end
 
       it 'redirects to the resume entry types index' do
         resume_entry_type
-        post :create, resume_entry_type: attributes_for(:resume_entry_type)
+        post :create, params: { resume_entry_type: attributes_for(:resume_entry_type) }
         expect(response).to redirect_to(resume_entry_types_path)
       end
     end
 
     describe 'GET #edit' do
       it 'renders the template' do
-        get :edit, id: resume_entry_type.id
+        get :edit, params: { id: resume_entry_type.id }
         expect(response).to render_template(:edit)
       end
     end
@@ -43,13 +43,13 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
       end
       
       it 'updates the resume entry type' do
-        put :update, id: resume_entry_type.id, resume_entry_type: { description: @new_description }
+        put :update, params: { id: resume_entry_type.id, resume_entry_type: { description: @new_description } }
         resume_entry_type.reload
         expect(resume_entry_type.description).to eq(@new_description)
       end
 
       it 'redirects to resume entry types index' do
-        put :update, id: resume_entry_type.id, resume_entry_type: { description: @new_description }
+        put :update, params: { id: resume_entry_type.id, resume_entry_type: { description: @new_description } }
         expect(response).to redirect_to(resume_entry_types_path)
       end
     end
@@ -58,12 +58,12 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
       it 'deletes the resume entry type' do
         resume_entry_type
         expect {
-          delete :destroy, id: resume_entry_type.id
+          delete :destroy, params: { id: resume_entry_type.id }
         }.to change(ResumeEntryType, :count).by(-1)
       end
 
       it 'redirects to resume entry types index' do
-        delete :destroy, id: resume_entry_type.id
+        delete :destroy, params: { id: resume_entry_type.id }
         expect(response).to redirect_to(resume_entry_types_path)
       end
     end
@@ -80,19 +80,19 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
     describe 'POST #create' do
       it 'does not create the resume entry type' do
         expect {
-          post :create, resume_entry_type: attributes_for(:resume_entry_type)
+          post :create, params: { resume_entry_type: attributes_for(:resume_entry_type) }
         }.to change(ResumeEntryType, :count).by(0)
       end
 
       it 'denies access' do
-        post :create, resume_entry_type: attributes_for(:resume_entry_type)
+        post :create, params: { resume_entry_type: attributes_for(:resume_entry_type) }
         expect(response).to redirect_to(signin_path)
       end
     end
 
     describe 'GET #edit' do
       it 'denies access' do
-        get :edit, id: resume_entry_type.id
+        get :edit, params: { id: resume_entry_type.id }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -104,13 +104,13 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
       end
       
       it 'does not update the resume entry type' do
-        put :update, id: resume_entry_type.id, resume_entry_type: { description: @new_description }
+        put :update, params: { id: resume_entry_type.id, resume_entry_type: { description: @new_description } }
         resume_entry_type.reload
         expect(resume_entry_type.description).to eq(@original_description)
       end
 
       it 'denies access' do
-        put :update, id: resume_entry_type.id, resume_entry_type: { description: @new_description }
+        put :update, params: { id: resume_entry_type.id, resume_entry_type: { description: @new_description } }
         expect(response).to redirect_to(signin_path)
       end
     end
@@ -119,12 +119,12 @@ RSpec.describe ResumeEntryTypesController, type: :controller do
       it 'does not delete the resume entry type' do
         resume_entry_type
         expect {
-          delete :destroy, id: resume_entry_type.id
+          delete :destroy, params: { id: resume_entry_type.id }
         }.to change(ResumeEntryType, :count).by(0)
       end
 
       it 'denies access' do
-        delete :destroy, id: resume_entry_type.id
+        delete :destroy, params: { id: resume_entry_type.id }
         expect(response).to redirect_to(signin_path)
       end
     end

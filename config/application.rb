@@ -33,8 +33,6 @@ module CaseyLiResume
 
     # config.i18n.enforce_available_locales = true
 
-    config.active_record.raise_in_transactional_callbacks = true
-
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -49,6 +47,15 @@ module CaseyLiResume
     
     # For Heroku
     config.assets.initialize_on_precompile = false
-    
+
+    ActiveSupport.halt_callback_chains_on_return_false = false
+
+    config.action_controller.per_form_csrf_tokens = true
+
+    config.action_controller.forgery_protection_origin_check = true
+
+    config.action_mailer.perform_caching = true
+
+    config.active_record.dump_schemas = :all
   end
 end

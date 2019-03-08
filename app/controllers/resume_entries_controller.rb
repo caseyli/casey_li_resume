@@ -1,6 +1,6 @@
 class ResumeEntriesController < ApplicationController
   
-  before_filter :authenticate
+  before_action :authenticate
   
   def new
     @resume_entry = ResumeEntry.new

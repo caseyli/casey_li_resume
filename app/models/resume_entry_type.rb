@@ -9,7 +9,7 @@
 #  updated_at  :datetime
 #
 
-class ResumeEntryType < ActiveRecord::Base  
+class ResumeEntryType < ApplicationRecord
   validates :description, :presence => true
   
   has_many :resume_entries, :dependent => :destroy

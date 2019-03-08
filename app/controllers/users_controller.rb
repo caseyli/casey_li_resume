@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   # Only users will be able to manage other users
-  before_filter :authenticate
+  before_action :authenticate
   
   def new
     @user = User.new

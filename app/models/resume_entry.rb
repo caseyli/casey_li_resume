@@ -15,10 +15,10 @@
 #  order_by             :integer
 #
 
-class ResumeEntry < ActiveRecord::Base
+class ResumeEntry < ApplicationRecord
   validates :title, :presence => true
   
-  belongs_to :resume_entry_type
+  belongs_to :resume_entry_type, optional: true
   
   has_many :resume_entry_notes, :dependent => :destroy
   

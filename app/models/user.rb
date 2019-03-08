@@ -11,7 +11,7 @@
 #  salt               :string(255)
 #
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   attr_accessor :password
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   end
   
   def self.authenticate(email, submitted_password)
-    user = find_by_email(email)
+    user = find_by(email: email)
     return nil if user.nil?
     return user if user.has_password?(submitted_password)
   end

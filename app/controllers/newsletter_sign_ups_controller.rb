@@ -1,6 +1,6 @@
 class NewsletterSignUpsController < ApplicationController
 	
-	before_filter :authenticate, except: [:create]
+	before_action :authenticate, except: [:create]
 	
   def index
     @newsletter_sign_ups = NewsletterSignUp.all

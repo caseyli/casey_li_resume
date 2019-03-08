@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  before_filter :basic_authenticate, only: [:engagement]
-  before_filter :authenticate, only: [:admin]
+  before_action :basic_authenticate, only: [:engagement]
+  before_action :authenticate, only: [:admin]
   
   def home
     @title = "Casey Li"
@@ -55,8 +55,8 @@ class PagesController < ApplicationController
   end
   
   def tutorails
-    @tutorails_where_we_are = Setting.find_by_key("tutorails_where_we_are").try(:value)
-    @tutorails_schedule = Setting.find_by_key("tutorails_schedule").try(:value)
+    @tutorails_where_we_are = Setting.find_by(key: "tutorails_where_we_are").try(:value)
+    @tutorails_schedule = Setting.find_by(key: "tutorails_schedule").try(:value)
     @hide_header = true
 	end
   
@@ -87,7 +87,7 @@ class PagesController < ApplicationController
   
   def skills
     @title = "Skills"
-    entry_type_id = ResumeEntryType.find_by_description("Skills")
+    entry_type_id = ResumeEntryType.find_by(description: "Skills")
     @entries = ResumeEntry.entries(entry_type_id)
     @show_date = false
     render layout: "legacy"
@@ -95,7 +95,7 @@ class PagesController < ApplicationController
 
   def work_experience
     @title = "Work Experience"
-    entry_type_id = ResumeEntryType.find_by_description("Work Experience")
+    entry_type_id = ResumeEntryType.find_by(description: "Work Experience")
     @entries = ResumeEntry.entries(entry_type_id)
     @show_date = true
     render layout: "legacy"
@@ -103,7 +103,7 @@ class PagesController < ApplicationController
 
   def education
     @title = "Education"
-    entry_type_id = ResumeEntryType.find_by_description("Education")
+    entry_type_id = ResumeEntryType.find_by(description: "Education")
     @entries = ResumeEntry.entries(entry_type_id)
     @show_date = true
     render layout: "legacy"
@@ -111,7 +111,7 @@ class PagesController < ApplicationController
 
   def hobbies
     @title = "Hobbies"
-    entry_type_id = ResumeEntryType.find_by_description("Hobbies")
+    entry_type_id = ResumeEntryType.find_by(description: "Hobbies")
     @entries = ResumeEntry.entries(entry_type_id)
     @show_date = false
     render layout: "legacy"

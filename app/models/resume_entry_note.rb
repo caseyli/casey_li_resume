@@ -13,8 +13,8 @@
 #  link_text       :string(255)
 #
 
-class ResumeEntryNote < ActiveRecord::Base  
-  belongs_to :resume_entry
+class ResumeEntryNote < ApplicationRecord
+  belongs_to :resume_entry, optional: true
   
   default_scope { order(order_by: :asc) }
   

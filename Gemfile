@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.2.11'
+gem 'rails', '5.0.7.1'
 
 gem 'pg'
 
@@ -22,11 +22,15 @@ end
 
 group :development, :test do
   gem 'pry'
-  gem 'faker'
-  gem 'factory_bot_rails', '~> 4.10'
+  gem 'dotenv-rails'
+end
+
+group :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'test-unit', '~> 3.0'
-  gem 'dotenv-rails'
+  gem 'faker'
+  gem 'factory_bot_rails', '~> 4.10'
+  gem 'rails-controller-testing'
 end
 
 ruby '2.5.3'
