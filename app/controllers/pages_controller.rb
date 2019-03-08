@@ -11,6 +11,11 @@ class PagesController < ApplicationController
                     description: "a software development and video production firm based in ottawa canada."
                   },
                   {
+                    url: "/talkstopeople",
+                    title: "podcast",
+                    description: "casey talks to people: a brand new podcast where casey talks to people."
+                  },
+                  {
                     url: "/videos",
                     title: "videos",
                     description: "various videos including tutorials on git, rails development and more"
@@ -39,6 +44,10 @@ class PagesController < ApplicationController
                 ]
 
     render layout: "landing"
+  end
+
+  def talks_to_people
+    @title = "Casey talks to people"
   end
 
   def videos
