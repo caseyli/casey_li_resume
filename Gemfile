@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.1.16'
+gem 'rails', '4.2.11'
 
 gem 'pg'
 
@@ -17,6 +17,7 @@ gem "rack-timeout"
 group :development do
 	 gem 'letter_opener'
    gem 'spring'
+   gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -28,5 +29,5 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-ruby '2.2.4'
+ruby '2.5.3'
 #ruby-gemset=casey_li_resume

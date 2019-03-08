@@ -19,8 +19,8 @@ class NewsletterSignUpsController < ApplicationController
 
     if @newsletter_sign_up.save
 
-			AdminMailer.user_signed_up_for_newsletter(@newsletter_sign_up).deliver
-			UserMailer.newsletter_confirmation(@newsletter_sign_up).deliver
+			AdminMailer.user_signed_up_for_newsletter(@newsletter_sign_up).deliver_now
+			UserMailer.newsletter_confirmation(@newsletter_sign_up).deliver_now
 			
       respond_to do |format|
         format.html { redirect_to newsletter_sign_ups_path, notice: 'Newsletter sign up was successfully created.' }
