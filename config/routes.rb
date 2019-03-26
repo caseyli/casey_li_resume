@@ -23,8 +23,12 @@ CaseyLiResume::Application.routes.draw do
   get "pages/gittingtoknowyou"
   get "/tutorails" => "pages#tutorails"
   get "/uo" => "pages#uo"
-  get "talkstopeople" => "pages#talks_to_people"
-  get "podcast" => "pages#talks_to_people"
+  
+  # get "/talkstopeople" => "pages#talks_to_people"
+  # get "/podcast" => "pages#talks_to_people"
+  get '/talkstopeople', to: redirect('https://anchor.fm/casey-talks-to-people')
+  get '/podcast', to: redirect('https://anchor.fm/casey-talks-to-people')
+
   
   post "pages/contact"
 
